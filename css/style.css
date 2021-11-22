@@ -1,4 +1,12 @@
-/* Basic styles */
+:root {
+    --primary:#ec7263;
+    --secondary:#533557;
+    --tertiary:#F6C390;
+    --orange:#FF8C1A;
+    --white:#DDD;
+    --black:#2B2B2B;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +20,7 @@ body {
 
 body {
     font-family: sans-serif;
-    height: 2000px;
+    overflow-x: hidden;
 }
 
 a {
@@ -20,60 +28,57 @@ a {
 }
 
 header {
-    background: url("https://cdn.pixabay.com/photo/2016/11/29/11/50/ancient-1869298_1280.jpg") center center;
+    background: url("../assets/images/celso-405219.jpg") center center;
     background-size: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 50vh;
     padding: 20px;
-}
+    gap: 20px;
 
-.flex-row {
+}
+/* default flex values */
+.row {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap:20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-row-wrap,
-.flex-col-wrap {
-    display: flex;
     flex-wrap: wrap;
-}
-
-/* default */
-.flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-/* col */
-.col {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    gap: 20px;
+    flex:1 33%;
 }
 
 header div.hero-content {
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 40px 4px 40px 4px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 450px;
+    width: 400px;
+    gap: 50px;
+}
+
+header div.hero-content p {
+    padding-top: 60px;
 }
 
 header div.btn-box {
@@ -82,31 +87,12 @@ header div.btn-box {
 }
 
 header div.btn-box button {
-    border-radius: 5px;
+    border-radius: 1px;
     text-transform: uppercase;
     font-weight: bold;
-    border: 1px solid #000;
+    width: 50%;
     padding: 10px;
 }
-
-
-
-section {
-    padding: 20px;
-    gap: 20px;
-}
-
-div.row {
-    display: flex;
-    gap:20px;
-}
-
-.flex-img {
-   max-width: 200px;
-}
-
-
-
 
 .container {
     position: fixed;
@@ -159,7 +145,7 @@ div.row {
 }
 
 #toggle:checked ~ .nav .nav-item {
-    color: #fff;
+    color: #FF8C1A;
     letter-spacing: 0;
     height: 40px;
     font-weight: 700;
@@ -207,29 +193,22 @@ div.row {
     opacity: 0;
 }
 
-#toggle:checked ~ .dummy-content {
-    padding-top: 30px;
-}
-
-#toggle:checked ~ .dummy-content:before {
-    background-color: rgba(0, 0, 0, 0.2);
-}
 
 /* Toggle button */
 .button-toggle {
     position: absolute;
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 25px;
-    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    margin: 20px;
+    background-color: #FF8C1A;
     cursor: pointer;
     border-radius: 100%;
     transition: 0.6s;
 }
 
 .button-toggle:hover {
-    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2), inset 0 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .button-toggle:before,
@@ -240,7 +219,7 @@ div.row {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #FF8C1A;
     border-radius: 5px;
     transition: 0.5s;
 }
@@ -267,7 +246,7 @@ div.row {
     float: left;
     clear: both;
     color: transparent;
-    font-size: 14px;
+    font-size: 22px;
     letter-spacing: -6.2px;
     height: 7px;
     line-height: 7px;
@@ -329,7 +308,7 @@ div.row {
     top: 50%;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: #000;
     transform: translateY(-50%) scaleY(5);
     transition: 0.5s;
