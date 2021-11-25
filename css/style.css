@@ -27,73 +27,9 @@ a {
     text-decoration: none;
 }
 
-header {
-    background: url("../assets/images/celso-405219.jpg") center center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 50vh;
-    padding: 20px;
-    gap: 20px;
 
-}
-/* default flex values */
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap:20px;
-}
 
-.col {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 20px;
-}
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-
-}
-
-.flex-col {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 20px;
-    flex:1 33%;
-}
-
-header div.hero-content {
-    padding: 100px 20px 20px 20px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    gap: 50px;
-}
-
-header div.hero-content p {
-    padding-top: 60px;
-}
-
-header div.btn-box {
-    display: flex;
-    gap: 10px;
-}
-
-header div.btn-box button {
-    border-radius: 1px;
-    text-transform: uppercase;
-    font-weight: bold;
-    width: 50%;
-    padding: 10px;
-}
-
+/************ NAVIGATION MENU **************/
 .container {
     position: fixed;
     margin: 0;
@@ -313,3 +249,112 @@ header div.btn-box button {
     transform: translateY(-50%) scaleY(5);
     transition: 0.5s;
 }
+
+
+
+
+
+
+
+
+
+
+header {
+    background-color: #533557;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50vh;
+    padding: 20px;
+    gap: 20px;
+
+}
+
+header.hero {
+    background: url("../assets/images/celso-405219.jpg") center center;
+    background-size: cover;
+}
+
+header.events {
+    padding: 100px 100px 100px 100px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    background-color: #533557;
+}
+
+header.events section {
+    background-color: #F6C390;
+}
+
+header.events section > * {
+    background-color: #533557;
+    padding: 50px 50px 60px 50px;
+    border: 1px solid #F6C390;
+}
+
+
+
+
+header div.hero-content {
+    padding: 100px 20px 20px 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 50px;
+}
+
+header div.hero-content p {
+    padding-top: 60px;
+}
+
+header div.btn-box {
+    display: flex;
+    gap: 10px;
+}
+
+header div.btn-box button {
+    border-radius: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    padding: 10px;
+}
+
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap:20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex:1 33%;
+}
+
+
+
+
