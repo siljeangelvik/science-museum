@@ -1,27 +1,32 @@
 * {
-    border: 1px solid black; /**/
+    /*border: 1px solid black; /**/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
+    background-color: #fdfbf9;
     display: grid;
     width: 100%;
     grid-template-rows: auto;
     grid-template-columns: 70px auto;
     grid-template-areas:
-    "nav nav nav"
-    "header main main"
-    "header main main"
-    "footer footer footer";
+     "nav nav"
+     "header main"
+     "footer footer"; /**/
 }
 
 nav {
     grid-area: nav;
+    display: grid;
+    grid-template-columns: 60px auto;
+    background-color: #4c60ed;
 }
+
 header {
     grid-area: header;
+    background-color: #edd94c;
 }
 
 main {
@@ -30,12 +35,14 @@ main {
 
 footer {
     grid-area: footer;
+    background-color: #4c60ed;
 }
 
 h1,
 h2,
 h3 {
     letter-spacing: 0.1em;
+    line-height: 1.4em;
 }
 
 nav,
@@ -51,28 +58,60 @@ main > * {
     padding: 10px;
 }
 
-.logo {
+
+img.logo {
+    max-width: 40px;
+}
+
+nav div.menu {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    align-items: flex-end;
 }
 
-nav {
-    display: grid;
-    grid-template-columns: 60px auto;
+nav div#toggle-element {
+    display: flex;
+    width: 100%;
+    flex: 1;
 }
 
-nav div:last-child {
+nav button#toggle-button {
     display: none;
+    border: none;
+    background: transparent;
+    color: #fdfbf9;
 }
 
-nav div,
-footer div {
+a {
+    text-decoration: none;
+    color: #fdfbf9;
+    border-radius: 2px;
+    background: linear-gradient(to left, #6db471 50%, salmon 50%) right;
+    background-size: 200%;
+    transition: 0.5s ease-out;
+}
+
+a:hover {
+    transition: 0.2s ease;
+    background-position: left;
+    /* background-color:salmon; /**/
+    /*background-color: #6db471;/**/
+}
+
+a.active {
+    background: salmon;
+    margin-bottom: 10px;
+}
+
+
+nav div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-nav div a,
-footer div a {
+nav div a {
     flex: 1;
     padding: 8px 8px;
     text-align: center;
@@ -90,37 +129,26 @@ main {
     flex-wrap: wrap;
 }
 
-main div {
-    width: 50%;
+main section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
-main div:nth-child(even) {
-    justify-content: center;
+main section:nth-child(even) {
+    background-color: #eee;
 }
 
-main div > img {
-    max-width: 350px;
+main section div > img {
+    max-width: 250px;
 }
 
 footer {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
 }
 
-footer div:first-child {
-    width: 60px;
-}
 
-footer div {
-    width: 45%;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
 
 @media only screen and (max-width: 960px) {
     body {
@@ -135,37 +163,71 @@ footer div {
       "footer";
     }
 
-    nav div:nth-child(2) {
-        display: none;
-    }
-
-    nav div:last-child a,
-    nav div:last-child {
+    nav {
+        /* position: fixed;/**/
+        width: 100%;
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
     }
 
+    nav div img {
+        position: relative;
+        max-width: 40px;
+    }
+
+    nav div.menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid red;
+    }
+
+    nav div.menu > * {
+        display: flex;
+        flex: 1 100%;
+    }
+
+    /*
+        nav div#toggle-element {
+            display: none;
+            z-index: 2;
+            width: 50%;
+            flex: 1;
+            position: fixed;
+            top: 8%;
+            right: 0;
+        }
+
+        nav button#toggle-button {
+            display: block;
+            position: absolute;
+            z-index: 3;
+        }
+
+        nav div:last-child a,
+        nav div:last-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+        /**/
     h1 {
         writing-mode: horizontal-tb;
         text-orientation: upright;
     }
 
-    main {
+    main section {
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
     }
 
-    main div {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    main div:nth-child(even) {
+
+    main section:nth-child(even) {
         justify-content: flex-start;
     }
 
-    footer div {
-        width: 100%;
+    footer section {
+        width: 60%;
     }
+
+
 }
