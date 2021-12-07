@@ -63,7 +63,9 @@ body {
     'footer';
     color: var(--primary);
 }
-
+#hero {
+    padding-left: 20px;
+}
 main section {
     display: flex;
     flex-direction: column;
@@ -370,7 +372,9 @@ img {
         writing-mode: vertical-lr;
         letter-spacing: .4em;
     }
-
+    #hero {
+        padding-left: 0;
+    }
     main section {
         display: flex;
         flex-direction: column;
