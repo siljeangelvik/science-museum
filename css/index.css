@@ -1,0 +1,41 @@
+/* MOBILE FIRST*/
+/** GRID BODY  **/
+body {
+    display: grid;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+    'header'
+    'hero'
+    "hero-img"
+    "second-nav"
+    'main'
+    'aside'
+    'footer';
+}
+
+/* @formatter:off */
+header                      { grid-area: header; }
+section#hero-img            { grid-area: hero-img; }
+section#hero                { grid-area: hero;   }
+section#second-nav          { grid-area: second-nav; }
+main.index                  { grid-area: main;   }
+aside                       { grid-area: aside;  }
+footer                      { grid-area: footer; }
+/* @formatter:on */
+
+/** TABLET SIZE **/
+@media (min-width: 640px) {
+}
+
+/** DESKTOP SIZE **/
+@media (min-width: 1024px) {
+    body {
+        grid-template-areas:
+      "header       header      header      header"
+      "hero         hero-img    hero-img    hero-img"
+      "hero         second-nav  .           aside"
+      "hero         main        main        aside"
+      "footer       footer      footer      footer";
+    }
+}

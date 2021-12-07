@@ -1,0 +1,352 @@
+:root {
+    /*
+    --primary: #4c5a69;
+    --secondary: #ac92ea;
+    --tertiary: orange;
+    --white: #fff;
+/**/
+
+    --primary: #4c5a69;
+    --secondary: #ac92ea;
+    --tertiary: orange;
+    --white: #fff;
+    --offWhite: #eee;
+    /**/
+}
+
+* {
+    box-sizing: border-box;
+    #border: 1px solid var(--primary);
+}
+
+/* @formatter:off */
+header,
+header > *,
+section#hero,
+main h2,
+footer                      { background-color: var(--primary); }
+
+/** GRID BODY  **/
+header                      { grid-area: header; }
+section#hero                { grid-area: hero;   }
+main                        { grid-area: main;   }
+aside                       { grid-area: aside;  }
+footer                      { grid-area: footer; }
+
+/** GRID HEADER  **/
+header a                    { grid-area: logo; }
+header span                 { grid-area: menu; }
+header nav                  { grid-area: nav;  }
+/* @formatter:on */
+
+
+/* MOBILE FIRST*/
+body {
+    display: grid;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    grid-template-areas:
+    'header'
+    'hero'
+    'main'
+    'aside'
+    'footer';
+    color: var(--primary);
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--white);
+    line-height: 1.7;
+    letter-spacing: .2em;
+}
+
+header > *,
+#hero-img div p,
+footer > * {
+    color: var(--offWhite);
+}
+
+i.fas {
+    color: var(--white);
+}
+
+p {
+    letter-spacing: .1em;
+}
+
+header {
+    display: grid;
+    align-items: center;
+    justify-items: baseline;
+    grid-template-areas:
+    "logo   .       menu"
+    "nav    nav     nav";
+    width: 100%;
+}
+
+section#hero-img {
+    display: flex;
+    flex-wrap: wrap;
+    height: 55vh;
+    overflow: hidden;
+    background-size: contain;
+    background: url("../assets/images/mavis-cw-164128.jpg") no-repeat center;
+}
+
+section#hero-img div.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+}
+
+section#hero-img div.wrapper div h2 {
+    font-size: 28px;
+}
+
+#hero,
+section#hero-img div.wrapper div,
+main {
+    padding: 0 20px;
+}
+
+header,
+footer {
+    padding: 0 20px 0 0;
+}
+
+section#hero-img div.wrapper div:last-child {
+    width: 80%;
+    line-height: 1.7em;
+}
+
+
+section#hero h1 {
+    writing-mode: horizontal-tb;
+    letter-spacing: .2em;
+}
+
+img.logo,
+img.logo {
+    height: 80px;
+}
+
+header span#toggle-button {
+    justify-self: end;
+    cursor: pointer;
+}
+
+header nav#toggle-element {
+    display: none;
+    width: 100%;
+    border-top: 3px solid var(--white);
+    border-bottom: 3px solid var(--white);
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: .2em;
+}
+
+nav a.active {
+    margin-right: 30px;
+    color: var(--tertiary);
+    border-color: var(--tertiary);
+}
+
+nav a:hover {
+    margin-right: 30px;
+    color: var(--tertiary);
+    border-color: var(--tertiary);
+    transition: .7s linear;
+}
+
+section.nav-secondary,
+aside {
+    margin: 20px 0;
+    width: 100%;
+}
+
+section.nav-secondary {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.nav-secondary div {
+    flex: 1 auto;
+    color: var(--primary);
+    text-align: center;
+}
+
+section.nav-secondary div a:first-child {
+    border-radius: 50%;
+    text-decoration: none;
+    padding: 20px 10px 0 10px;
+}
+
+section.nav-secondary div a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: var(--primary);
+}
+
+section.nav-secondary div a i {
+    padding: 20px;
+    margin: 0 10px;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+section.nav-secondary div a i:hover {
+    background-color: var(--secondary);
+}
+
+section.nav-secondary div p {
+    font-weight: bold;
+}
+
+main.index {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main.index h3 {
+    color: var(--primary);
+}
+
+main.index div.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 auto;
+    border-left: 2px solid var(--primary);
+    border-radius: 0 30px;
+}
+
+main.index div.wrapper div:nth-child(even),
+main.index div.wrapper div:nth-child(even) h3 {
+    background: var(--primary);
+    color: var(--white);
+}
+
+main.index div.wrapper > * {
+    flex: 1 auto;
+    padding: 10px;
+    border-left: var(--primary);
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+footer > * {
+    flex: 1 auto;
+}
+
+footer div a,
+footer div p {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 14px;
+}
+
+img {
+    max-width: 250px;
+}
+
+
+/** TABLET SIZE **/
+@media (min-width: 640px) {
+    body {
+
+    }
+}
+
+/** DESKTOP SIZE **/
+@media (min-width: 1024px) {
+    body {
+        grid-template-areas:
+      'header       header      header      header'
+      'hero         main        main        aside'
+      'footer       footer      footer      footer';
+    }
+
+    section#hero h1 {
+        writing-mode: vertical-lr;
+        letter-spacing: .4em;
+    }
+
+    main section,
+    aside {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    section#hero-img {
+        display: flex;
+        flex-wrap: wrap;
+        height: 70vh;
+        background: url("../assets/images/mavis-cw-164128.jpg") repeat-y center;
+        background-size: cover;
+    }
+
+    #hero {
+        padding: 20px 0;
+    }
+
+    section#hero-img div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    section#hero-img div.wrapper div:last-child {
+        width: 50%;
+        line-height: 1.7em;
+    }
+
+    main.index div.wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 1 33%;
+        margin: 10px 0;
+
+    }
+
+    main.index div.wrapper > * {
+        flex: 1 33%;
+        margin: 10px 0;
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Meta Title</title>
+    <title>Most awesome Museum!</title>
     <meta name="description"
           content="">
     <meta name="keywords"
@@ -16,60 +16,169 @@
           maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/mobile-first.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/183e136a7d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+<header class="index">
+    <a href="index.html">
+        <img class="logo" src="assets/images/icon-science-black.svg" alt="science museum logo">
+    </a>
 
-<div class="container">
-    <input id="toggle" type="checkbox">
-    <label class="toggle-container" for="toggle">
-        <span class="button button-toggle"></span>
-    </label>
+    <span id="toggle-button">
+    <i class="fas fa-bars fa-2x"></i>
+    </span>
 
-    <nav class="nav">
-        <a class="nav-item" href="index.html">Home</a>
-        <a class="nav-item" href="pages/explore.html">Explore</a>
-        <a class="nav-item" href="pages/exhibition-spaces.html">Exhibition</a>
-        <a class="nav-item" href="pages/events.html">Events</a>
-        <a class="nav-item" href="pages/visit.html">Visit</a>
-        <a class="nav-item" href="pages/contact.html">Contact</a>
+    <nav id="toggle-element">
+        <a class="active" href="index.html">Home</a>
+        <a href="pages/visit.html">Visit</a>
+        <a href="pages/events.html">Special Events</a>
+        <a href="pages/exhibition-spaces.html">Exhibition</a>
+        <a href="pages/explore.html">Explore</a>
+        <a href="pages/get-involved.html">Get Involved</a>
+        <a href="pages/contact.html">Contact</a>
     </nav>
-</div>
-
-
-<header class="hero">
-    <div class="hero-content">
-
-        <h1>Explore together</h1>
-        <p>Come join us at the Community Science Museum where we’re committed to making science accessible to
-            all.</p>
-        <div class="btn-box">
-            <button><a href="#">Read more</a></button>
-            <button><a href="#">Buy tickets</a></button>
-        </div>
-    </div>
 </header>
 
-<section>
-    <h2>lorem ipsum h2</h2>
-    <h3>lorem ipsum h3</h3>
-    <p>
-        Over the course of human history, science has developed from our early understanding of fire, wind, water, and
-        earth to exploring everything from galaxies far away to the very building blocks of life itself.
-    </p>
-    <p>The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and
-        perhaps even ignite a lifelong passion to continue the exploration of the world around us.
-    </p>
-    <p>We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we
-        have over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are
-        designed for you to interact with and play around to see science come to life (apart from the dinosaur exhibits
-        – they only come to life at night when everyone’s gone home).
-    </p>
+<section id="hero-img">
+    <div class="wrapper">
+        <div>
+            <h2 class="index-h2">Community Science Museum</h2>
+        </div>
+        <div>
 
-
+            <!-- MAKE READ MORE TAB
+                   AND EXPLORE NOW / VISIT NOW CTA -->
+            <p>The aim of our museum is to create a space where everyone can experience the wonders of our discoveries
+                and
+                perhaps even ignite a lifelong passion to continue the exploration of the world around us.
+            </p>
+        </div>
+    </div>
 </section>
 
+<section id="hero" class="index">
+    <h1>Welcome to - </h1>
+</section>
+
+<section id="second-nav" class="nav-secondary">
+    <div>
+        <a href="#">
+            <i class="fas fa-clock fa-2x"></i>
+        </a>
+        <p><a href="#">Hours</a></p>
+    </div>
+
+    <div>
+        <a href="#">
+            <i class="fas fa-shapes fa-2x"></i>
+        </a>
+        <p><a href="#">For kids</a></p>
+    </div>
+
+    <div>
+        <a href="#">
+            <i class="fas fa-user fa-2x"></i>
+        </a>
+        <p><a href="#">For teachers</a></p>
+
+    </div>
+
+    <div>
+        <a href="#">
+            <i class="fas fa-calendar-alt fa-2x"></i>
+        </a>
+        <p><a href="#">Events</a></p>
+    </div>
+
+    <div>
+        <a href="#">
+            <i class="fas fa-hand-holding-medical fa-2x"></i>
+        </a>
+        <p><a href="#">Support</a></p>
+    </div>
+
+    <div>
+        <a href="#">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+        </a>
+        <p><a href="#">Location</a></p>
+    </div>
+
+    <div>
+        <a href="#">
+            <i class="fas fa-universal-access fa-2x"></i>
+        </a>
+        <p><a href="#">Accessibility</a></p>
+    </div>
+</section>
+
+<main class="index">
+    <h2>News</h2>
+
+    <div class="wrapper">
+        <div>
+            <h3>Professor</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, perferendis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus asperiores at eum numquam
+                tempora?</p>
+        </div>
+
+        <div>
+            <h3>Professor</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, tempora.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at dolore in maiores quisquam
+                veniam?</p>
+        </div>
+
+        <div>
+            <h3>Professor</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, nostrum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolor ex, expedita tempore tenetur
+                voluptatibus!</p>
+        </div>
+    </div>
+</main>
+
+<aside>
+    <h2>Follow us!</h2>
+    <a href="#"><i> </i></a>
+    <a href="#"><i> </i></a>
+    <a href="#"><i> </i></a>
+    <a href="#"><i> </i></a>
+    <a href="#"><i> </i></a>
+</aside>
+
+<footer class="contact">
+    <div>
+        <a href="index.html"><img class="logo" src="assets/images/icon-science-white.svg" alt="science museum logo"></a>
+    </div>
+
+    <div>
+        <h4>Contact us</h4>
+        <address>
+            <p><a href="mailto:john@doe.com">john@doe.com</a></p>
+            <p><a href="tel:+00 123 445 678">(00) 123 45 678</a></p>
+        </address>
+    </div>
+
+    <div>
+        <h4>Newsletter</h4>
+        <a href="#">Sign up</a>
+    </div>
+
+    <div>
+        <h4>Cookies</h4>
+        <p>We use cookies..</p>
+    </div>
+
+    <div>
+        <p>©2021 Dev. Made with <i class="fas fa-heart"></i> All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/burger-menu.js"></script>
 </body>
 </html>
