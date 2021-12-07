@@ -120,13 +120,12 @@ main h3,
 main section,
 aside h3,
 aside div,
-footer section,
 header,
 main,
 aside,
 #nav { padding:0 20px; }
 
-header, section.index, section#heading, main h2, aside { background-color:var(--primary);   }
+header, section.index, main h2 { background-color:var(--primary);   }
 header > *, section#hero div p                        { color: var(--offWhite); }
 
 h1, h2, h3, h4, h5, a, i.fas { color: var(--white); }
@@ -294,11 +293,23 @@ aside section {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    padding: 0 20px 20px 20px;
 }
+
+aside section div { padding: 20px; }
 
 aside section div a {
     font-size: 20px;
 }
+
+aside section div a i {
+    padding: 10px;
+    border-radius: 30%;
+}
+
+aside h5, aside section div a i { color: var(--primary); }
+aside section div i:hover { transition: .5s ease-in-out; background: var(--primary); color: var(--white); border-radius: 50%; padding: 10px; }
+
 
 footer,
 footer section,
@@ -392,7 +403,8 @@ img                 { max-width: 250px; }
 
     section#hero,
     div#overlay {
-        background: url(https://vilikkevite.netlify.app/assets/images/mavis-cw-164128.jpg) no-repeat center top;
+        height: 80vh;
+        background: url(https://vilikkevite.netlify.app/assets/images/mavis-cw-164128.jpg) no-repeat center;
         background-size: cover;
         align-content: flex-start;
         justify-content: center;
