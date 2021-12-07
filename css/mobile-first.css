@@ -465,26 +465,6 @@ img {
 /* CLASSNAMES FOR SPECIFICS */
 .btn-primary {
     outline: none;
-    border: 2px solid var(--primary);
-    border-radius: 5px;
-    padding: 10px;
-    background-color: var(--primary);
-    color: var(--white);
-    text-transform: uppercase;
-    font-weight: bolder;
-    letter-spacing: .2em;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background-color: var(--white);
-    border-color: var(--white);
-    color: var(--primary);
-    transition: .5s ease-in-out;
-}
-
-.btn-secondary {
-    outline: none;
     border: 2px solid var(--white);
     border-radius: 5px;
     padding: 10px;
@@ -496,10 +476,30 @@ img {
     cursor: pointer;
 }
 
+.btn-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+    transition: .5s ease-in-out;
+}
+
+.btn-secondary {
+    outline: none;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: .2em;
+    cursor: pointer;
+}
+
 .btn-secondary:hover {
     background-color: var(--white);
     color: var(--primary);
-    border-color: var(--primary);
+    border-color: var(--white);
     transition: .5s ease-in-out;
 }
 
