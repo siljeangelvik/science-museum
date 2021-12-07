@@ -88,7 +88,7 @@ body {
     display: grid;
     max-width: 100%;
     margin: 0 auto;
-    padding: 5px 10px;
+    padding: 5px 20px;
     overflow-x: hidden;
     grid-template-columns:auto;
     grid-template-rows:auto;
@@ -124,25 +124,22 @@ footer section,
 header,
 main,
 aside,
-#nav { padding:0 10px; }
+#nav { padding:0 20px; }
 
-header, section.index, section#heading, main h2, aside, footer { background-color:var(--primary);   }
+header, section.index, section#heading, main h2, aside { background-color:var(--primary);   }
+header > *, section#hero div p                        { color: var(--offWhite); }
 
-header > *, section#hero div p, footer > *                         { color: var(--offWhite); }
-
-h1, h2, h3, h4, h5, h6, a, i.fas { color: var(--white); }
+h1, h2, h3, h4, h5, a, i.fas { color: var(--white); }
 h1 { font-size: 32px; font-family: fontBold, sans-serif; letter-spacing: .3em; font-weight: 700; }
 h2 { font-size: 32px; font-family: fontMedium, sans-serif; letter-spacing: .3em; font-weight: 700; }
-
 h3 { font-size: 24px; font-family: fontMedium, sans-serif; letter-spacing: .2em; font-weight: 500; }
 h4 { font-size: 24px; font-family: fontRegular, sans-serif; letter-spacing: .2em; font-weight: 500; }
-
 h5 { font-size: 20px; font-family: fontRegular, sans-serif; letter-spacing: .1em; font-weight: 300; }
 h6 { font-size: 20px; font-family: fontLight, sans-serif; letter-spacing: .1em; font-weight: 300; }
-
 strong { font-size: 16px; font-family: fontRegular, sans-serif; letter-spacing: .1em; font-weight: 100; }
 p      { font-size: 16px; font-family: fontLight, sans-serif; letter-spacing: .1em; font-weight: 100; }
 a      { text-decoration: none; font-family: fontRegular, sans-serif; font-weight: 100;}
+h6 { color: var(--primary); }
 
 .fa-heart {
     font-size: 13px;
@@ -228,7 +225,6 @@ nav a.active {
 nav a:hover {
     margin-left: 30px;
     transition: .6s linear;
-    background-color: var(--white);
     color: var(--primary);
    /**
     background-image: linear-gradient(
@@ -253,7 +249,6 @@ nav a:hover {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     **/
-
 }
 
 section#nav {
@@ -277,24 +272,23 @@ section#nav div a {
 section#nav div a i {
     height: 80px;
     width: 80px;
-    line-height: 80px;
+    line-height: 70px;
     border-radius: 50%;
     vertical-align: center;
-    color: var(--primary);
-    background: var(--white);
-    border: 3px solid var(--primary);
+    color: var(--white);
+    background: var(--primary);
+    border: 3px solid var(--white);
 }
 
 section#nav div a i:hover {
     transition: .7s ease;
-    background-color: var(--primary);
-    color: var(--white);
-    border: 3px solid var(--white);
+    background-color: var(--white);
+    color: var(--primary);
+    border: 3px solid var(--primary);
 }
 
-main h3         { background-color: var(--primary);
-}
-main h4 { color: var(--primary); }
+main h3         { background-color: var(--primary); }
+main h4         { color: var(--primary); }
 
 aside section {
     display: flex;
@@ -310,6 +304,7 @@ footer,
 footer section,
 footer section div {
     flex: 1;
+    color: var(--primary);
 }
 
 footer > div > p {
