@@ -277,6 +277,10 @@ main.index div.wrapper {
 
 main.index div.wrapper div:nth-child(even),
 main.index div.wrapper div:nth-child(even) h3 {
+    justify-content: space-evenly;
+    justify-items: baseline;
+    align-items: center;
+
     background: var(--primary);
     color: var(--white);
 }
