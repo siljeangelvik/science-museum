@@ -81,7 +81,9 @@ footer > * {
     color: var(--offWhite);
 }
 
-i.fas {
+i.fas,
+i.far,
+i.fab {
     color: var(--white);
 }
 
