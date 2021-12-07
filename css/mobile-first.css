@@ -25,9 +25,14 @@ header > *,
 section#hero,
 main h2,
 aside,
-footer                      { background-color: var(--primary); padding: 10px; }
+footer                      { background-color: var(--primary); }
 
-/** GRID BODY  **/
+header,
+header > *,
+main h2,
+aside,
+footer { padding: 10px;}
+    /** GRID BODY  **/
 header                      { grid-area: header; }
 section#hero                { grid-area: hero;   }
 main                        { grid-area: main;   }
