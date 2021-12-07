@@ -24,7 +24,8 @@ header,
 header > *,
 section#hero,
 main h2,
-footer                      { background-color: var(--primary); }
+aside,
+footer                      { background-color: var(--primary); padding: 10px; }
 
 /** GRID BODY  **/
 header                      { grid-area: header; }
@@ -37,6 +38,7 @@ footer                      { grid-area: footer; }
 header a                    { grid-area: logo; }
 header span                 { grid-area: menu; }
 header nav                  { grid-area: nav;  }
+
 /* @formatter:on */
 
 
@@ -46,6 +48,8 @@ body {
     max-width: 100%;
     margin: 0 auto;
     padding: 5px 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     grid-template-areas:
     'header'
     'hero'
@@ -68,7 +72,6 @@ h4,
 h5,
 h6 {
     color: var(--white);
-    line-height: 1.7;
     letter-spacing: .2em;
 }
 
@@ -107,17 +110,18 @@ section#hero-img {
 
 section#hero-img div.wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     width: 100%;
     background: rgba(0, 0, 0, .4);
 }
 
 section#hero-img div.wrapper div h2 {
-    font-size: 28px;
+    font-size: 36px;
+    padding: 0;
+    margin: 30px 0 0 0;
 }
 
-#hero,
 section#hero-img div.wrapper div,
 main {
     padding: 0 20px;
@@ -128,8 +132,33 @@ footer {
     padding: 0 20px 0 0;
 }
 
-section#hero-img div.wrapper div:last-child {
-    width: 80%;
+section#hero-img div.wrapper div.hero-content {
+    width: 85%;
+    margin: 0;
+    padding: 0 20px 10px 20px;
+    line-height: 1.7em;
+}
+
+
+section#hero-img div.wrapper div.btn-box {
+    margin: 0 0 50px;
+    width: 85%;
+    display: flex;
+    gap: 10px;
+}
+
+section#hero-img div.wrapper div.btn-box button.btn-primary {
+    flex: 2 60%;
+}
+
+section#hero-img div.wrapper div.btn-box button.btn-secondary {
+    flex: 1 40%;
+}
+
+section#hero-img div.wrapper div.hero-content {
+    width: 85%;
+    margin: 0;
+    padding: 0 20px 10px 20px;
     line-height: 1.7em;
 }
 
@@ -137,6 +166,7 @@ section#hero-img div.wrapper div:last-child {
 section#hero h1 {
     writing-mode: horizontal-tb;
     letter-spacing: .2em;
+    font-size: 30px;
 }
 
 img.logo,
@@ -168,16 +198,13 @@ nav a {
 }
 
 nav a.active {
-    margin-right: 30px;
     color: var(--tertiary);
-    border-color: var(--tertiary);
 }
 
 nav a:hover {
-    margin-right: 30px;
+    margin-left: 30px;
     color: var(--tertiary);
-    border-color: var(--tertiary);
-    transition: .7s linear;
+    transition: .6s linear;
 }
 
 section.nav-secondary,
@@ -255,14 +282,44 @@ main.index div.wrapper > * {
     border-left: var(--primary);
 }
 
+aside {
+    width: 100%;
+}
+
+aside div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+aside h2,
+aside div a {
+    padding: 20px;
+    display: inline;
+    text-align: center;
+    flex: 1 auto;
+    width: auto;
+}
+
+aside div a i {
+    border: 2px solid var(--white);
+    background-color: var(--white);
+    color: var(--primary);
+    border-radius: 50%;
+    padding: 5px;
+}
 
 footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    color: var(--primary);
 }
 
-footer > * {
+footer div {
     flex: 1 auto;
 }
 
@@ -271,6 +328,10 @@ footer div p {
     text-decoration: none;
     color: var(--white);
     font-size: 14px;
+}
+
+footer div:last-child p {
+    text-align: center;
 }
 
 img {
@@ -288,6 +349,8 @@ img {
 /** DESKTOP SIZE **/
 @media (min-width: 1024px) {
     body {
+        grid-template-columns: 80px auto auto;
+        grid-template-rows: auto;
         grid-template-areas:
       'header       header      header      header'
       'hero         main        main        aside'
@@ -299,34 +362,46 @@ img {
         letter-spacing: .4em;
     }
 
-    main section,
-    aside {
+    main section {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 
     section#hero-img {
-        display: flex;
-        flex-wrap: wrap;
         height: 70vh;
         background: url("../assets/images/mavis-cw-164128.jpg") repeat-y center;
         background-size: cover;
     }
 
-    #hero {
-        padding: 20px 0;
-    }
-
-    section#hero-img div {
+    section#hero-img div.wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: end;
         flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, .4);
     }
 
-    section#hero-img div.wrapper div:last-child {
-        width: 50%;
+    section#hero-img div.wrapper div.hero-content {
+        width: 35%;
+        margin: 0;
+        padding: 0 20px 10px 20px;
         line-height: 1.7em;
+    }
+
+    section#hero-img div.wrapper div.btn-box {
+        margin: 0 0 50px;
+        width: 35%;
+        display: flex;
+        gap: 10px;
+    }
+
+    section#hero-img div.wrapper div.btn-box button.btn-primary {
+        flex: 2 60%;
+    }
+
+    section#hero-img div.wrapper div.btn-box button.btn-secondary {
+        flex: 1 40%;
     }
 
     main.index div.wrapper {
@@ -334,7 +409,6 @@ img {
         flex-wrap: nowrap;
         flex: 1 33%;
         margin: 10px 0;
-
     }
 
     main.index div.wrapper > * {
@@ -342,11 +416,156 @@ img {
         margin: 10px 0;
     }
 
+    aside div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    aside h2,
+    aside div a {
+        display: block;
+        text-align: center;
+        flex: 1 100%;
+        width: 100%;
+    }
 
     footer {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
+
+    footer div {
+        width: 33%;
+        flex: 1 24%;
+    }
+
+    footer div:last-child p {
+        text-align: center;
+    }
+    form {
+        width: 75%;
+    }
+
+    form label input,
+    form label,
+    form label textarea,
+    form label select {
+        border: none;
+        padding: 20px 0;
+        display: flex;
+        width: 70%;
+    }
+}
+
+
+/* CLASSNAMES FOR SPECIFICS */
+.btn-primary {
+    outline: none;
+    border: 2px solid var(--tertiary);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--tertiary);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: .2em;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--tertiary);
+    border-color: var(--tertiary);
+    color: var(--white);
+    transition: .5s ease-in-out;
+}
+
+.btn-secondary {
+    outline: none;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--secondary);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: .2em;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: var(--secondary);
+    border-color: var(--secondary);
+    transition: .5s ease-in-out;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 30px 10px;
+}
+
+form label input,
+form label,
+form label textarea,
+form label select {
+    border: none;
+    padding: 20px 0;
+    display: flex;
+    width: 100%;
+}
+
+form label input,
+form label select {
+    border: transparent;
+    border-bottom: 2px solid var(--secondary);
+    border-radius: 5px;
+}
+
+form label textarea {
+    height: 100px;
+    border: transparent;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+}
+
+form > label:last-of-type,
+form > label:last-of-type input {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+form label i.fas {
+    color: var(--secondary);
+    font-size: 24px;
+    margin-right: 15px;
+
+}
+
+form label input,
+form label textarea {
+    padding: 5px;
+}
+
+form div:last-of-type,
+form div button {
+    width: 90%;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }

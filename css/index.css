@@ -32,10 +32,17 @@ footer                      { grid-area: footer; }
 @media (min-width: 1024px) {
     body {
         grid-template-areas:
-      "header       header      header      header"
-      "hero         hero-img    hero-img    hero-img"
-      "hero         second-nav  .           aside"
-      "hero         main        main        aside"
-      "footer       footer      footer      footer";
+      "header       header      header         header"
+      "hero         hero-img    hero-img       hero-img"
+      "hero         second-nav  aside          aside"
+      "hero         main        aside          aside"
+      "footer       footer      footer         footer";
+    }
+
+    .nav-secondary,
+    aside,
+    main,
+    footer {
+        margin:10px 0;
     }
 }
