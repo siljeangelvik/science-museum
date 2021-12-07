@@ -22,6 +22,57 @@
     --white: #fff;
     --offWhite: #ddd;
 
+    --radicalRed: #FF355E;
+    --wildWatermelon: #FD5B78;
+    --outrageousOrange: #FF6037;
+    --atmoicTangerine: #FF9966;
+    --neonCarrot: #FF9933;
+    --sunglow: #FFCC33;
+    --laserLemon: #FFFF66;
+    --unmellowYellow: #FFFF66;
+    --electricLime: #CCFF00;
+    --screaminGreen: #66FF66;
+    --magicMint: #AAF0D1;
+    --blizzardBlue: #50BFE6;
+    --shockingPink: #FF6EFF;
+    --razzleDazzleRose: #EE34D2;
+    --hotMagneta: #FF00CC;
+    --purplePizzazz: #FF00CC;
+    /*
+
+background: linear-gradient(
+    0deg,
+    #ff355e,
+    #fd5b78 7.7%,
+    #ff6037 15.4%,
+    #ff9966 23.1%,
+    #ff9933 30.8%,
+    #ffcc33 38.5%,
+    #ffff66 46.2%,
+    #ccff00 53.9%,
+    #66ff66 61.6%,
+    #aaf0d1 69.3%,
+    #50bfe6 77%,
+    #ff6eff 84.7%,
+    #ee34d2 92.4%,
+    #ff00cc 100%
+  );
+
+*/
+
+
+
+    /* blue, red, purple and orange */
+    /* pink, red and blue, purple */
+    /* warm and bright hues */
+
+    /*
+    Children had positive reactions to bright colors
+    (e.g., pink, blue, red)
+    and negative emotions for dark colors
+    (e.g., brown, black, gray)
+    */
+
     --rainbow: #000;    /*      index        */
     --yellow: #000;     /*      visit        */
     --green: #000;      /*      events       */
@@ -38,6 +89,7 @@ body {
     max-width: 100%;
     margin: 0 auto;
     padding: 5px 10px;
+    overflow-x: hidden;
     grid-template-columns:auto;
     grid-template-rows:auto;
     color: var(--primary);
@@ -62,16 +114,17 @@ header nav      { grid-area: nav;      }
 #hero #overlay h2,
 #hero #overlay p,
 #hero #overlay div.btn-box,
+#heading h1,
 main h2,
+main h3,
 main section,
 aside h3,
 aside div,
-footer section { padding:0 10px; }
-
+footer section,
 header,
 main,
 aside,
-#nav { padding: 20px; }
+#nav { padding:0 10px; }
 
 header, section.index, section#heading, main h2, aside, footer { background-color:var(--primary);   }
 
@@ -109,14 +162,15 @@ header {
 }
 
 img.logo {
-    height: 72px;
+    height: 82px;
+    margin: 0;
+    padding: 0;
 }
 
 section#hero,
 div#overlay {
     height: 50vh;
     background-size: contain;
-    align-content: center;
     background: url(https://vilikkevite.netlify.app/assets/images/mavis-cw-164128.jpg) no-repeat center;
 }
 
@@ -127,8 +181,12 @@ section#hero div#overlay {
 section#hero div#overlay h2,
 section#hero div#overlay p,
 section#hero div#overlay div.btn-box {
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
+}
+
+#hero .btn-box {
+    margin-top: 20px;
 }
 
 /* @formatter:off */
@@ -137,6 +195,8 @@ section#hero div#overlay div.btn-box button.btn-secondary { flex-basis: 38%; }
 /* @formatter:on */
 
 section#heading h1 {
+    letter-spacing: .4em;
+    margin: 0;
     writing-mode: horizontal-tb;
 }
 
@@ -156,32 +216,56 @@ nav a {
     display: block;
     text-decoration: none;
     text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--white);
-    letter-spacing: .2em;
+    color: var(--offWhite);
+    letter-spacing: .25em;
+    padding: 30px;
 }
 
 nav a.active {
-    color: var(--tertiary)
+    color: var(--white)
 }
 
 nav a:hover {
     margin-left: 30px;
-    color: var(--tertiary);
     transition: .6s linear;
-}
+    background-color: var(--white);
+    color: var(--primary);
+   /**
+    background-image: linear-gradient(
+            0deg,
+            #ff355e,
+            #fd5b78 7.7%,
+            #ff6037 15.4%,
+            #ff9966 23.1%,
+            #ff9933 30.8%,
+            #ffcc33 38.5%,
+            #ffff66 46.2%,
+            #ccff00 53.9%,
+            #66ff66 61.6%,
+            #aaf0d1 69.3%,
+            #50bfe6 77%,
+            #ff6eff 84.7%,
+            #ee34d2 92.4%,
+            #ff00cc 100%);
+    background-size: 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    **/
 
+}
 
 section#nav {
     padding-top: 0;
-    margin-top: -10px;
+    margin-top: -20px;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 section#nav div {
-    flex: 1 33%;
+    flex: 1 20%;
     color: var(--primary);
     text-align: center;
 }
@@ -196,9 +280,9 @@ section#nav div a i {
     line-height: 80px;
     border-radius: 50%;
     vertical-align: center;
-    border: 3px solid var(--primary);
-    background-color: var(--white);
     color: var(--primary);
+    background: var(--white);
+    border: 3px solid var(--primary);
 }
 
 section#nav div a i:hover {
@@ -208,45 +292,32 @@ section#nav div a i:hover {
     border: 3px solid var(--white);
 }
 
+main h3         { background-color: var(--primary);
+}
+main h4 { color: var(--primary); }
+
 aside section {
     display: flex;
     flex-wrap: wrap;
-}
-
-aside section div {
-    flex: 1 33%;
-    color: var(--primary);
     text-align: center;
 }
 
 aside section div a {
-    color: var(--primary);
+    font-size: 20px;
 }
 
-aside section div a i {
-    height: 80px;
-    width: 80px;
-    border-radius:80px;
-    line-height: 100px ;
-    border: 3px solid var(--offWhite);
-    background-color: var(--primary);
-    color: var(--offWhite);
-
+footer,
+footer section,
+footer section div {
+    flex: 1;
 }
 
-aside section div a i:hover {
-    transition: .7s ease;
-    background-color: var(--primary);
-    color: var(--white);
-    border: 3px solid var(--white);
+footer > div > p {
+    width: 100%;
+    text-align: center;
 }
 
-
-
-main.index section div {
-    border-left: 3px solid var(--primary);
-    border-radius: 30px;
-}
+header, footer { padding-left: 0; }
 
 /* @formatter:off */
 footer div p        { font-size: 10px; }
@@ -266,6 +337,14 @@ img                 { max-width: 250px; }
     justify-items: center;
 }
 
+@media (min-width: 640px) {
+    section#hero div#overlay h2,
+    section#hero div#overlay p,
+    section#hero div#overlay div.btn-box {
+        width: 65%;
+    }
+}
+
 @media (min-width: 1024px) {
     body {
         grid-template-columns:80px auto auto;
@@ -274,14 +353,6 @@ img                 { max-width: 250px; }
                 "header       header      header      header"
                 "heading      main        main        aside"
                 "footer       footer      footer      footer";
-    }
-
-    #hero {
-        margin: 10px;
-    }
-
-    #hero .btn-box {
-        margin-top: 20px;
     }
 
     header {
@@ -300,40 +371,28 @@ img                 { max-width: 250px; }
         display: flex;
         justify-content: end;
         gap: 10px;
-        border-top: 3px solid var(--white);
-        border-bottom: 3px solid var(--white);
+        width: 100%;
     }
 
     nav#toggle-element a {
         flex: 1 auto;
         display: block;
-        padding: 10px;
-        border-radius: 5px 30px;
         color: var(--offWhite);
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid transparent;
     }
 
     nav#toggle-element a.active {
         color: var(--white);
-        border-top: 3px solid var(--offWhite);
-        border-bottom: 3px solid var(--offWhite);
     }
-
 
     nav#toggle-element a:hover {
         margin-left: 0;
         color: var(--white);
-        border-top: 3px solid var(--offWhite);
-        border-bottom: 3px solid var(--offWhite);
         transition: .6s linear;
     }
 
     section#heading h1 {
         writing-mode: vertical-lr;
         letter-spacing: .4em;
-        padding: 0 10px;
-        margin: 0;
     }
 
     section#hero,
@@ -346,7 +405,7 @@ img                 { max-width: 250px; }
 
     section#hero div#overlay p,
     section#hero div#overlay div.btn-box {
-        width: 50%;
+        width: 40%;
     }
 
     section#nav {
@@ -355,10 +414,6 @@ img                 { max-width: 250px; }
 
     section#nav div {
         flex: 1 10%;
-    }
-
-    aside section div {
-        flex: 1 100%;
     }
 
     .row-desktop {
