@@ -32,31 +32,31 @@
     </nav>
 </header>
 
-<section id="hero" class="contact">
+<section id="heading" class="contact">
     <h1>Ask us anything</h1>
 </section>
 
 <main class="contact">
-    <section>
+    <section class="col">
         <h2>Direct contact!</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
             et dolore magna aliqua.</p>
 
         <form method="post">
-                  <label>
-                      <i class="fas fa-user"></i>
-                      <input type="text" placeholder="Enter your name"/>
-                  </label>
+            <label>
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Enter your name"/>
+            </label>
 
-                <label>
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Enter your email"/>
-                </label>
+            <label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter your email"/>
+            </label>
 
-                <label>
-                    <i class="fas fa-calendar-alt"></i>
-                    <input type="date"/>
-                </label>
+            <label>
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date"/>
+            </label>
 
             <label>
                 <i class="fas fa-list-ul"></i>
@@ -71,10 +71,10 @@
                 <textarea placeholder="Leave a message"></textarea>
             </label>
 
-                <label class="row">
-                    <input type="checkbox">
-                    <span>Send me a copy.</span>
-                </label>
+            <label class="row">
+                <input type="checkbox">
+                <span>Send me a copy.</span>
+            </label>
 
             <div>
                 <button class="btn-secondary">Send</button>
@@ -91,7 +91,7 @@
     </section>
 </main>
 
-<aside>
+<aside class="row-mobile col-desktop">
     <h2>Follow us!</h2>
     <div>
         <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a>
@@ -104,32 +104,30 @@
 
 
 <footer>
-    <div>
-        <a href="../index.html"><img class="logo" src="../assets/images/icon-science-white.svg"
-                                     alt="science museum logo"></a>
-    </div>
+    <section>
+        <div class="flex-col">
+            <a href="../index.html"><img class="logo" src="../assets/images/icon-science-white.svg"
+                                         alt="science museum logo"></a>
 
-    <div>
-        <h4>Contact us</h4>
-        <address>
-            <p><a href="mailto:john@doe.com">john@doe.com</a></p>
-            <p><a href="tel:+0012345678">(00) 123 45 678</a></p>
-        </address>
-    </div>
+            <p><strong>Get in touch</strong></p>
+            <address>
+                <p><a href="mailto:john@doe.com">john@doe.com</a></p>
+                <p><a href="tel:+0012345678">+(00) 123 45 678</a></p>
+            </address>
 
-    <div>
-        <h4>Newsletter</h4>
-        <a class="btn-primary" href="#">Sign up</a>
-    </div>
+            <p><strong>Newsletter</strong></p>
+            <a class="btn-primary" href="#">Sign up</a>
 
-    <div>
-        <h4>Cookies</h4>
-        <p>We use cookies..</p>
-    </div>
+            <p><strong>Cookies</strong></p>
+            <p>We use cookies..</p>
 
-    <div>
-        <p>©2021 Dev. Made with <i class="fas fa-heart"></i> All rights reserved.</p>
-    </div>
+
+        </div>
+
+        <div class="row">
+            <p>©2021 AngDev. Made with <i class="fas fa-heart"></i> All rights reserved.</p>
+        </div>
+    </section>
 </footer>
 
 
