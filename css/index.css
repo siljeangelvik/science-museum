@@ -21,8 +21,11 @@ main                { grid-area: main       }
 aside               { grid-area: aside      }
 footer              { grid-area: footer     }
 
+
+
 @media (min-width: 1024px) {
     body {
+        grid-template-columns: 80px auto;
         grid-template-areas:
           "header    header  header  header"
           "heading   hero    hero    hero"
@@ -30,7 +33,6 @@ footer              { grid-area: footer     }
           "heading   main    main    aside"
           "footer    footer  footer  footer";
         }
-
 }
 
 

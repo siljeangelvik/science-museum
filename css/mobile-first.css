@@ -22,22 +22,22 @@
     --white: #fff;
     --offWhite: #ddd;
 
-    --radicalRed: #FF355E;
-    --wildWatermelon: #FD5B78;
-    --outrageousOrange: #FF6037;
-    --atmoicTangerine: #FF9966;
-    --neonCarrot: #FF9933;
-    --sunglow: #FFCC33;
-    --laserLemon: #FFFF66;
-    --unmellowYellow: #FFFF66;
-    --electricLime: #CCFF00;
-    --screaminGreen: #66FF66;
-    --magicMint: #AAF0D1;
-    --blizzardBlue: #50BFE6;
-    --shockingPink: #FF6EFF;
-    --razzleDazzleRose: #EE34D2;
-    --hotMagneta: #FF00CC;
-    --purplePizzazz: #FF00CC;
+    /* 1 */ --radicalRed: #FF355E;
+    /* 2 */  --wildWatermelon: #FD5B78;
+    /* 3 */  --outrageousOrange: #FF6037;
+    /* 4 */   --atmoicTangerine: #FF9966;
+    /* 5 */  --neonCarrot: #FF9933;
+    /* 6 */  --sunglow: #FFCC33;
+    /* 7 */  --laserLemon: #FFFF66;
+    /* 8 */  --unmellowYellow: #FFFF66;
+    /* 9  */  --electricLime: #CCFF00;
+    /* 10 */   --screaminGreen: #66FF66;
+    /* 11 */  --magicMint: #AAF0D1;
+    /* 12 */  --blizzardBlue: #50BFE6;
+    /* 13 */  --shockingPink: #FF6EFF;
+    /* 14 */  --razzleDazzleRose: #EE34D2;
+    /* 15 */  --hotMagneta: #FF00CC;
+    /* 16 */   --purplePizzazz: #FF00CC;
     /*
 
 background: linear-gradient(
@@ -88,7 +88,6 @@ body {
     display: grid;
     max-width: 100%;
     margin: 0 auto;
-    padding: 5px 20px;
     overflow-x: hidden;
     grid-template-columns:auto;
     grid-template-rows:auto;
@@ -116,6 +115,66 @@ header nav      { grid-area: nav;      }
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+h1,
+#hero-h1 {
+    padding: 0 10px;
+    font-size: 5vw;
+    font-family: fontBold,sans-serif;
+    letter-spacing: .4em;
+    line-height: 1.7em;
+    background-color: transparent;
+    color: var(--white);
+}
+
+h1 {
+    color: var(--white);
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: fontMedium,sans-serif;
+    letter-spacing: .2em;
+    line-height: 1.7em;
+    background-color: var(--primary);
+    padding: 10px;
+    color: var(--white);
+}
+
+h3 {
+    font-size: 1em;
+    color: var(--white);
+    background-color: var(--primary);
+    font-family: fontRegular,sans-serif;
+    letter-spacing: .1em;
+    line-height: 1.4em;
+    padding: 10px;
+}
+
+h4 {
+    font-size: 1em;
+    font-family: fontBold,sans-serif;
+    color: var(--primary);
+    letter-spacing: .1em;
+    line-height: 1.7em;
+    padding: 10px;
+}
+
+a {
+    font-size: .9em;
+    text-decoration: none;
+    font-family: fontRegular, sans-serif;
+    color: var(--primary);
+}
+
+p {
+    padding: 0 10px;
+    color: var(--primary);
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
 /* @formatter:on */
 
 header {
@@ -145,12 +204,14 @@ section#hero div#overlay {
 section#hero div#overlay h2,
 section#hero div#overlay p,
 section#hero div#overlay div.btn-box {
+    color: var(--white);
     width: 90%;
     justify-content: space-between;
 }
 
 #hero .btn-box {
     margin-top: 20px;
+    padding: 0 10px;
 }
 
 /* @formatter:off */
@@ -166,7 +227,8 @@ section#heading h1 {
 header span#toggle-button {
     justify-self: end;
     cursor: pointer;
-    color: var(--primary);
+    color: var(--white);
+    padding: 20px;
 }
 
 header nav#toggle-element {
@@ -269,6 +331,20 @@ main h4 {
     color: var(--primary);
 }
 
+
+main,
+aside {
+    width: 90%;
+    margin: 0 auto;
+}
+
+aside section div {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
 footer,
 footer section,
 footer section div,
@@ -315,12 +391,74 @@ img                 { max-width: 250px; }
 @media (min-width: 1024px) {
     body {
         overflow-x: hidden;
+        max-width: 100%;
         grid-template-columns:80px auto auto;
         grid-template-rows:auto;
         grid-template-areas:
-                "header       header      header "
+                "header       header      header"
                 "heading      main        aside"
                 "footer       footer      footer";
+    }
+
+    h1,
+    #hero-h1 {
+        font-family: fontBold, sans-serif;
+        letter-spacing: .4em;
+        line-height: 1.7em;
+        background-color: transparent;
+        color: var(--white);
+    }
+
+    #hero-h1 {
+        font-size: 3vw;
+    }
+
+    h1 {
+        font-size: 2vw;
+        color: var(--white);
+    }
+
+    h2 {
+        font-size: 1.5em;
+        font-family: fontMedium, sans-serif;
+        letter-spacing: .2em;
+        line-height: 1.7em;
+        background-color: var(--primary);
+        padding: 10px;
+        color: var(--white);
+    }
+
+    h3 {
+        font-size: 1em;
+        color: var(--white);
+        background-color: var(--primary);
+        font-family: fontRegular, sans-serif;
+        letter-spacing: .1em;
+        line-height: 1.4em;
+        padding: 10px;
+    }
+
+    h4 {
+        font-size: 1em;
+        font-family: fontBold, sans-serif;
+        color: var(--primary);
+        letter-spacing: .1em;
+        line-height: 1.7em;
+        padding: 10px;
+    }
+
+    a {
+        font-size: .9em;
+        text-decoration: none;
+        font-family: fontRegular, sans-serif;
+        color: var(--primary);
+    }
+
+    p {
+        color: var(--primary);
+        font-size: 16px;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
     }
 
     header {
@@ -337,7 +475,6 @@ img                 { max-width: 250px; }
 
     header nav#toggle-element {
         display: block;
-        background: var(--primary);
     }
 
     header nav#toggle-element div {
@@ -368,6 +505,7 @@ img                 { max-width: 250px; }
     section#heading h1 {
         writing-mode: vertical-lr;
         letter-spacing: .4em;
+        padding: 0 10px;
     }
 
     section#hero,
@@ -382,6 +520,7 @@ img                 { max-width: 250px; }
     section#hero div#overlay p,
     section#hero div#overlay div.btn-box {
         width: 40%;
+        color: var(--white);
     }
 
     section#nav {
@@ -392,10 +531,21 @@ img                 { max-width: 250px; }
         flex: 1 10%;
     }
 
+    aside {
+        text-align: center;
+        width: 300px;
+    }
+
+    aside div a {
+        flex: 1 100%;
+        font-size: 1.2vw;
+    }
+
+
     .row-desktop {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         width: 100%;
         gap: 20px;
     }
@@ -403,7 +553,7 @@ img                 { max-width: 250px; }
     .col-desktop {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         width: 100%;
         gap: 20px;
     }
@@ -450,63 +600,127 @@ img                 { max-width: 250px; }
     transition: .5s ease-in-out;
 }
 
-
-h1,
-#hero-h1 {
-    font-size: 2em;
-    font-family: fontBold,sans-serif;
-    letter-spacing: .4em;
-    line-height: 1.7em;
-    background-color: transparent;
-    color: var(--white);
+header,
+header a,
+header nav,
+header nav > * {
+    background: transparent;
 }
 
-h1 {
-    color: var(--white);
+header,
+header nav,
+header nav > * {
+    background: linear-gradient(
+            90deg,
+            #ff00cc,
+            #ee34d2 7.7%,
+            #ff6eff 15.4%,
+            #50bfe6 23.1%,
+            #aaf0d1 30.3%,
+            #66ff66 38.6%,
+            #ccff00 46.9%,
+            #ffff66 53.2%,
+            #ffcc33 61.5%,
+            #ff9933 69.8%,
+            #ff9966 77.1%,
+            #ff6037 84.4%,
+            #fd5b78 92.4%,
+            #ff355e 100%
+    );
 }
 
-h2 {
-    font-size: 1.5em;
-    font-family: fontMedium,sans-serif;
-    letter-spacing: .2em;
-    line-height: 1.7em;
-    background-color: var(--primary);
-    padding: 10px;
-    color: var(--white);
+aside section div a {
+    background-image: linear-gradient(
+            90deg,
+            #ff00cc,
+            #ee34d2 7.7%,
+            #ff6eff 15.4%,
+            #50bfe6 23.1%,
+            #aaf0d1 30.3%,
+            #66ff66 38.6%,
+            #ccff00 46.9%,
+            #ffff66 53.2%,
+            #ffcc33 61.5%,
+            #ff9933 69.8%,
+            #ff9966 77.1%,
+            #ff6037 84.4%,
+            #fd5b78 92.4%,
+            #ff355e 100%);
+    background-clip: text;
+}
+aside section div a i  {
+    background-image: linear-gradient(
+            90deg,
+            #ff00cc,
+            #ee34d2 7.7%,
+            #ff6eff 15.4%,
+            #50bfe6 23.1%,
+            #aaf0d1 30.3%,
+            #66ff66 38.6%,
+            #ccff00 46.9%,
+            #ffff66 53.2%,
+            #ffcc33 61.5%,
+            #ff9933 69.8%,
+            #ff9966 77.1%,
+            #ff6037 84.4%,
+            #fd5b78 92.4%,
+            #ff355e 100%);
+    color: transparent;
+
 }
 
-h3 {
-    font-size: 1em;
-    color: var(--white);
-    background-color: var(--primary);
-    font-family: fontRegular,sans-serif;
-    letter-spacing: .1em;
-    line-height: 1.4em;
-    padding: 10px;
-}
+/**
+#ff00cc,
+#ee34d2 7.7%,
+#ff6eff 15.4%,
+#50bfe6 23.1%,
+#aaf0d1 30.3%,
+#66ff66 38.6%,
+#ccff00 46.9%,
+#ffff66 53.2%,
+#ffcc33 61.5%,
+#ff9933 69.8%,
+#ff9966 77.1%,
+#ff6037 84.4%,
+#fd5b78 92.4%,
+#ff355e 100%
 
-h4 {
-    font-size: 1em;
-    font-family: fontBold,sans-serif;
-    color: var(--primary);
-    letter-spacing: .1em;
-    line-height: 1.7em;
-    padding: 10px;
-}
 
-a {
-    font-size: .9em;
-    text-decoration: none;
-    font-family: fontRegular, sans-serif;
-}
 
-p#hero-content {
-    color: var(--white);
-}
+#ff355e,
+#fd5b78 7.7%,
+#ff6037 15.4%,
+#ff9966 23.1%,
+#ff9933 30.8%,
+#ffcc33 38.5%,
+#ffff66 46.2%,
+#ccff00 53.9%,
+#66ff66 61.6%,
+#aaf0d1 69.3%,
+#50bfe6 77%,
+#ff6eff 84.7%,
+#ee34d2 92.4%,
+#ff00cc 100%
 
-p#hero-content,
-p {
-    font-size: 16px;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
+
+
+ */
+section#heading {
+    background: linear-gradient(
+            0deg,
+            #ff355e,
+            #fd5b78 7.7%,
+            #ff6037 15.4%,
+            #ff9966 23.1%,
+            #ff9933 30.8%,
+            #ffcc33 38.5%,
+            #ffff66 46.2%,
+            #ccff00 53.9%,
+            #66ff66 61.6%,
+            #aaf0d1 69.3%,
+            #50bfe6 77%,
+            #ff6eff 84.7%,
+            #ee34d2 92.4%,
+            #ff00cc 100%
+    );
 }
