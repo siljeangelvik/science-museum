@@ -1,9 +1,83 @@
+:root {
+    --primary: #4c5a69;
+    --secondary: #ac92ea;
+    --tertiary: orange;
+    --white: #fff;
+    --offWhite: #ddd;
+
+    /* 1 */ --radicalRed: #FF355E;
+    /* 2 */  --wildWatermelon: #FD5B78;
+    /* 3 */  --outrageousOrange: #FF6037;
+    /* 4 */   --atmoicTangerine: #FF9966;
+    /* 5 */  --neonCarrot: #FF9933;
+    /* 6 */  --sunglow: #FFCC33;
+    /* 7 */  --laserLemon: #FFFF66;
+    /* 8 */  --unmellowYellow: #FFFF66;
+    /* 9  */  --electricLime: #CCFF00;
+    /* 10 */   --screaminGreen: #66FF66;
+    /* 11 */  --magicMint: #AAF0D1;
+    /* 12 */  --blizzardBlue: #50BFE6;
+    /* 13 */  --shockingPink: #FF6EFF;
+    /* 14 */  --razzleDazzleRose: #EE34D2;
+    /* 15 */  --hotMagneta: #FF00CC;
+    /* 16 */   --purplePizzazz: #FF00CC;
+}
+
+
+header,
+header a,
+header nav,
+header nav > * {
+    background: transparent;
+}
+
+header {
+    background: linear-gradient(
+            90deg,
+            #ff00cc,
+            #ee34d2 7.7%,
+            #ff6eff 15.4%,
+            #50bfe6 23.1%,
+            #aaf0d1 30.3%,
+            #66ff66 38.6%,
+            #ccff00 46.9%,
+            #ffff66 53.2%,
+            #ffcc33 61.5%,
+            #ff9933 69.8%,
+            #ff9966 77.1%,
+            #ff6037 84.4%,
+            #fd5b78 92.4%,
+            #ff355e 100%
+    );
+}
+
+
+section#h1 {
+    background: linear-gradient(
+            0deg,
+            #ff355e,
+            #fd5b78 7.7%,
+            #ff6037 15.4%,
+            #ff9966 23.1%,
+            #ff9933 30.8%,
+            #ffcc33 38.5%,
+            #ffff66 46.2%,
+            #ccff00 53.9%,
+            #66ff66 61.6%,
+            #aaf0d1 69.3%,
+            #50bfe6 77%,
+            #ff6eff 84.7%,
+            #ee34d2 92.4%,
+            #ff00cc 100%
+    );
+}
+
 * {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    #border: 1px solid black;
 }
+
 body {
     display: grid;
     max-width: 100%;
@@ -73,6 +147,7 @@ section#hero section {
 display: flex;
     flex-direction: column;
     align-content: flex-start;
+    width: 90%;
 }
 section#hero h2,
 section#hero p,
@@ -124,6 +199,7 @@ img.logo {
 
 header nav div a {
     flex:1;
+    border-radius: 5px;
 }
 #toggle-button {
     display:none;
@@ -152,7 +228,6 @@ footer > div > p {
 }
 header a,
 footer a {
-    border:1px solid #000;
     margin: 0;
     width: 80px;
     align-self: center;
@@ -278,20 +353,11 @@ footer {
     }
 }
 
-section#hero,
-nav#nav-secondary,
-main,
-aside,
-footer {
-    border:2px solid;
-}
-
 section#hero section,
 nav#nav-secondary section,
 main section,
 aside section,
 footer section {
     gap:10px;
-    border:1px solid;
 }
 

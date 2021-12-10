@@ -37,7 +37,7 @@
     /* 13 */  --shockingPink: #FF6EFF;
     /* 14 */  --razzleDazzleRose: #EE34D2;
     /* 15 */  --hotMagneta: #FF00CC;
-    /* 16 */   --purplePizzazz: #FF00CC;
+    /* 16 */   --purplePizzazz: #FF00CC;}
     /*
 
 background: linear-gradient(
@@ -72,15 +72,6 @@ background: linear-gradient(
     and negative emotions for dark colors
     (e.g., brown, black, gray)
     */
-
-    --rainbow: #000;    /*      index        */
-    --yellow: #000;     /*      visit        */
-    --green: #000;      /*      events       */
-    --blue: #000;       /*      exhibition   */
-    --purple: #000;     /*      explore      */
-    --orange: #000;     /*      get involved */
-    --red: #000;        /*      contact      */
-}
 
 * { box-sizing: border-box; padding: 0; }
 
