@@ -65,10 +65,14 @@ section#hero {
     height: 60vh;
     background: #ddd;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
     justify-content: center;
     gap: 20px;
+}
+
+section#hero section {
+display: flex;
+    flex-direction: column;
+    align-content: flex-start;
 }
 section#hero h2,
 section#hero p,
