@@ -82,7 +82,8 @@ img.logo {
 /**********     HEADER#HEADER-MOBILE    ***********/
 header.header-mobile,
 header.header-mobile section {
-    margin: 5px 0;
+    margin: 0;
+    padding: 0;
     position: fixed;
     background: var(--primary);
 }
@@ -91,7 +92,7 @@ header.header-mobile section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
+    width: 97%;
 }
 
 header.header-mobile section a,
@@ -117,14 +118,14 @@ header.header-mobile nav {
 header.header-mobile nav div#toggle-element {
     background: var(--primary);
     position: fixed;
-    margin: 90px 0;
-    width: 95%;
+    margin: 80px 0;
+    width: 97%;
 }
 
 header.header-mobile nav div#toggle-element a {
     display: block;
     width: 100%;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     text-decoration: none;
     color: var(--offWhite);
@@ -153,20 +154,24 @@ section#hero {
     height: 50vh;
     align-self: center;
     justify-self: center;
-    padding: 50px 50px 0 0;
+    padding: 30px 50px 0 0;
+    background: url("https://cdn.pixabay.com/photo/2015/11/17/18/59/architecture-1048092_1280.jpg") center no-repeat;
+    background-size: cover;
 }
 
 section#hero section {
     display: flex;
     flex-direction: column;
-    margin: 170px 0;
+    padding-left: 10px;
+    padding-right: 200px;
 }
 
 section#hero section h2 {
-
+color: var(--white);
 }
 
 section#hero section p {
+    color: var(--white);
     padding: 0 0 10px 0;
 }
 
@@ -310,7 +315,7 @@ footer section div p {
 
 button {
     outline: none;
-    border:none;
+    border: none;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: .2em;
@@ -322,7 +327,7 @@ button {
 
 
 .btn-primary {
-    background: var(--primary);
+    background: var(--tertiary);
     color: var(--white);
 }
 
