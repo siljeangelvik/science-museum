@@ -1,0 +1,339 @@
+
+:root {
+    --primary: #4c5a69;
+    --secondary: #ac92ea;
+    --tertiary: orange;
+    --white: #fff;
+    --offWhite: #ddd;
+
+    /* 1 */
+    --radicalRed: #FF355E;
+    /* 2 */
+    --wildWatermelon: #FD5B78;
+    /* 3 */
+    --outrageousOrange: #FF6037;
+    /* 4 */
+    --atmoicTangerine: #FF9966;
+    /* 5 */
+    --neonCarrot: #FF9933;
+    /* 6 */
+    --sunglow: #FFCC33;
+    /* 7 */
+    --laserLemon: #FFFF66;
+    /* 8 */
+    --unmellowYellow: #FFFF66;
+    /* 9  */
+    --electricLime: #CCFF00;
+    /* 10 */
+    --screaminGreen: #66FF66;
+    /* 11 */
+    --magicMint: #AAF0D1;
+    /* 12 */
+    --blizzardBlue: #50BFE6;
+    /* 13 */
+    --shockingPink: #FF6EFF;
+    /* 14 */
+    --razzleDazzleRose: #EE34D2;
+    /* 15 */
+    --hotMagneta: #FF00CC;
+    /* 16 */
+    --purplePizzazz: #FF00CC;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    min-width: 300px;
+    margin: 0 auto; /* Center align once max-width is reached */
+    padding: 5px 10px;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "h1"
+    "hero"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+}
+
+
+/* @formatter:off */
+header { grid-area: header; }
+section#h1 { grid-area: h1; }
+section#hero { grid-area: hero; }
+nav#nav-secondary { grid-area: nav; }
+main { grid-area: main; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+/* @formatter:on */
+
+
+header > a,
+footer > a,
+img.logo {
+    width: 80px;
+}
+
+/**********     HEADER#HEADER-MOBILE    ***********/
+header.header-mobile,
+header.header-mobile section {
+    margin: 5px 0;
+    position: fixed;
+    background: var(--primary);
+}
+
+header.header-mobile section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+header.header-mobile section a,
+header.header-mobile section span {
+    flex: 1;
+}
+
+header.header-mobile section span {
+    text-align: right;
+    padding-right: 15px;
+    color: var(--white);
+}
+
+header.header-desktop,
+div#toggle-element {
+    display: none;
+}
+
+header.header-mobile nav {
+    width: 100%;
+}
+
+header.header-mobile nav div#toggle-element {
+    background: var(--primary);
+    position: fixed;
+    margin: 90px 0;
+    width: 95%;
+}
+
+header.header-mobile nav div#toggle-element a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--offWhite);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--white);
+}
+
+header.header-mobile nav div#toggle-element a:hover {
+    background: var(--tertiary);
+    color: var(--primary);
+    transition: .5s linear;
+}
+
+header.header-mobile nav div#toggle-element a.active {
+    background: var(--tertiary);
+    color: var(--primary);
+}
+
+/**********     SECTION#H1    ***********/
+section#h1 {
+
+}
+
+/**********     SECTION#HERO    ***********/
+section#hero {
+    height: 50vh;
+    align-self: center;
+    justify-self: center;
+    padding: 50px 50px 0 0;
+}
+
+section#hero section {
+    display: flex;
+    flex-direction: column;
+    margin: 170px 0;
+}
+
+section#hero section h2 {
+
+}
+
+section#hero section p {
+    padding: 0 0 10px 0;
+}
+
+section#hero section div {
+    display: flex;
+    gap: 20px;
+}
+
+section#hero section div button:first-child {
+    flex: 2 60%;
+}
+
+section#hero section div button:first-child {
+    flex: 1 40%;
+}
+
+/**********     NAV#NAV-SECONDARY    ***********/
+nav#nav-secondary {
+
+}
+
+nav#nav-secondary section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+nav#nav-secondary section div {
+    width: 170px;
+    flex: 1 auto;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid var(--primary);
+}
+
+nav#nav-secondary section div > a {
+}
+
+nav#nav-secondary section div > a i {
+    color: var(--primary);
+}
+
+nav#nav-secondary section div > p {
+    padding-top: 10px;
+}
+
+nav#nav-secondary section div > p a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--primary);
+    font-size: 14px;
+}
+
+/**********     MAIN    ***********/
+main {
+
+}
+
+main section:first-child {
+    color: var(--white);
+    background: var(--primary);
+    width: 70%;
+}
+
+main section h2 {
+    padding: 10px;
+}
+
+main section:last-child {
+
+}
+
+/**********     ASIDE    ***********/
+aside {
+
+}
+
+aside section:first-child {
+    color: var(--white);
+    background: var(--primary);
+    width: 70%;
+}
+
+aside section h2 {
+    padding: 10px;
+}
+
+aside section:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+aside section div {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+aside section div a {
+    padding: 20px;
+    color: var(--primary);
+}
+
+/**********     FOOTER    ***********/
+footer {
+    background: var(--primary);
+    color: var(--white);
+}
+
+footer section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+footer section div {
+    width: 300px;
+    flex: 1 auto;
+    padding: 20px;
+}
+
+footer section div h3 {
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+footer section div p {
+    letter-spacing: .1em;
+    color: var(--offWhite);
+}
+
+
+/**********     DIVERSE    ***********/
+
+button {
+    outline: none;
+    border:none;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .2em;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+}
+
+.btn-tertiary {
+    background: transparent;
+    color: var(--white);
+    border: 3px solid var(--white);
+}

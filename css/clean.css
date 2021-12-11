@@ -69,7 +69,7 @@ header {
             90deg,
             #ff6eff 15.4%,
             #50bfe6 33.1%,
-            #ffff66 63.2%,
+            #AAF0D1 50%,
             #ff9966 87.1%,
             #fd5b78 100%);
     );
@@ -80,7 +80,7 @@ section#h1 {
             0deg,
             #fd5b78 7.7%,
             #ff9966 23.1%,
-            #ffff66 46.2%,
+            #AAF0D1 50%,
             #50bfe6 77%,
             #ff6eff 84.7%
     );
@@ -127,7 +127,6 @@ h1 {
     padding: 0 10px;
     color: var(--white);
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-
 }
 
 h1,
@@ -246,7 +245,7 @@ button {
             140deg,
             #ff6eff 15.4%,
             #50bfe6 33.1%,
-            #ffff66 63.2%,
+            #AAF0D1 50%,
             #ff9966 87.1%,
             #fd5b78 100%);
     cursor: pointer;
@@ -278,21 +277,26 @@ header nav.nav-desktop a {
     padding: 8px;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.25);
     border-radius: 12px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     text-transform: uppercase;
     font-weight: bolder;
     letter-spacing: .2em;
     color: var(--white);
-    text-shadow: 1px 0 0 #444, 0 -1px 0 #444, 0 1px 0 #444, -1px 0 0 #444;
     text-align: center;
 }
+
+/*
 header nav a:hover,
 header nav a.active {
     background: transparent;
     transition: .6s linear;
 }
+
+ */
+
+
 #toggle-button {
     display: none;
 }
@@ -399,22 +403,12 @@ section#hero {
     background-size: cover;
 }
 
-nav#nav-secondary {
-    grid-area: nav;
-}
-
-main {
-    grid-area: main;
-}
-
-aside {
-    grid-area: aside;
-}
-
-footer {
-    grid-area: footer;
-}
-
+/* @formatter:off */
+nav#nav-secondary { grid-area: nav; }
+main { grid-area: main; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+/* @formatter:on */
 
 /**** MOBILE ****/
 @media (max-width: 920px) {
@@ -612,7 +606,7 @@ h4 {
 
 a.btn-gradient {
     border-radius: 50%;
-display: block;
+    display: block;
     max-width: 84px;
     max-height: 84px;
 }
@@ -638,6 +632,4 @@ p {
         display: grid;
         margin: 0 auto;
     }
-
-
 }
