@@ -15,31 +15,7 @@
     src: url("../assets/fonts/lemon_milk/LEMONMILK-Light.otf") format("woff2");
     font-weight: 300;  }
 
-:root {
-    --primary: #4c5a69;
-    --secondary: #ac92ea;
-    --tertiary: orange;
-    --white: #fff;
-    --offWhite: #ddd;
-
-    /* 1 */ --radicalRed: #FF355E;
-    /* 2 */  --wildWatermelon: #FD5B78;
-    /* 3 */  --outrageousOrange: #FF6037;
-    /* 4 */   --atmoicTangerine: #FF9966;
-    /* 5 */  --neonCarrot: #FF9933;
-    /* 6 */  --sunglow: #FFCC33;
-    /* 7 */  --laserLemon: #FFFF66;
-    /* 8 */  --unmellowYellow: #FFFF66;
-    /* 9  */  --electricLime: #CCFF00;
-    /* 10 */   --screaminGreen: #66FF66;
-    /* 11 */  --magicMint: #AAF0D1;
-    /* 12 */  --blizzardBlue: #50BFE6;
-    /* 13 */  --shockingPink: #FF6EFF;
-    /* 14 */  --razzleDazzleRose: #EE34D2;
-    /* 15 */  --hotMagneta: #FF00CC;
-    /* 16 */   --purplePizzazz: #FF00CC;}
-    /*
-
+/*
 background: linear-gradient(
     0deg,
     #ff355e,
@@ -619,7 +595,7 @@ header nav > * {
             #ff355e 100%
     );
 }
-
+/*
 aside section div a {
     background-image: linear-gradient(
             90deg,
@@ -637,8 +613,9 @@ aside section div a {
             #ff6037 84.4%,
             #fd5b78 92.4%,
             #ff355e 100%);
-    background-clip: text;
 }
+*/
+
 aside section div a i  {
     background-image: linear-gradient(
             90deg,
