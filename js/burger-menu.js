@@ -4,5 +4,5 @@ let toggle = true;
 
 toggleButton.addEventListener("click", () => {
     toggle = !toggle;
-    toggleableElement.style.display = toggle ? "block" : "none";
+    toggleableElement.style.display = toggle ? "flex" : "none";
 });
