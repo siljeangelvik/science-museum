@@ -169,6 +169,7 @@ section#hero {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -176,9 +177,10 @@ section#hero {
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(5px);
         background-color: rgba(111, 111, 111, 0.3);
-        max-width: 460px;
-        height: 35%;
+        max-width: 100%;
         padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -198,10 +200,11 @@ section#hero section p {
 section#hero section div {
     display: flex;
     gap: 10px;
+    padding: 10px 0 15px 0;
 }
 
 section#hero section div button:first-child {
-    flex: 2 65%;
+    flex: 1 65%;
 }
 
 section#hero section div button:first-child {
@@ -449,12 +452,11 @@ footer section {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px 20px;
 }
 
 footer section div {
-    max-width: 300px;
-    flex: 1 auto;
+    padding: 10px 20px;
+    flex: 1 100%;
 }
 
 footer section div h3 {
@@ -478,16 +480,18 @@ footer section div p {
     color: var(--offWhite);
 }
 
-footer > div,
-footer > div > p {
-    width: 100%;
-    text-align: center;
+footer h3,
+footer p {
+    text-align: left;
     font-size: 11px;
     font-family: fontLight, sans-serif;
 }
 
+footer > div > p {
+    text-align: center;
+}
+
 footer section div button {
-    width: 50%;
     color: var(--greenLizard);
     border: 3px solid var(--greenLizard);
     background: transparent;
@@ -506,9 +510,9 @@ button {
     border: none;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: .2em;
+    letter-spacing: .1em;
     padding: 10px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bolder;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
@@ -516,7 +520,8 @@ button {
 
 .btn-primary {
     background: var(--greenLizard);
-    color: var(--white);
+    color: var(--primary);
+    border: 3px solid var(--greenLizard);
 }
 
 .btn-secondary {
@@ -526,9 +531,9 @@ button {
 }
 
 .btn-tertiary {
-    background: transparent;
-    color: var(--white);
-    border: 3px solid var(--white);
+    background: var(--primary);
+    color: var(--greenLizard);
+    border: 3px solid var(--primary);
 }
 
 .fa-heart {
@@ -553,6 +558,33 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
+/***************    TABLET    ***************/
+@media (min-width: 640px) {
+    body {
+        max-width: 980px;
+    }
+
+    /****************   HEADER#HEADER-DESKTOP    *******************/
+    /****************   SECTION#h1    *******************/
+    /****************   SECTION#HERO    *******************/
+    /* @formatter:off */
+    section#hero { height: 70vh; }
+    section#hero section { max-width: 60%; }
+}
+
+
+/****************   NAV#NAV-SECONDARY   *******************/
+/****************   MAIN    *******************/
+/****************   ASIDE    *******************/
+/****************   FOOTER    *******************/
+
+footer section div {
+    flex: 1 10%;
+}
+
+/* @formatter:on */
 
 
 /***************    DESKTOP    ***************/
@@ -592,30 +624,15 @@ button {
 
     /****************   SECTION#HERO    *******************/
     section#hero {
-
-    }
-
-    section#hero {
         height: 70vh;
-        background-size: cover;
     }
 
     section#hero section {
-        width: 500px;
-        padding-left: 10px;
+        max-width: 40%;
     }
 
     section#hero section h2#hero-h1 {
         letter-spacing: .4em;
-        font-family: fontBold, sans-serif;
-    }
-
-    section#hero section p {
-
-    }
-
-    section#hero section div {
-
     }
 
 
