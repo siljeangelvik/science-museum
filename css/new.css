@@ -160,7 +160,7 @@ section#h1 {
 
 /**********     SECTION#HERO    ***********/
 section#hero {
-    height: 50vh;
+    height: 60vh;
     background: url("../assets/images/roberto-nickson-396152.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
@@ -173,7 +173,7 @@ section#hero {
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(5px);
         background-color: rgba(111, 111, 111, 0.3);
-        min-width: 300px;
+        max-width: 450px;
     }
 }
 
@@ -221,7 +221,7 @@ nav#nav-secondary section {
 
 
 nav#nav-secondary section div {
-    width: 100px;
+    width: 80px;
     flex: 1 25%;
     padding: 10px;
     display: flex;
@@ -234,8 +234,8 @@ nav#nav-secondary section div {
 nav#nav-secondary section div > a {
     background: var(--primary);
     border: 3px solid var(--white);
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -343,20 +343,18 @@ aside section h2 {
 aside section:last-child {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
     margin: 30px 0;
 }
 
 aside section div {
-    flex: 1;
+    flex: 1 auto;
     text-align: center;
     justify-content: center;
 }
 
 aside section div a {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
