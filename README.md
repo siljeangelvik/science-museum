@@ -37,3 +37,14 @@ be easy to use on a variety of devices
 ! INFO !
 * You have been provided media assets in the form of text and images (see link under Resources). 
 It is for you to decide how these will be used, in terms of presentation, hierarchy, and design.
+
+
+
+
+
+
+
+**RESOURCES**
+
+* Perfect Circle <br>
+https://blog.hubspot.com/website/css-border-radius-circle

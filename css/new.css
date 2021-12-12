@@ -1,3 +1,19 @@
+/* @formatter:off */
+@font-face {  font-family: "fontBold";
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Bold.otf") format("otf");
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Bold.otf") format("woff2");  }
+@font-face {  font-family: "fontMedium";
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Medium.otf") format("otf");
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Medium.otf") format("woff2");
+    font-weight: 500;  }
+@font-face {  font-family: "fontRegular";
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Regular.otf") format("otf");
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Regular.otf") format("woff2");
+    font-weight: 400;  }
+@font-face {  font-family: "fontLight";
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Light.otf") format("otf");
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Light.otf") format("woff2");
+    font-weight: 300;  }
 
 :root {
     --primary: #4c5a69;
@@ -6,37 +22,21 @@
     --white: #fff;
     --offWhite: #ddd;
 
-    /* 1 */
     --radicalRed: #FF355E;
-    /* 2 */
     --wildWatermelon: #FD5B78;
-    /* 3 */
     --outrageousOrange: #FF6037;
-    /* 4 */
     --atmoicTangerine: #FF9966;
-    /* 5 */
     --neonCarrot: #FF9933;
-    /* 6 */
     --sunglow: #FFCC33;
-    /* 7 */
     --laserLemon: #FFFF66;
-    /* 8 */
     --unmellowYellow: #FFFF66;
-    /* 9  */
     --electricLime: #CCFF00;
-    /* 10 */
     --screaminGreen: #66FF66;
-    /* 11 */
     --magicMint: #AAF0D1;
-    /* 12 */
     --blizzardBlue: #50BFE6;
-    /* 13 */
     --shockingPink: #FF6EFF;
-    /* 14 */
     --razzleDazzleRose: #EE34D2;
-    /* 15 */
     --hotMagneta: #FF00CC;
-    /* 16 */
     --purplePizzazz: #FF00CC;
 }
 
@@ -49,6 +49,7 @@ body {
     font-family: Roboto, sans-serif;
     min-width: 300px;
     margin: 0 auto; /* Center align once max-width is reached */
+    overflow-x: hidden;
     padding: 5px 10px;
     display: grid;
     grid-template-areas:
@@ -63,13 +64,13 @@ body {
 
 
 /* @formatter:off */
-header { grid-area: header; }
-section#h1 { grid-area: h1; }
-section#hero { grid-area: hero; }
-nav#nav-secondary { grid-area: nav; }
-main { grid-area: main; }
-aside { grid-area: aside; }
-footer { grid-area: footer; }
+header { grid-area: header;     padding: 5px 10px;}
+h1#h1 { grid-area: h1;     padding: 5px 10px;}
+section#hero { grid-area: hero;     padding: 5px 10px;}
+nav#nav-secondary { grid-area: nav;     padding: 5px 10px;}
+main { grid-area: main;     padding: 5px 10px;}
+aside { grid-area: aside;     padding: 5px 10px;}
+footer { grid-area: footer;     padding: 5px 10px;}
 /* @formatter:on */
 
 
@@ -80,10 +81,19 @@ img.logo {
 }
 
 /**********     HEADER#HEADER-MOBILE    ***********/
-header.header-mobile,
-header.header-mobile section {
+header.header-mobile {
+    min-width: 300px;
+    overflow-x: hidden;
+    display: flex;
     margin: 0;
     padding: 0;
+    top: 0;
+    left: 0;
+    width: 90%;
+}
+
+header.header-mobile,
+header.header-mobile section {
     position: fixed;
     background: var(--primary);
 }
@@ -92,7 +102,7 @@ header.header-mobile section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 97%;
+    min-width: 100%;
 }
 
 header.header-mobile section a,
@@ -102,8 +112,8 @@ header.header-mobile section span {
 
 header.header-mobile section span {
     text-align: right;
-    padding-right: 15px;
     color: var(--white);
+    padding: 0 20px;
 }
 
 header.header-desktop,
@@ -146,46 +156,44 @@ header.header-mobile nav div#toggle-element a.active {
 
 /**********     SECTION#H1    ***********/
 section#h1 {
-
 }
 
 /**********     SECTION#HERO    ***********/
 section#hero {
     height: 50vh;
-    align-self: center;
-    justify-self: center;
-    padding: 30px 50px 0 0;
-    background: url("https://cdn.pixabay.com/photo/2015/11/17/18/59/architecture-1048092_1280.jpg") center no-repeat;
+    background: url("../assets/images/scott-webb-102825.jpg") center bottom no-repeat;
     background-size: cover;
 }
 
 section#hero section {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    padding-right: 200px;
+    width: 400px;
+    padding: 250px 10px;
 }
 
 section#hero section h2 {
-color: var(--white);
+    color: var(--white);
+    font-family: fontBold, sans-serif;
+    letter-spacing: .4em;
 }
 
 section#hero section p {
+    line-height: 1.7em;
+    letter-spacing: .07em;
     color: var(--white);
-    padding: 0 0 10px 0;
 }
 
 section#hero section div {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    padding: 10px 0;
 }
 
 section#hero section div button:first-child {
-    flex: 2 60%;
+    flex: 2 65%;
 }
 
 section#hero section div button:first-child {
-    flex: 1 40%;
+    flex: 1 35%;
 }
 
 /**********     NAV#NAV-SECONDARY    ***********/
@@ -196,23 +204,37 @@ nav#nav-secondary {
 nav#nav-secondary section {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 10px;
+    gap: 10px;
+    margin-top: -35px;
 }
 
+
 nav#nav-secondary section div {
-    width: 170px;
+    width: 140px;
     flex: 1 auto;
-    padding: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    border: 3px solid var(--primary);
 }
 
 nav#nav-secondary section div > a {
+    background: var(--primary);
+    border: 3px solid var(--white);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 nav#nav-secondary section div > a i {
-    color: var(--primary);
+    width: 100%;
+    color: var(--white);
 }
 
 nav#nav-secondary section div > p {
@@ -227,57 +249,130 @@ nav#nav-secondary section div > p a {
     font-size: 14px;
 }
 
+nav#nav-secondary section div > a:hover {
+    background: rgb(241, 111, 8);
+    background: radial-gradient(circle,
+    rgba(241, 111, 8, 1) 0%,
+    rgba(255, 153, 51, 1) 45%,
+    rgba(255, 211, 0, 1) 100%,
+    rgba(232, 255, 0, 1) 100%);
+    border: 3px solid transparent;
+    transition: .5s linear;
+}
+
 /**********     MAIN    ***********/
 main {
-
+    margin-bottom: 100px;
 }
 
 main section:first-child {
     color: var(--white);
     background: var(--primary);
-    width: 70%;
+    padding: 0 10px;
 }
 
 main section h2 {
     padding: 10px;
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .2em;
 }
 
 main section:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding: 20px;
+    margin-bottom: 5px;
+    background: url("../assets/images/roberto-nickson-396152.jpg")  center center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
 
+main section div {
+    width: 340px;
+    height: 160px;
+    overflow-y: scroll;
+    flex: 1 auto;
+    padding: 10px;
+
+    border: 3px solid var(--primary);
+    background: var(--white);
+}
+
+main section h3 {
+    font-family: fontRegular, sans-serif;
+    letter-spacing: .15em;
+    background: var(--tertiary);
+    color: var(--white);
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+main section div p {
+    letter-spacing: .1em;
+    color: var(--primary);
 }
 
 /**********     ASIDE    ***********/
 aside {
-
 }
 
 aside section:first-child {
     color: var(--white);
     background: var(--primary);
-    width: 70%;
 }
 
 aside section h2 {
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .2em;
     padding: 10px;
 }
 
 aside section:last-child {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
+    margin: 30px 0;
 }
 
 aside section div {
     flex: 1;
-    padding: 20px;
     text-align: center;
     justify-content: center;
 }
 
 aside section div a {
-    padding: 20px;
-    color: var(--primary);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 3px solid var(--white);
+    background: var(--primary);
+    color: var(--white);
+}
+
+aside section div a i {
+    width: 100%;
+}
+
+aside section div a:hover {
+    background: rgb(241, 111, 8);
+    background: radial-gradient(circle,
+    rgba(241, 111, 8, 1) 0%,
+    rgba(255, 153, 51, 1) 45%,
+    rgba(255, 211, 0, 1) 100%,
+    rgba(232, 255, 0, 1) 100%);
+    border: 3px solid transparent;
+    transition: .5s linear;
 }
 
 /**********     FOOTER    ***********/
@@ -289,20 +384,26 @@ footer {
 footer section {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
 }
 
 footer section div {
-    width: 300px;
+    width: 330px;
     flex: 1 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 footer section div h3 {
+    font-family: fontRegular, sans-serif;
     font-weight: bolder;
     text-transform: uppercase;
-    letter-spacing: .2em;
+    letter-spacing: .15em;
+}
+
+footer section div p a {
+    color: var(--tertiary);
+    text-decoration: underline;
 }
 
 footer section div p {
@@ -310,9 +411,29 @@ footer section div p {
     color: var(--offWhite);
 }
 
+footer > div,
+footer > div > p {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    font-family: fontLight, sans-serif;
+}
+
+footer section div button {
+    width: 50%;
+    color: var(--tertiary);
+    border: 3px solid var(--tertiary);
+    background: transparent;
+}
+
+footer section div button:hover {
+    background: var(--tertiary);
+    border: 3px solid transparent;
+    color: var(--primary);
+    transition: .4s linear;
+}
 
 /**********     DIVERSE    ***********/
-
 button {
     outline: none;
     border: none;
@@ -322,9 +443,8 @@ button {
     padding: 10px;
     font-size: 15px;
     font-weight: bolder;
-    border-radius: 5px;
+    border-radius: 8px;
 }
-
 
 .btn-primary {
     background: var(--tertiary);
@@ -341,4 +461,125 @@ button {
     background: transparent;
     color: var(--white);
     border: 3px solid var(--white);
+}
+
+.fa-heart {
+    font-size: 13px;
+    background: rgb(241, 111, 8);
+    background: radial-gradient(circle,
+    rgba(241, 111, 8, 1) 0%,
+    rgba(255, 153, 51, 1) 45%,
+    rgba(255, 211, 0, 1) 100%,
+    rgba(232, 255, 0, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/***************    DESKTOP    ***************/
+@media (min-width: 1024px) {
+    body {
+        max-width: 1920px;
+        display: grid;
+        margin: 0 auto;
+        overflow-x: hidden;
+        grid-template-columns: 80px auto;
+        grid-template-rows: 75px auto;
+        grid-template-areas:
+    "header   header  header  header"
+    "h1       hero    hero    hero"
+    "h1       nav     nav     aside"
+    "h1       main    main    aside"
+    "footer   footer  footer  footer";
+    }
+
+
+    /****************   HEADER#HEADER-DESKTOP    *******************/
+    /****************   SECTION#h1    *******************/
+    h1#h1 {
+        left: 0;
+        margin-left: -10px;
+        padding: 5px 10px;
+        width: 90px;
+        writing-mode: vertical-lr;
+        color: var(--white);
+        background: var(--primary);
+    }
+
+    h1#h1 {
+        letter-spacing: .4em;
+        font-family: fontBold, sans-serif;
+    }
+
+    /****************   SECTION#HERO    *******************/
+    section#hero {
+
+    }
+
+    section#hero {
+        height: 70vh;
+        background: url("../assets/images/roberto-nickson-396152.jpg") center center no-repeat;
+        background-size: cover;
+    }
+
+    section#hero section {
+        width: 500px;
+        padding-left: 10px;
+    }
+
+    section#hero section h2#hero-h1 {
+        letter-spacing: .4em;
+        font-family: fontBold, sans-serif;
+    }
+
+    section#hero section p {
+
+    }
+
+    section#hero section div {
+
+    }
+
+
+    /****************   NAV#NAV-SECONDARY   *******************/
+    /****************   MAIN    *******************/
+
+    /****************   ASIDE    *******************/
+    aside {
+
+    }
+
+    aside section:first-child {
+    }
+
+    aside section h2 {
+        text-align: center;
+        padding: 5px;
+    }
+
+    aside section:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    aside section div {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    aside section div a {
+        padding: 20px;
+    }
+
+    /****************   FOOTER    *******************/
+    footer {
+        margin-left: -10px;
+    }
+
+
 }
