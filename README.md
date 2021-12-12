@@ -48,3 +48,6 @@ It is for you to decide how these will be used, in terms of presentation, hierar
 
 * Perfect Circle <br>
 https://blog.hubspot.com/website/css-border-radius-circle
+
+* Hero Overlay <br>
+  https://css-tricks.com/almanac/properties/b/backdrop-filter/

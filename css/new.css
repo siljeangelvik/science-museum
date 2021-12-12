@@ -161,31 +161,42 @@ section#h1 {
 /**********     SECTION#HERO    ***********/
 section#hero {
     height: 50vh;
-    background: url("../assets/images/scott-webb-102825.jpg") center bottom no-repeat;
+    background: url("../assets/images/roberto-nickson-396152.jpg") center center no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-section#hero section {
-    width: 400px;
-    padding: 250px 10px;
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    section#hero section{
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(5px);
+        background-color: rgba(111, 111, 111, 0.3);
+        width: 450px;
+    }
 }
 
 section#hero section h2 {
     color: var(--white);
     font-family: fontBold, sans-serif;
     letter-spacing: .4em;
+    padding: 10px;
+
 }
 
 section#hero section p {
     line-height: 1.7em;
     letter-spacing: .07em;
     color: var(--white);
+    padding: 10px;
+
 }
 
 section#hero section div {
     display: flex;
     gap: 10px;
-    padding: 10px 0;
+    padding:20px 10px;
 }
 
 section#hero section div button:first-child {
@@ -280,41 +291,37 @@ main section h2 {
 main section:last-child {
     display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 30px;
     padding: 20px;
     margin-bottom: 5px;
-    background: url("../assets/images/roberto-nickson-396152.jpg")  center center no-repeat;
-    background-size: cover;
     height: 100%;
+    background: var(--primary);
 }
 
 main section div {
     width: 340px;
-    height: 160px;
-    overflow-y: scroll;
+    #height: 400px;
     flex: 1 auto;
     padding: 10px;
-
-    border: 3px solid var(--primary);
-    background: var(--white);
 }
 
 main section h3 {
     font-family: fontRegular, sans-serif;
     letter-spacing: .15em;
-    background: var(--tertiary);
+    background: var(--primary);
+    border-radius: 10px;
     color: var(--white);
     margin: 0;
     width: 100%;
-    padding: 10px;
     font-weight: bolder;
     text-transform: uppercase;
 }
 
 
 main section div p {
-    letter-spacing: .1em;
-    color: var(--primary);
+    line-height: 1.5em;
+    letter-spacing: .13em;
+    color: var(--white);
 }
 
 /**********     ASIDE    ***********/
@@ -475,7 +482,6 @@ button {
     -webkit-text-fill-color: transparent;
 }
 
-
 /***************    DESKTOP    ***************/
 @media (min-width: 1024px) {
     body {
@@ -518,7 +524,6 @@ button {
 
     section#hero {
         height: 70vh;
-        background: url("../assets/images/roberto-nickson-396152.jpg") center center no-repeat;
         background-size: cover;
     }
 
@@ -543,10 +548,16 @@ button {
 
     /****************   NAV#NAV-SECONDARY   *******************/
     /****************   MAIN    *******************/
+    main section:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin-bottom: 5px;
+        min-height: 60vh;
+    }
 
     /****************   ASIDE    *******************/
     aside {
-
     }
 
     aside section:first-child {
