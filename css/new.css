@@ -109,7 +109,7 @@ header.header-mobile section {
     min-width: 100%;
 }
 
-header.header-mobile section a,
+header.header-mobile section > a,
 header.header-mobile section span {
     flex: 1;
 }
@@ -136,7 +136,7 @@ header.header-mobile nav div#toggle-element {
     width: 100%;
 }
 
-header.header-mobile nav div#toggle-element a {
+header.header-mobile nav div#toggle-element > a {
     display: block;
     width: 100%;
     padding: 35px;
@@ -150,15 +150,37 @@ header.header-mobile nav div#toggle-element a {
     border-bottom: 2px solid var(--white);
 }
 
-header.header-mobile nav div#toggle-element a:hover {
+header.header-mobile nav div#toggle-element > a:hover {
     background: var(--greenLizard);
     color: var(--primary);
     transition: .5s linear;
 }
 
-header.header-mobile nav div#toggle-element a.active {
+header.header-mobile nav div#toggle-element > a.active {
     background: var(--primary);
     color: var(--greenLizard);
+}
+
+header.header-mobile nav div#toggle-element p {
+    text-align: center;
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .2em;
+    color: var(--offWhite);
+    text-transform: uppercase;
+
+}
+
+header.header-mobile nav div#toggle-element address {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 35px;
+}
+
+header.header-mobile nav div#toggle-element > address a {
+    text-align: center;
+    color: var(--greenLizard);
+    text-decoration: underline;
+    letter-spacing: .13em;
 }
 
 /**********     SECTION#H1    ***********/
@@ -168,7 +190,7 @@ section#h1 {
 /**********     SECTION#HERO    ***********/
 section#hero {
     height: 70vh;
-    background: url("../assets/images/roberto-nickson-396152.jpg") center center no-repeat;
+    background: url("../assets/images/william-bout-264826.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -179,12 +201,13 @@ section#hero {
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     section#hero section {
         -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(5px);
-        background-color: rgba(111, 111, 111, 0.3);
+        backdrop-filter: blur(6px);
+        background-color: rgba(000, 000, 000, 0.45);
         max-width: 100%;
         padding: 10px 20px;
         display: flex;
         flex-direction: column;
+        border-radius: 10px;
     }
 }
 
@@ -304,10 +327,9 @@ main section:first-child {
 }
 
 main section h2 {
-    padding: 10px 20px;
-    font-size: 20px;
     font-family: fontMedium, sans-serif;
     letter-spacing: .2em;
+    padding: 10px 20px;
 }
 
 main section:last-child {
@@ -455,11 +477,12 @@ footer {
 footer section {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 footer section div {
-    padding: 10px 20px;
+    max-width: 300px;
+    padding: 10px;
     flex: 1 100%;
 }
 
@@ -567,7 +590,6 @@ button {
 /***************    TABLET    ***************/
 @media (min-width: 640px) {
     body {
-        max-width: 980px;
     }
 
     /****************   HEADER#HEADER-DESKTOP    *******************/
@@ -583,9 +605,15 @@ button {
 /****************   MAIN    *******************/
 /****************   ASIDE    *******************/
 /****************   FOOTER    *******************/
-
-footer section div {
-    flex: 1 10%;
+footer {
+    display: flex;
+    flex-direction: column;
+}
+footer section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
 }
 
 /* @formatter:on */
