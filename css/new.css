@@ -30,7 +30,9 @@
     --sunglow: #FFCC33;
     --laserLemon: #FFFF66;
     --unmellowYellow: #FFFF66;
+    --yellowSunshine: #FFF700;
     --electricLime: #CCFF00;
+    --greenLizard: #A7F432;
     --screaminGreen: #66FF66;
     --magicMint: #AAF0D1;
     --blizzardBlue: #50BFE6;
@@ -46,7 +48,8 @@
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 16px;
     min-width: 300px;
     margin: 0 auto; /* Center align once max-width is reached */
     overflow-x: hidden;
@@ -160,7 +163,7 @@ section#h1 {
 
 /**********     SECTION#HERO    ***********/
 section#hero {
-    height: 60vh;
+    height: 70vh;
     background: url("../assets/images/roberto-nickson-396152.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
@@ -169,34 +172,32 @@ section#hero {
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    section#hero section{
+    section#hero section {
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(5px);
         background-color: rgba(111, 111, 111, 0.3);
-        max-width: 450px;
+        max-width: 460px;
+        height: 35%;
+        padding: 10px 20px;
     }
 }
 
 section#hero section h2 {
     color: var(--white);
     font-family: fontBold, sans-serif;
-    letter-spacing: .4em;
-    padding: 10px;
-
+    letter-spacing: .2em;
 }
 
 section#hero section p {
     line-height: 1.7em;
     letter-spacing: .07em;
     color: var(--white);
-    padding: 10px;
 
 }
 
 section#hero section div {
     display: flex;
     gap: 10px;
-    padding:20px 10px;
 }
 
 section#hero section div button:first-child {
@@ -232,10 +233,9 @@ nav#nav-secondary section div {
 }
 
 nav#nav-secondary section div > a {
-    background: var(--primary);
     border: 3px solid var(--white);
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -244,19 +244,33 @@ nav#nav-secondary section div > a {
     cursor: pointer;
 }
 
+/* @formatter:off */
+nav#nav-secondary section div:nth-child(1) > a { background-color: var(--shockingPink); }
+nav#nav-secondary section div:nth-child(2) > a { background-color: var(--blizzardBlue); }
+nav#nav-secondary section div:nth-child(3) > a { background-color: var(--greenLizard); }
+nav#nav-secondary section div:nth-child(4) > a { background-color: var(--yellowSunshine); }
+nav#nav-secondary section div:nth-child(5) > a { background-color: var(--sunglow); }
+nav#nav-secondary section div:nth-child(6) > a { background-color: var(--atmoicTangerine); }
+nav#nav-secondary section div:nth-child(7) > a { background-color: var(--wildWatermelon); }
+/* @formatter:on */
+
+
 nav#nav-secondary section div > a i {
     width: 100%;
+    font-size: 22px;
     color: var(--white);
 }
 
 nav#nav-secondary section div > p {
     padding-top: 10px;
+    font-size: 16px;
 }
 
 nav#nav-secondary section div > p a {
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: .1em;
+    font-family: fontRegular, sans-serif;
+    letter-spacing: .02em;
     color: var(--primary);
     font-size: 14px;
 }
@@ -280,11 +294,11 @@ main {
 main section:first-child {
     color: var(--white);
     background: var(--primary);
-    padding: 0 10px;
 }
 
 main section h2 {
-    padding: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
     font-family: fontMedium, sans-serif;
     letter-spacing: .2em;
 }
@@ -292,30 +306,23 @@ main section h2 {
 main section:last-child {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px;
-    margin-bottom: 5px;
+    row-gap: 20px;
     height: 100%;
-    background: var(--primary);
+    background: var(--white);
 }
 
 main section div {
-    max-width: 300px;
-    #height: 400px;
     flex: 1 auto;
-    padding: 10px;
+    background: var(--primary);
+    padding: 10px 20px;
 }
 
 main section h3 {
     font-family: fontRegular, sans-serif;
     letter-spacing: .15em;
+    font-size: 16px;
+    color: var(--greenLizard);
     background: var(--primary);
-    border-radius: 10px;
-    color: var(--white);
-    margin: 0;
-    width: 100%;
-    font-weight: bolder;
-    text-transform: uppercase;
 }
 
 
@@ -337,7 +344,7 @@ aside section:first-child {
 aside section h2 {
     font-family: fontMedium, sans-serif;
     letter-spacing: .2em;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 aside section:last-child {
@@ -347,27 +354,77 @@ aside section:last-child {
 }
 
 aside section div {
-    flex: 1 auto;
+    flex: 1 25%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     justify-content: center;
 }
 
 aside section div a {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border: 3px solid var(--white);
-    background: var(--primary);
-    color: var(--white);
+    border: 3px solid transparent;
+    background: var(--white);
 }
 
+/* @formatter:off */
+aside section div:nth-child(1) a {
+    color: var(--white);
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285AEB 90%);
+    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    border-radius: 13px;
+    border:none;
+}
+
+
+aside section div:nth-child(2) a {
+    color: #eee;
+    background: #3b5998;
+    border: 3px solid #3b5998;
+    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
+aside section div:nth-child(3) a {
+    background-image: linear-gradient(45deg, #4481eb 0%, #04befe 100%);
+    /* color: transparent; /**/
+    /* -webkit-background-clip: text; /**/
+    /* background-clip: text; /**/
+    color: var(--white); /**/
+    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
+aside section div:nth-child(4) a {
+    color: var(--white);
+    background-color: #fe251b;
+    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
+
+/* @formatter:on */
 aside section div a i {
-    width: 100%;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 3px solid transparent;
+    background: transparent;
+    font-size: 22px;
 }
 
 aside section div a:hover {
@@ -377,6 +434,7 @@ aside section div a:hover {
     rgba(255, 153, 51, 1) 45%,
     rgba(255, 211, 0, 1) 100%,
     rgba(232, 255, 0, 1) 100%);
+    color: var(--white);
     border: 3px solid transparent;
     transition: .5s linear;
 }
@@ -391,24 +449,27 @@ footer section {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 footer section div {
     max-width: 300px;
     flex: 1 auto;
-    padding: 10px;
 }
 
 footer section div h3 {
     font-family: fontRegular, sans-serif;
+    letter-spacing: .15em;
+    background: var(--primary);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 16px;
     font-weight: bolder;
     text-transform: uppercase;
-    letter-spacing: .15em;
 }
 
 footer section div p a {
-    color: var(--tertiary);
+    color: var(--greenLizard);
     text-decoration: underline;
 }
 
@@ -427,13 +488,13 @@ footer > div > p {
 
 footer section div button {
     width: 50%;
-    color: var(--tertiary);
-    border: 3px solid var(--tertiary);
+    color: var(--greenLizard);
+    border: 3px solid var(--greenLizard);
     background: transparent;
 }
 
 footer section div button:hover {
-    background: var(--tertiary);
+    background: var(--greenLizard);
     border: 3px solid transparent;
     color: var(--primary);
     transition: .4s linear;
@@ -450,10 +511,11 @@ button {
     font-size: 15px;
     font-weight: bolder;
     border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
 .btn-primary {
-    background: var(--tertiary);
+    background: var(--greenLizard);
     color: var(--white);
 }
 
@@ -471,15 +533,27 @@ button {
 
 .fa-heart {
     font-size: 13px;
+
+    background: var(--greenLizard);
+    background: radial-gradient(circle,
+    #90e70c 0%,
+    #81ce0b 45%,
+    #72b60a 100%,
+    #639e08 100%);
+
+    /*
     background: rgb(241, 111, 8);
     background: radial-gradient(circle,
     rgba(241, 111, 8, 1) 0%,
     rgba(255, 153, 51, 1) 45%,
     rgba(255, 211, 0, 1) 100%,
     rgba(232, 255, 0, 1) 100%);
+    /**/
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 /***************    DESKTOP    ***************/
 @media (min-width: 1024px) {

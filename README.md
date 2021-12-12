@@ -46,8 +46,25 @@ It is for you to decide how these will be used, in terms of presentation, hierar
 
 **RESOURCES**
 
-* Perfect Circle <br>
+* **Perfect Circle** <br>
 https://blog.hubspot.com/website/css-border-radius-circle
 
-* Hero Overlay <br>
+* **Hero Overlay** <br>
   https://css-tricks.com/almanac/properties/b/backdrop-filter/
+
+* **Social Media Icons** <br>
+
+-- Instagram
+https://codepen.io/thomasrye/pen/VaRoYv
+<br>
+-- Facebook
+https://codepen.io/miduga/pen/RaXvdg
+<br>
+
+--Twitter
+  https://codepen.io/tomlutzenberger/pen/OwaoBG
+
+<br>
+--YouTube
+
+<br>
