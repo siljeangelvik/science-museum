@@ -98,6 +98,7 @@ header.header-mobile {
 header.header-mobile,
 header.header-mobile section {
     position: fixed;
+    z-index: 2;
     background: var(--primary);
 }
 
@@ -125,36 +126,39 @@ div#toggle-element {
 }
 
 header.header-mobile nav {
-    width: 100%;
+    max-width: 100%;
 }
 
 header.header-mobile nav div#toggle-element {
     background: var(--primary);
     position: fixed;
     margin: 80px 0;
-    width: 97%;
+    width: 100%;
 }
 
 header.header-mobile nav div#toggle-element a {
     display: block;
     width: 100%;
-    padding: 25px;
+    padding: 35px;
     text-align: center;
     text-decoration: none;
     color: var(--offWhite);
     text-transform: uppercase;
-    border-bottom: 1px solid var(--white);
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .2em;
+    line-height: 1.7em;
+    border-bottom: 2px solid var(--white);
 }
 
 header.header-mobile nav div#toggle-element a:hover {
-    background: var(--tertiary);
+    background: var(--greenLizard);
     color: var(--primary);
     transition: .5s linear;
 }
 
 header.header-mobile nav div#toggle-element a.active {
-    background: var(--tertiary);
-    color: var(--primary);
+    background: var(--primary);
+    color: var(--greenLizard);
 }
 
 /**********     SECTION#H1    ***********/
