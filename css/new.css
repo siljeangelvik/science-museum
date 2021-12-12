@@ -326,7 +326,7 @@ main section:first-child {
     background: var(--primary);
 }
 
-main section h2 {
+main section:first-child h2 {
     font-family: fontMedium, sans-serif;
     letter-spacing: .2em;
     padding: 10px 20px;
@@ -338,6 +338,13 @@ main section:last-child {
     row-gap: 20px;
     height: 100%;
     background: var(--white);
+}
+
+main section > div h2 {
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .1em;
+    font-size: 20px;
+    color: var(--greenLizard);
 }
 
 main section div {
