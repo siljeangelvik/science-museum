@@ -68,3 +68,15 @@ https://codepen.io/miduga/pen/RaXvdg
 --YouTube
 
 <br>
+
+
+
+
+
+visit:
+admission 
+
+
+
+explore: CLEANUP
+mangler bilde på teacher og researchers

@@ -634,8 +634,15 @@ div.gmap_canvas {
     max-width: 100%;
     padding: 0;
     box-shadow: none;
-
 }
+
+div#location,
+div#prices,
+div#opening-hours,
+div#accessibility {
+    display: none;
+}
+
 
 /***************    TABLET    ***************/
 @media (min-width: 640px) {
