@@ -369,6 +369,7 @@ main section div h3 {
 }
 
 main section div h2 {
+    font-family: fontMedium, sans-serif;
     padding: 10px;
     text-align: center;
     font-size: 16px;
@@ -378,25 +379,6 @@ main section div h2 {
 main section div p {
     line-height: 1.5em;
     letter-spacing: .13em;
-}
-
-main.visit section div {
-    flex: 1 auto;
-}
-
-main.visit section div:first-child {
-    flex: 1 100%;
-}
-
-main.visit section div p a {
-    color: var(--primary);
-    text-decoration: underline;
-    font-family: fontLight, sans-serif;
-    font-weight: bolder;
-    font-size: 12px;
-}
-
-img.main-img {
 }
 
 /**********     ASIDE    ***********/
