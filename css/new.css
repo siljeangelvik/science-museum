@@ -201,12 +201,13 @@ h1#mobile-h1 {
 
 /**********     SECTION#HERO    ***********/
 section#hero {
-    height: 60vh;
+    height: 65vh;
     background: url("../assets/images/banner-abstract.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 90px;
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -343,8 +344,10 @@ main h2 {
     color: var(--primary);
     background: var(--greenLizard);
     font-size: 18px;
+
 }
 
+h2#news-h2,
 main section div {
     border-radius: 10px;
     max-width: 300px;
@@ -363,13 +366,7 @@ main section div h3 {
     border-radius: 5px;
 }
 
-main section div h2 {
-    font-family: fontMedium, sans-serif;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-    display: flex;
-}
+
 
 main section div p {
     line-height: 1.5em;
