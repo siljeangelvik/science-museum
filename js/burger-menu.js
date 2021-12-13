@@ -5,4 +5,5 @@ let toggle = true;
 toggleButton.addEventListener("click", () => {
     toggle = !toggle;
     toggleableElement.style.display = toggle ? "none" : "block";
+
 });
