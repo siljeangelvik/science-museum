@@ -533,14 +533,13 @@ footer > div > p {
     font-size: 10px;
 }
 
-footer section div button {
-    width: 80%;
+footer section div a.btn {
     color: var(--greenLizard);
     border: 3px solid var(--greenLizard);
     background: transparent;
 }
 
-footer section div button:hover {
+footer section div a.btn:hover {
     background: var(--greenLizard);
     border: 3px solid transparent;
     color: var(--primary);
@@ -557,7 +556,7 @@ a.btn {
     padding: 10px;
     font-size: 14px;
     font-weight: bolder;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
@@ -565,12 +564,14 @@ a.btn {
     background: var(--greenLizard);
     color: var(--primary);
     border: 3px solid var(--greenLizard);
+    padding: 5px;
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--primary);
     border: 3px solid var(--primary);
+    padding: 5px;
 }
 
 .btn-tertiary {
@@ -676,6 +677,44 @@ footer section {
 
 
     /****************   HEADER#HEADER-DESKTOP    *******************/
+    header.header-mobile {
+        display: none;
+    }
+
+    header.header-desktop {
+        display: flex;
+        gap:100px;
+        background: var(--primary);
+    }
+
+    header.header-desktop > a,
+    header.header-desktop > a > img {
+        margin-left: -5px;
+    }
+
+    header.header-desktop nav {
+        display: flex;
+        gap:50px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    header.header-desktop nav a {
+        text-decoration: none;
+        font-family: fontLight, sans-serif;
+        color: var(--greenLizard);
+        padding: 10px;
+        flex:1 20%;
+    }
+    header.header-desktop nav a.active,
+    header.header-desktop nav a:hover {
+        background: var(--greenLizard);
+        color: var(--primary);
+        transition: .5s linear;
+    }
+
+
     /****************   SECTION#h1    *******************/
     h1 {
         padding: 30px 0 0 0;
