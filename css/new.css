@@ -79,9 +79,11 @@ footer > a,
 img.logo {
     width: 80px;
 }
+
 header img.logo {
     margin-left: 10px;
 }
+
 /**********     HEADER#HEADER-MOBILE    ***********/
 header.header-mobile {
     min-width: 300px;
@@ -180,8 +182,8 @@ header.header-mobile nav div#toggle-element > address a {
 }
 
 /**********     SECTION#H1    ***********/
-h1{
-    padding:100px 0 20px 10px;
+h1 {
+    padding: 100px 0 20px 10px;
     color: var(--primary);
     letter-spacing: .3em;
     font-family: fontBold, sans-serif;
@@ -313,21 +315,21 @@ main {
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
-    gap:40px;
+    gap: 40px;
     color: var(--primary);
 }
 
 main section {
     display: flex;
     flex-wrap: wrap;
-    gap:20px;
+    gap: 20px;
 }
 
 main section div {
     flex: 1 25%;
     max-width: 470px;
     padding: 10px 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
 main section h3 {
@@ -347,9 +349,19 @@ main section div p {
 main.visit section div {
     flex: 1 auto;
 }
+
 main.visit section div:first-child {
     flex: 1 100%;
 }
+
+main.visit section div p a {
+    color: var(--primary);
+    text-decoration: underline;
+    font-family: fontLight, sans-serif;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
 /**********     ASIDE    ***********/
 aside {
 }
@@ -578,19 +590,19 @@ img {
 }
 
 div.mapouter {
-    position:relative;
-    text-align:left;
-    height:200px;
-    max-width:420px;
+    position: relative;
+    text-align: left;
+    height: 200px;
+    max-width: 420px;
     padding: 0;
     box-shadow: none;
 }
 
 div.gmap_canvas {
-    overflow:hidden;
-    background:none!important;
-    height:200px;
-    max-width:420px;
+    overflow: hidden;
+    background: none !important;
+    height: 200px;
+    max-width: 420px;
     padding: 0;
     box-shadow: none;
 
@@ -601,9 +613,9 @@ div.gmap_canvas {
     body {
 
     }
+
     /****************   HEADER#HEADER-DESKTOP    *******************/
     /****************   SECTION#h1    *******************/
-
     /****************   SECTION#HERO    *******************/
     /* @formatter:off */
     section#hero { height: 70vh; }
@@ -650,8 +662,8 @@ footer section {
 
     /****************   HEADER#HEADER-DESKTOP    *******************/
     /****************   SECTION#h1    *******************/
-    h1{
-        padding:30px 0 0 0;
+    h1 {
+        padding: 30px 0 0 0;
         writing-mode: vertical-lr;
     }
 
@@ -675,9 +687,10 @@ footer section {
     }
 
     /****************   ASIDE    *******************/
-    aside  {
+    aside {
         box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
     }
+
     aside section div {
         max-width: 100%;
         flex: 1 105%;
