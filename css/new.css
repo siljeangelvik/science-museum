@@ -66,7 +66,7 @@ body {
 
 /* @formatter:off */
 header { grid-area: header;     padding: 5px 10px;}
-h1#h1 { grid-area: h1;     padding: 5px 10px;}
+h1#h1 { grid-area: h1;    }
 section#hero { grid-area: hero;     padding: 5px 10px;}
 nav#nav-secondary { grid-area: nav;     padding: 5px 10px;}
 main { grid-area: main;     padding: 5px 10px;}
@@ -79,7 +79,9 @@ footer > a,
 img.logo {
     width: 80px;
 }
-
+header img.logo {
+    margin-left: 10px;
+}
 /**********     HEADER#HEADER-MOBILE    ***********/
 header.header-mobile {
     min-width: 300px;
@@ -178,12 +180,14 @@ header.header-mobile nav div#toggle-element > address a {
 }
 
 /**********     SECTION#H1    ***********/
-section#h1 {
+h1{
+    padding:100px 0 20px 10px;
+    color: var(--primary);
+    letter-spacing: .3em;
+    font-family: fontBold, sans-serif;
+    writing-mode: horizontal-tb;
+}
 
-}
-h1 {
-    padding: 10px;
-}
 /**********     SECTION#HERO    ***********/
 section#hero {
     height: 65vh;
@@ -327,8 +331,8 @@ main section div {
 }
 
 main section h3 {
-    font-family: fontRegular, sans-serif;
-    letter-spacing: .15em;
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .17em;
     font-size: 16px;
     padding: 10px;
     background: var(--greenLizard);
@@ -340,6 +344,12 @@ main section div p {
     letter-spacing: .13em;
 }
 
+main.visit section div {
+    flex: 1 auto;
+}
+main.visit section div:first-child {
+    flex: 1 100%;
+}
 /**********     ASIDE    ***********/
 aside {
 }
@@ -351,13 +361,15 @@ aside section:first-child {
 aside section h2 {
     font-family: fontMedium, sans-serif;
     letter-spacing: .2em;
-    padding: 10px 20px;
+    padding: 10px;
+    text-align: left;
 }
 
 aside section:last-child {
     display: flex;
     flex-wrap: wrap;
     margin: 30px 0;
+    row-gap: 0;
 }
 
 aside section div {
@@ -565,14 +577,24 @@ img {
     max-width: 420px;
 }
 
-h1 {
-    font-family: fontBold, sans-serif;
-    letter-spacing: .3em;
-    color: var(--primary);
+div.mapouter {
+    position:relative;
+    text-align:left;
+    height:200px;
+    max-width:420px;
+    padding: 0;
+    box-shadow: none;
 }
 
+div.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:200px;
+    max-width:420px;
+    padding: 0;
+    box-shadow: none;
 
-
+}
 
 /***************    TABLET    ***************/
 @media (min-width: 640px) {
@@ -581,6 +603,7 @@ h1 {
     }
     /****************   HEADER#HEADER-DESKTOP    *******************/
     /****************   SECTION#h1    *******************/
+
     /****************   SECTION#HERO    *******************/
     /* @formatter:off */
     section#hero { height: 70vh; }
@@ -627,16 +650,9 @@ footer section {
 
     /****************   HEADER#HEADER-DESKTOP    *******************/
     /****************   SECTION#h1    *******************/
-    h1#h1 {
-        left: 0;
-        margin-left: -10px;
-        padding: 5px 10px;
-        width: 90px;
+    h1{
+        padding:30px 0 0 0;
         writing-mode: vertical-lr;
-        color: var(--white);
-        background: var(--primary);
-        letter-spacing: .4em;
-        font-family: fontBold, sans-serif;
     }
 
     /****************   SECTION#HERO    *******************/
@@ -646,10 +662,6 @@ footer section {
 
     section#hero section {
         max-width: 40%;
-    }
-
-    section#hero section h2#hero-h1 {
-        letter-spacing: .4em;
     }
 
     /****************   NAV#NAV-SECONDARY   *******************/
@@ -663,34 +675,26 @@ footer section {
     }
 
     /****************   ASIDE    *******************/
-    aside {
+    aside  {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
     }
-
-    aside section:first-child {
+    aside section div {
+        max-width: 100%;
+        flex: 1 105%;
     }
 
     aside section h2 {
+        font-family: fontMedium, sans-serif;
+        letter-spacing: .2em;
+        padding: 10px;
         text-align: center;
-        padding: 5px;
     }
 
     aside section:last-child {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
-        gap: 30px;
-        padding: 20px;
-    }
-
-    aside section div {
-        flex: 1;
-        padding: 20px;
-        text-align: center;
-        justify-content: center;
-    }
-
-    aside section div a {
-        padding: 20px;
+        margin: 30px 0;
+        row-gap: 100px;
     }
 
     /****************   FOOTER    *******************/
