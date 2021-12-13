@@ -192,7 +192,7 @@ h1 {
 
 /**********     SECTION#HERO    ***********/
 section#hero {
-    height: 65vh;
+    height: 60vh;
     background: url("../assets/images/william-bout-264826.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
@@ -205,7 +205,7 @@ section#hero {
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(6px);
         background-color: rgba(000, 000, 000, 0.45);
-        max-width: 100%;
+        max-width: 470px;
         padding: 10px 20px;
         display: flex;
         flex-direction: column;
@@ -315,7 +315,6 @@ main {
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
     color: var(--primary);
 }
 
@@ -323,12 +322,24 @@ main section {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+
+}
+
+main h2 {
+    padding: 10px 20px;
+    font-family: fontBold, sans-serif;
+    letter-spacing: .2em;
+    font-size: 18px;
+    background: var(--greenLizard);
+    color: var(--primary);
 }
 
 main section div {
-    flex: 1 25%;
-    max-width: 470px;
+    max-width: 400px;
     padding: 10px 20px;
+    border-radius: 10px;
+    flex: 1 100%;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
@@ -337,8 +348,9 @@ main section h3 {
     letter-spacing: .17em;
     font-size: 16px;
     padding: 10px;
-    background: var(--greenLizard);
-    color: var(--primary);
+    background: var(--primary);
+    color: var(--greenLizard);
+    border-radius: 5px;
 }
 
 main section div p {
@@ -478,13 +490,15 @@ footer {
 footer section {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
+    padding: 10px;
 }
 
 footer section div {
-    max-width: 300px;
+    max-width: 330px;
     padding: 10px;
     flex: 1 100%;
+
 }
 
 footer section div h3 {
@@ -519,6 +533,7 @@ footer > div > p {
 }
 
 footer section div button {
+    width: 80%;
     color: var(--greenLizard);
     border: 3px solid var(--greenLizard);
     background: transparent;
@@ -618,8 +633,7 @@ div.gmap_canvas {
     /****************   SECTION#h1    *******************/
     /****************   SECTION#HERO    *******************/
     /* @formatter:off */
-    section#hero { height: 70vh; }
-    section#hero section { max-width: 60%; }
+    section#hero { height: 65vh; }
 }
 
 
@@ -672,12 +686,16 @@ footer section {
         height: 70vh;
     }
 
-    section#hero section {
-        max-width: 40%;
-    }
-
     /****************   NAV#NAV-SECONDARY   *******************/
     /****************   MAIN    *******************/
+    main section:first-child {
+
+    }
+
+    main section:first-child h2 {
+
+    }
+
     main section:last-child {
         display: flex;
         flex-wrap: wrap;
@@ -713,5 +731,13 @@ footer section {
     /****************   FOOTER    *******************/
     footer {
         margin-left: -10px;
+    }
+
+
+    footer section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 10px 0 10px 100px;
     }
 }
