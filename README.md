@@ -70,13 +70,3 @@ https://codepen.io/miduga/pen/RaXvdg
 <br>
 
 
-
-
-
-visit:
-admission 
-
-
-
-explore: CLEANUP
-mangler bilde på teacher og researchers

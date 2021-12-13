@@ -120,9 +120,15 @@ header.header-mobile section span {
     flex-direction: column;
     color: var(--white);
     padding: 0 20px;
+    cursor: pointer;
+    max-width: 90px;
 }
 header.header-mobile section span > i {
-    padding: 0 10px 5px 0;
+    padding: 0 5px 5px 0;
+}
+
+header.header-mobile section span strong {
+font-size: 13px;
 }
 
 header.header-desktop,
@@ -170,20 +176,8 @@ header.header-mobile nav div#toggle-element > a.active {
     color: var(--greenLizard);
 }
 
-header.header-mobile nav div#toggle-element address {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 35px;
-    background: var(--greenLizard);
-}
 
-header.header-mobile nav div#toggle-element > address a {
-    text-align: center;
-    color: var(--primary);
-    text-decoration: underline;
-    letter-spacing: .13em;
-    font-weight: bolder;
-}
+
 
 /**********     SECTION#H1    ***********/
 h1#h1 {
@@ -324,7 +318,6 @@ nav#nav-secondary section div > a:hover {
 
 /**********     MAIN    ***********/
 main {
-    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     color: var(--primary);
@@ -333,9 +326,13 @@ main {
 main section {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
     padding: 10px;
     justify-content: center;
+}
+
+main section div {
+min-width: 370px;
 }
 
 main h2 {
