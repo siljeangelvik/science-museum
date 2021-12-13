@@ -703,6 +703,7 @@ footer section {
     header.header-desktop nav a {
         text-decoration: none;
         font-family: fontLight, sans-serif;
+        letter-spacing: .2em;
         color: var(--greenLizard);
         padding: 10px;
         flex:1 20%;
