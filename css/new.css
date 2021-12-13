@@ -42,7 +42,6 @@
     --purplePizzazz: #FF00CC;
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -65,7 +64,6 @@ body {
     "footer";
 }
 
-
 /* @formatter:off */
 header { grid-area: header;     padding: 5px 10px;}
 h1#h1 { grid-area: h1;     padding: 5px 10px;}
@@ -75,7 +73,6 @@ main { grid-area: main;     padding: 5px 10px;}
 aside { grid-area: aside;     padding: 5px 10px;}
 footer { grid-area: footer;     padding: 5px 10px;}
 /* @formatter:on */
-
 
 header > a,
 footer > a,
@@ -132,14 +129,18 @@ header.header-mobile nav {
 header.header-mobile nav div#toggle-element {
     background: var(--primary);
     position: fixed;
-    margin: 80px 0;
+    margin: 84px 0;
     width: 100%;
+}
+
+header.header-mobile nav div#toggle-element > a:first-child {
+    border-top: 2px solid var(--white);
 }
 
 header.header-mobile nav div#toggle-element > a {
     display: block;
     width: 100%;
-    padding: 35px;
+    padding: 25px;
     text-align: center;
     text-decoration: none;
     color: var(--offWhite);
@@ -161,41 +162,36 @@ header.header-mobile nav div#toggle-element > a.active {
     color: var(--greenLizard);
 }
 
-header.header-mobile nav div#toggle-element p {
-    text-align: center;
-    font-family: fontMedium, sans-serif;
-    letter-spacing: .2em;
-    color: var(--offWhite);
-    text-transform: uppercase;
-
-}
-
 header.header-mobile nav div#toggle-element address {
     display: flex;
     justify-content: space-evenly;
     padding: 35px;
+    background: var(--greenLizard);
 }
 
 header.header-mobile nav div#toggle-element > address a {
     text-align: center;
-    color: var(--greenLizard);
+    color: var(--primary);
     text-decoration: underline;
     letter-spacing: .13em;
+    font-weight: bolder;
 }
 
 /**********     SECTION#H1    ***********/
 section#h1 {
-}
 
+}
+h1 {
+    padding: 10px;
+}
 /**********     SECTION#HERO    ***********/
 section#hero {
-    height: 70vh;
+    height: 65vh;
     background: url("../assets/images/william-bout-264826.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -221,7 +217,6 @@ section#hero section p {
     line-height: 1.7em;
     letter-spacing: .07em;
     color: var(--white);
-
 }
 
 section#hero section div {
@@ -239,17 +234,12 @@ section#hero section div button:first-child {
 }
 
 /**********     NAV#NAV-SECONDARY    ***********/
-nav#nav-secondary {
-
-}
-
 nav#nav-secondary section {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: -35px;
 }
-
 
 nav#nav-secondary section div {
     width: 80px;
@@ -284,7 +274,6 @@ nav#nav-secondary section div:nth-child(6) > a { background-color: var(--atmoicT
 nav#nav-secondary section div:nth-child(7) > a { background-color: var(--wildWatermelon); }
 /* @formatter:on */
 
-
 nav#nav-secondary section div > a i {
     width: 100%;
     font-size: 22px;
@@ -292,7 +281,7 @@ nav#nav-secondary section div > a i {
 }
 
 nav#nav-secondary section div > p {
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 16px;
 }
 
@@ -300,7 +289,6 @@ nav#nav-secondary section div > p a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: fontRegular, sans-serif;
-    letter-spacing: .02em;
     color: var(--primary);
     font-size: 14px;
 }
@@ -319,53 +307,37 @@ nav#nav-secondary section div > a:hover {
 /**********     MAIN    ***********/
 main {
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    color: var(--primary);
 }
 
-main section:first-child {
-    color: var(--white);
-    background: var(--primary);
-}
-
-main section:first-child h2 {
-    font-family: fontMedium, sans-serif;
-    letter-spacing: .2em;
-    padding: 10px 20px;
-}
-
-main section:last-child {
+main section {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
-    height: 100%;
-    background: var(--white);
-}
-
-main section > div h2 {
-    font-family: fontMedium, sans-serif;
-    letter-spacing: .1em;
-    font-size: 20px;
-    color: var(--greenLizard);
+    gap:20px;
 }
 
 main section div {
-    flex: 1 auto;
-    background: var(--primary);
+    flex: 1 25%;
+    max-width: 470px;
     padding: 10px 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.25);
 }
 
 main section h3 {
     font-family: fontRegular, sans-serif;
     letter-spacing: .15em;
     font-size: 16px;
-    color: var(--greenLizard);
-    background: var(--primary);
+    padding: 10px;
+    background: var(--greenLizard);
+    color: var(--primary);
 }
-
 
 main section div p {
     line-height: 1.5em;
     letter-spacing: .13em;
-    color: var(--white);
 }
 
 /**********     ASIDE    ***********/
@@ -373,8 +345,7 @@ aside {
 }
 
 aside section:first-child {
-    color: var(--white);
-    background: var(--primary);
+    color: var(--primary);
 }
 
 aside section h2 {
@@ -427,7 +398,6 @@ aside section div:nth-child(1) a {
     border-radius: 13px;
     border:none;
 }
-
 
 aside section div:nth-child(2) a {
     color: #eee;
@@ -496,10 +466,8 @@ footer section div {
 footer section div h3 {
     font-family: fontRegular, sans-serif;
     letter-spacing: .15em;
-    background: var(--primary);
     border-radius: 10px;
-    color: var(--white);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bolder;
     text-transform: uppercase;
 }
@@ -523,6 +491,7 @@ footer p {
 
 footer > div > p {
     text-align: center;
+    font-size: 10px;
 }
 
 footer section div button {
@@ -572,7 +541,6 @@ button {
 
 .fa-heart {
     font-size: 13px;
-
     background: var(--greenLizard);
     background: radial-gradient(circle,
     #90e70c 0%,
@@ -593,12 +561,24 @@ button {
     -webkit-text-fill-color: transparent;
 }
 
+img {
+    max-width: 420px;
+}
+
+h1 {
+    font-family: fontBold, sans-serif;
+    letter-spacing: .3em;
+    color: var(--primary);
+}
+
+
+
 
 /***************    TABLET    ***************/
 @media (min-width: 640px) {
     body {
-    }
 
+    }
     /****************   HEADER#HEADER-DESKTOP    *******************/
     /****************   SECTION#h1    *******************/
     /****************   SECTION#HERO    *******************/
@@ -616,6 +596,7 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
 footer section {
     display: flex;
     flex-wrap: wrap;
@@ -654,9 +635,6 @@ footer section {
         writing-mode: vertical-lr;
         color: var(--white);
         background: var(--primary);
-    }
-
-    h1#h1 {
         letter-spacing: .4em;
         font-family: fontBold, sans-serif;
     }
@@ -673,7 +651,6 @@ footer section {
     section#hero section h2#hero-h1 {
         letter-spacing: .4em;
     }
-
 
     /****************   NAV#NAV-SECONDARY   *******************/
     /****************   MAIN    *******************/
@@ -720,6 +697,4 @@ footer section {
     footer {
         margin-left: -10px;
     }
-
-
 }
