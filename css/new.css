@@ -289,6 +289,7 @@ nav#nav-secondary section div:nth-child(4) > a { background-color: var(--yellowS
 nav#nav-secondary section div:nth-child(5) > a { background-color: var(--sunglow); }
 nav#nav-secondary section div:nth-child(6) > a { background-color: var(--atmoicTangerine); }
 nav#nav-secondary section div:nth-child(7) > a { background-color: var(--wildWatermelon); }
+nav#nav-secondary section div:nth-child(8) > a { background-color: var(--secondary); }
 /* @formatter:on */
 
 nav#nav-secondary section div > a i {
