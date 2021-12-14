@@ -86,18 +86,20 @@ header img.logo {
 
 /**********     HEADER#HEADER-MOBILE    ***********/
 header.header-mobile {
+    min-width: 300px;
     overflow-x: hidden;
     display: flex;
     margin: 0;
     padding: 0;
     top: 0;
     left: 0;
+    width: 90%;
 }
 
 header.header-mobile,
 header.header-mobile section {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background: var(--primary);
 }
 
@@ -132,6 +134,10 @@ font-size: 13px;
 header.header-desktop,
 div#toggle-element {
     display: none;
+}
+
+header.header-mobile nav {
+    border:1px solid greenyellow;
 }
 
 header.header-mobile nav div#toggle-element {
@@ -170,6 +176,9 @@ header.header-mobile nav div#toggle-element > a.active {
     color: var(--greenLizard);
 }
 
+
+
+
 /**********     SECTION#H1    ***********/
 h1#h1 {
     display: none;
@@ -186,7 +195,7 @@ h1#mobile-h1 {
 
 /**********     SECTION#HERO    ***********/
 section#hero {
-    height: 70vh;
+    height: 65vh;
     background: url("../assets/images/banner-abstract.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
@@ -201,7 +210,7 @@ section#hero {
         backdrop-filter: blur(6px);
         background-color: rgba(000, 000, 000, 0.45);
         max-width: 470px;
-        padding: 10px;
+        padding: 10px 20px;
         display: flex;
         flex-direction: column;
         border-radius: 10px;
@@ -216,14 +225,14 @@ section#hero section h2 {
 
 section#hero section p {
     line-height: 1.7em;
-    letter-spacing: .1em;
+    letter-spacing: .07em;
     color: var(--white);
 }
 
 section#hero section div {
     display: flex;
     gap: 10px;
-    padding-bottom: 15px;
+    padding: 10px 0 15px 0;
     text-align: center;
 }
 
@@ -245,7 +254,8 @@ nav#nav-secondary section {
 
 nav#nav-secondary section div {
     width: 80px;
-    flex: 1 20%;
+    flex: 1 25%;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -316,30 +326,43 @@ main {
 main section {
     display: flex;
     flex-wrap: wrap;
-    gap:10px;
-    flex: 1 100%;
+    gap: 20px;
+    justify-content: center;
 }
 
 main section div {
-    max-width: 320px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
 main h2 {
+    padding: 10px;
     font-family: fontBold, sans-serif;
     letter-spacing: .3em;
     color: var(--primary);
     background: var(--greenLizard);
     font-size: 18px;
+
+}
+
+h2#news-h2,
+main section div {
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 10px;
+    flex: 1 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
 main section div h3 {
     font-family: fontMedium, sans-serif;
     letter-spacing: .17em;
     font-size: 16px;
+    padding: 10px;
     background: var(--primary);
     color: var(--greenLizard);
+    border-radius: 5px;
 }
+
+
 
 main section div p {
     line-height: 1.5em;
@@ -347,6 +370,7 @@ main section div p {
 }
 
 /**********     ASIDE    ***********/
+
 aside section:first-child {
     color: var(--primary);
 }
@@ -354,6 +378,7 @@ aside section:first-child {
 aside section h2 {
     font-family: fontMedium, sans-serif;
     letter-spacing: .2em;
+    padding: 10px;
     text-align: left;
 }
 
@@ -361,10 +386,12 @@ aside section:last-child {
     display: flex;
     flex-wrap: wrap;
     margin: 30px 0;
+    row-gap: 0;
 }
 
 aside section div {
     flex: 1 25%;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -409,6 +436,9 @@ aside section div:nth-child(2) a {
 }
 aside section div:nth-child(3) a {
     background-image: linear-gradient(45deg, #4481eb 0%, #04befe 100%);
+    /* color: transparent; /**/
+    /* -webkit-background-clip: text; /**/
+    /* background-clip: text; /**/
     color: var(--white); /**/
     box-shadow: 0 3px 10px rgba(0,0,0,.25);
 }
@@ -432,6 +462,17 @@ aside section div a i {
     font-size: 22px;
 }
 
+aside section div a:hover {
+    background: rgb(241, 111, 8);
+    background: radial-gradient(circle,
+    rgba(241, 111, 8, 1) 0%,
+    rgba(255, 153, 51, 1) 45%,
+    rgba(255, 211, 0, 1) 100%,
+    rgba(232, 255, 0, 1) 100%);
+    color: var(--white);
+    border: 3px solid transparent;
+    transition: .5s linear;
+}
 
 /**********     FOOTER    ***********/
 footer * {
@@ -454,6 +495,7 @@ footer section {
 
 footer section div {
     max-width: 300px;
+    padding: 10px;
     flex: 1 100%;
 }
 
@@ -710,6 +752,14 @@ footer section {
 
     /****************   NAV#NAV-SECONDARY   *******************/
     /****************   MAIN    *******************/
+    main section:first-child {
+
+    }
+
+    main section:first-child h2 {
+
+    }
+
     main section:last-child {
         display: flex;
         flex-wrap: wrap;
