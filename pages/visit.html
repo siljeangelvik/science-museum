@@ -16,7 +16,8 @@
           maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- stylesheets -->
-    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- <link rel="stylesheet" href="css/new.css"> -->
     <script src="https://kit.fontawesome.com/183e136a7d.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -64,24 +65,10 @@
 <main class="visit">
     <h1 id="mobile-h1">Visit us</h1>
 
-    <section>
-        <div id="location"></div>
-        <div>
-            <h2>Location</h2>
-            <p> The museum is located at</p>
-            <p>
-                <a href="https://www.google.com/maps/place/Thorm%C3%B8hlens+Gate+51,+5006+Bergen/@60.3813525,5.329152,17z/data=!3m1!4b1!4m5!3m4!1s0x463cf954a01532ad:0x8c054b57865041ec!8m2!3d60.3813525!4d5.329152">Thormøhlens
-                    gate 51, 5006 Bergen</a>
-            </p>
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="420" height="200" id="gmap_canvas"
-                            src="https://maps.google.com/maps?q=thorm%C3%B8hlens%20gate%2051,%205006%20bergen&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-                </div>
-            </div>
-        </div>
+    <section class="row">
         <div id="opening-hours"></div>
-        <div>
+
+        <div class="column">
             <h2>Hours</h2>
             <p><strong>Monday:</strong>
                 Closed</p>
@@ -100,7 +87,8 @@
         </div>
 
         <div id="prices"></div>
-        <div>
+
+        <div class="column">
             <h2>Admission</h2>
             <p>The entrance is free for all.</p>
             <p>There are guided tours of the museum that leave every hour. </p>
@@ -111,23 +99,40 @@
                 the tour.</p>
         </div>
 
-        <div id="accessibility">
+        <div id="accessibility"></div>
+        <div class="column">
             <h2>Accessibility</h2>
             <p>The museum has wheelchair accessibility ramps. It also has audio guides and braille display signs for the
                 visually impaired.</p>
         </div>
 
-        <div>
+        <div class="column">
             <h2>Food & Drink</h2>
             <p>There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and
                 more.</p>
         </div>
 
-        <div>
+        <div class="column">
             <h2>Shop</h2>
             <p>Our shop offers a range of memorabilia from the museum as well as great gifts and activity packs that
                 allow
                 you to continue to explore science even after you’ve left the museum.</p>
+        </div>
+
+        <div id="location"></div>
+        <div class="column">
+            <h2>Location</h2>
+            <p> The museum is located at</p>
+            <p>
+                <a href="https://www.google.com/maps/place/Thorm%C3%B8hlens+Gate+51,+5006+Bergen/@60.3813525,5.329152,17z/data=!3m1!4b1!4m5!3m4!1s0x463cf954a01532ad:0x8c054b57865041ec!8m2!3d60.3813525!4d5.329152">Thormøhlens
+                    gate 51, 5006 Bergen</a>
+            </p>
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="420" height="200" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=thorm%C3%B8hlens%20gate%2051,%205006%20bergen&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
         </div>
     </section>
 </main>
@@ -136,7 +141,7 @@
     <section>
         <h2>Follow us</h2>
     </section>
-    <section>
+    <section class="col">
         <div>
             <a href="#"><i class="fab fa-instagram fa-2x fa-gradient"></i></a>
         </div>
@@ -157,7 +162,7 @@
         <img class="logo" src="../assets/images/icon-science-white.svg" alt="logo">
     </a>
 
-    <section>
+    <section class="row">
         <div>
             <h3>Newsletter</h3>
             <a href="#" class="btn btn-tertiary">sign up</a>

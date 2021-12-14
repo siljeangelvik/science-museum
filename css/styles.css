@@ -46,6 +46,47 @@
     box-sizing: border-box;
 }
 
+h2 {
+    font-family: fontBold, sans-serif;
+    letter-spacing: .2em;
+    color: var(--primary);
+}
+
+
+h3 {
+    font-family: fontLight, sans-serif;
+    letter-spacing: .17em;
+    font-weight: bolder;
+    background: var(--primary);
+    color: var(--white);
+}
+
+p {
+    line-height: 1.7em;
+    letter-spacing: .1em;
+    color: var(--primary);
+}
+
+section#hero section p {
+    color: var(--white);
+}
+
+
+
+
+
+/* @formatter:on */
+
+header > a,
+footer > a,
+img.logo {
+    width: 80px;
+}
+
+header img.logo {
+    margin-left: 10px;
+}
+
 body {
     font-family: "Roboto Thin", sans-serif;
     font-size: 16px;
@@ -65,25 +106,14 @@ body {
 }
 
 /* @formatter:off */
-header { grid-area: header;     padding: 5px 10px;}
-h1#h1 { grid-area: h1;    }
-section#hero { grid-area: hero;     padding: 5px 10px;}
-nav#nav-secondary { grid-area: nav;     padding: 5px 10px;}
-main { grid-area: main;     padding: 5px 10px;}
-aside { grid-area: aside;     padding: 5px 10px;}
-footer { grid-area: footer;     padding: 5px 10px;}
-/* @formatter:on */
-
-header > a,
-footer > a,
-img.logo {
-    width: 80px;
-}
-
-header img.logo {
-    margin-left: 10px;
-}
-
+    header { grid-area: header;     padding: 5px 10px;}
+    h1#h1 { grid-area: h1;    }
+    section#hero { grid-area: hero;     padding: 5px 10px;}
+    nav#nav-secondary { grid-area: nav;     padding: 5px 10px;}
+    main { grid-area: main;}
+    aside { grid-area: aside;     padding: 5px 10px;}
+    footer { grid-area: footer;     padding: 5px 10px;}
+    /* @formatter:on */
 /**********     HEADER#HEADER-MOBILE    ***********/
 header.header-mobile {
     overflow-x: hidden;
@@ -108,6 +138,7 @@ header.header-mobile section {
     min-width: 100%;
 }
 
+
 header.header-mobile section span {
     flex: 1;
 }
@@ -121,12 +152,13 @@ header.header-mobile section span {
     cursor: pointer;
     max-width: 90px;
 }
+
 header.header-mobile section span > i {
     padding: 0 5px 5px 0;
 }
 
 header.header-mobile section span strong {
-font-size: 13px;
+    font-size: 13px;
 }
 
 header.header-desktop,
@@ -208,15 +240,7 @@ section#hero {
     }
 }
 
-section#hero section h2 {
-    color: var(--white);
-    font-family: fontBold, sans-serif;
-    letter-spacing: .2em;
-}
-
-section#hero section p {
-    line-height: 1.7em;
-    letter-spacing: .1em;
+section#hero h2 {
     color: var(--white);
 }
 
@@ -265,34 +289,20 @@ nav#nav-secondary section div > a {
     cursor: pointer;
 }
 
-/* @formatter:off */
-nav#nav-secondary section div:nth-child(1) > a { background-color: var(--shockingPink); }
-nav#nav-secondary section div:nth-child(2) > a { background-color: var(--blizzardBlue); }
-nav#nav-secondary section div:nth-child(3) > a { background-color: var(--greenLizard); }
-nav#nav-secondary section div:nth-child(4) > a { background-color: var(--yellowSunshine); }
-nav#nav-secondary section div:nth-child(5) > a { background-color: var(--sunglow); }
-nav#nav-secondary section div:nth-child(6) > a { background-color: var(--atmoicTangerine); }
-nav#nav-secondary section div:nth-child(7) > a { background-color: var(--wildWatermelon); }
-nav#nav-secondary section div:nth-child(8) > a { background-color: var(--secondary); }
-/* @formatter:on */
-
 nav#nav-secondary section div > a i {
     width: 100%;
     font-size: 22px;
     color: var(--white);
 }
 
-nav#nav-secondary section div > p {
-    padding-top: 5px;
-    font-size: 16px;
-}
-
 nav#nav-secondary section div > p a {
     text-decoration: none;
     text-transform: uppercase;
-    font-family: fontRegular, sans-serif;
     color: var(--primary);
-    font-size: 14px;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: fontLight, sans-serif;
+    padding-top: 5px;
 }
 
 nav#nav-secondary section div > a:hover {
@@ -306,68 +316,29 @@ nav#nav-secondary section div > a:hover {
     transition: .5s linear;
 }
 
+/* @formatter:off */
+    nav#nav-secondary section div:nth-child(1) > a { background-color: var(--shockingPink); }
+    nav#nav-secondary section div:nth-child(2) > a { background-color: var(--blizzardBlue); }
+    nav#nav-secondary section div:nth-child(3) > a { background-color: var(--greenLizard); }
+    nav#nav-secondary section div:nth-child(4) > a { background-color: var(--yellowSunshine); }
+    nav#nav-secondary section div:nth-child(5) > a { background-color: var(--sunglow); }
+    nav#nav-secondary section div:nth-child(6) > a { background-color: var(--atmoicTangerine); }
+    nav#nav-secondary section div:nth-child(7) > a { background-color: var(--wildWatermelon); }
+    nav#nav-secondary section div:nth-child(8) > a { background-color: var(--secondary); }
+    /* @formatter:on */
 /**********     MAIN    ***********/
 main {
-    display: flex;
-    flex-direction: column;
     color: var(--primary);
-}
-
-main section {
-    display: flex;
-    flex-wrap: wrap;
-    gap:10px;
-    flex: 1 100%;
 }
 
 main section div {
-    max-width: 320px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
-main h2 {
-    font-family: fontBold, sans-serif;
-    letter-spacing: .3em;
-    color: var(--primary);
-    background: var(--greenLizard);
-    font-size: 18px;
-}
-
-main section div h3 {
-    font-family: fontMedium, sans-serif;
-    letter-spacing: .17em;
-    font-size: 16px;
-    background: var(--primary);
-    color: var(--greenLizard);
-}
-
-main section div p {
-    line-height: 1.5em;
-    letter-spacing: .1em;
-}
-
 /**********     ASIDE    ***********/
-aside section:first-child {
-    color: var(--primary);
-}
-
-aside section h2 {
-    font-family: fontMedium, sans-serif;
-    letter-spacing: .2em;
-    text-align: left;
-}
-
-aside section:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 30px 0;
-}
 
 aside section div {
-    flex: 1 25%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex: 1 20%;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -383,10 +354,8 @@ aside section div a {
     text-decoration: none;
     cursor: pointer;
     border: 3px solid transparent;
-    background: var(--white);
 }
 
-/* @formatter:off */
 aside section div:nth-child(1) a {
     color: var(--white);
     background: #d6249f;
@@ -396,26 +365,28 @@ aside section div:nth-child(1) a {
     #fd5949 45%,
     #d6249f 60%,
     #285AEB 90%);
-    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
     border-radius: 13px;
-    border:none;
+    border: none;
 }
 
 aside section div:nth-child(2) a {
     color: #eee;
     background: #3b5998;
     border: 3px solid #3b5998;
-    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
+
 aside section div:nth-child(3) a {
     background-image: linear-gradient(45deg, #4481eb 0%, #04befe 100%);
-    color: var(--white); /**/
-    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    color: var(--white);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
+
 aside section div:nth-child(4) a {
     color: var(--white);
     background-color: #fe251b;
-    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
 /* @formatter:on */
@@ -432,206 +403,92 @@ aside section div a i {
     font-size: 22px;
 }
 
-
 /**********     FOOTER    ***********/
-footer * {
-    #border:1px solid greenyellow;;
-}
-
 footer {
     background: var(--primary);
     color: var(--white);
 }
 
-footer section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-footer section div {
-    max-width: 300px;
-    flex: 1 100%;
-}
-
 footer section div h3:first-child {
     padding-bottom: 10px;
 }
-footer section > div > a {
+
+footer section a.btn {
     display: inline-block;
     width: 150px;
     text-align: center;
-}
-footer section div h3 {
-    font-family: fontRegular, sans-serif;
-    letter-spacing: .15em;
-    font-size: 15px;
-    font-weight: bolder;
-    line-height: 1.4em;
-    text-transform: uppercase;
+    border: 3px solid var(--greenLizard)
 }
 
 footer section div p a {
+    font-family: fontLight, sans-serif;
     color: var(--greenLizard);
     text-decoration: underline;
-}
-
-footer section div p {
-    letter-spacing: .1em;
-    color: var(--offWhite);
-}
-
-footer h3,
-footer p {
-    text-align: left;
-    font-size: 11px;
-    font-family: fontLight, sans-serif;
-}
-
-footer > div > p {
-    text-align: center;
-    font-size: 10px;
-}
-
-footer section div a.btn {
-    color: var(--greenLizard);
-    border: 3px solid var(--greenLizard);
-    background: transparent;
-    font-size: 18px;
-}
-
-footer section div a.btn:hover {
-    background: var(--greenLizard);
-    border: 3px solid transparent;
-    color: var(--primary);
-    transition: .4s linear;
-}
-
-/**********     DIVERSE    ***********/
-a.btn {
-    outline: none;
-    border: none;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: .1em;
-    padding: 10px;
-    font-size: 14px;
     font-weight: bolder;
-    border-radius: 5px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+    font-size: 11px;
 }
 
-.btn-primary {
-    background: var(--greenLizard);
-    color: var(--primary);
-    border: 3px solid var(--greenLizard);
-    padding: 5px;
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--primary);
-    border: 3px solid var(--primary);
-    padding: 5px;
-}
-
-.btn-tertiary {
-    background: var(--primary);
-    color: var(--greenLizard);
-    border: 3px solid var(--primary);
-}
-
-.fa-heart {
-    font-size: 13px;
-    background: var(--greenLizard);
-    background: radial-gradient(circle,
-    #90e70c 0%,
-    #81ce0b 45%,
-    #72b60a 100%,
-    #639e08 100%);
-
-    /*
-    background: rgb(241, 111, 8);
-    background: radial-gradient(circle,
-    rgba(241, 111, 8, 1) 0%,
-    rgba(255, 153, 51, 1) 45%,
-    rgba(255, 211, 0, 1) 100%,
-    rgba(232, 255, 0, 1) 100%);
-    /**/
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-img {
-    max-width: 100%;
-}
-
-div.mapouter {
-    position: relative;
+footer p {
+    color: var(--offWhite);
     text-align: left;
-    height: 200px;
-    max-width: 100%;
-    padding: 0;
-    box-shadow: none;
+    font-size: 16px;
+    letter-spacing: .1em;
 }
 
-div.gmap_canvas {
-    overflow: hidden;
-    background: none !important;
-    height: 200px;
-    max-width: 100%;
-    padding: 0;
-    box-shadow: none;
+footer > div:last-child > p {
+    font-family: fontLight, sans-serif;
+    color: var(--white);
+    text-align: center;
+    font-size: 11px;
 }
 
-div#location,
-div#prices,
-div#opening-hours,
-div#accessibility {
-    display: none;
-}
+/* on screens that are 639px wide or less */
+@media screen and (max-width: 599px) {
 
-
-/***************    TABLET    ***************/
-@media (min-width: 640px) {
-    body {
-
+    aside section:last-child {
+        margin: 30px 0;
     }
 
-    /****************   HEADER#HEADER-DESKTOP    *******************/
-    /****************   SECTION#h1    *******************/
-    /****************   SECTION#HERO    *******************/
-    /* @formatter:off */
-    section#hero { height: 65vh; }
+    .col {
+        flex-direction: row;
+    }
+
+    .row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .column {
+        flex: 33.33%;
+    }
+
 }
 
 
-/****************   NAV#NAV-SECONDARY   *******************/
-/****************   MAIN    *******************/
+/* On screens that are 640px wide or more, go from one column to two columns */
+@media screen and (min-width: 600px) {
+    aside section:last-child {
+        margin: 30px 0;
+    }
 
-/****************   ASIDE    *******************/
-/****************   FOOTER    *******************/
-footer {
-    display: flex;
-    flex-direction: column;
+
+
+    footer section div a.btn:hover {
+        background: var(--greenLizard);
+        border: 3px solid transparent;
+        color: var(--primary);
+        transition: .4s linear;
+    }
+    .column {
+        flex:50%;
+    }
 }
 
-footer section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 20px;
-}
-
-/* @formatter:on */
+/* On screens that are 992px wide or more, go from two columns to four columns */
 
 
-/***************    DESKTOP    ***************/
-@media (min-width: 1024px) {
+/* on screens that are 1800px wide or more */
+@media (min-width: 1200px) {
     body {
         max-width: 1920px;
         display: grid;
@@ -647,8 +504,20 @@ footer section {
     "footer   footer  footer  footer";
     }
 
+    h1#h1 {
+        display: block;
+        font-family: fontBold, sans-serif;
+        letter-spacing: .3em;
+        color: var(--primary);
+        padding: 30px 0 0 0;
+        writing-mode: vertical-lr;
+    }
 
-    /****************   HEADER#HEADER-DESKTOP    *******************/
+    h1#mobile-h1 {
+        display: none;
+    }
+
+
     header.header-mobile {
         display: none;
     }
@@ -688,72 +557,120 @@ footer section {
         transition: .5s linear;
     }
 
-
-    /****************   SECTION#h1    *******************/
-    h1#h1 {
-        display: block;
-        font-family: fontBold, sans-serif;
-        letter-spacing: .3em;
-        color: var(--primary);
-        padding: 30px 0 0 0;
-        writing-mode: vertical-lr;
-    }
-
-    h1#mobile-h1 {
-        display: none;
-    }
-
-    /****************   SECTION#HERO    *******************/
-    section#hero {
-        height: 70vh;
-    }
-
-    /****************   NAV#NAV-SECONDARY   *******************/
-    /****************   MAIN    *******************/
-    main section:last-child {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 20px;
-        margin-bottom: 5px;
-        min-height: 60vh;
-    }
-
-    /****************   ASIDE    *******************/
-    aside {
-        box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
-    }
-
-    aside section div {
-        max-width: 100%;
-        flex: 1 105%;
-    }
-
-    aside section h2 {
-        font-family: fontMedium, sans-serif;
-        letter-spacing: .2em;
-        padding: 10px;
-        text-align: center;
-    }
-
     aside section:last-child {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 30px 0;
-        row-gap: 100px;
+        align-items: center;
     }
 
-    /****************   FOOTER    *******************/
-    footer {
-        margin-left: -10px;
+    .col {
+        flex-direction: column;
+        gap: 150px;
     }
 
-
-    footer section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 10px 0 10px 100px;
-        justify-content: center;
-
+    .column {
+        flex: 25%;
     }
+
+}
+
+
+/**********     DIVERSE    ***********/
+footer {
+    margin-top: 30px;
+}
+main h2 {
+    padding: 10px 5px;
+    background: var(--greenLizard);
+}
+main div h3 {
+    padding: 10px 5px;
+}
+main div p {
+    padding: 5px 10px;
+}
+
+main section.row,
+footer section.row {
+    gap:20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .1em;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+}
+
+
+.btn-primary {
+    background: var(--greenLizard);
+    color: var(--primary);
+    border: 3px solid var(--greenLizard);
+    padding: 5px;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    padding: 5px;
+}
+
+.btn-tertiary {
+    background: var(--primary);
+    color: var(--greenLizard);
+    border: 3px solid var(--primary);
+}
+
+.fa-heart {
+    font-size: 13px;
+    background: var(--greenLizard);
+    background: radial-gradient(circle,
+    #90e70c 0%,
+    #81ce0b 45%,
+    #72b60a 100%,
+    #639e08 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+div.mapouter {
+    position: relative;
+    text-align: left;
+    height: 200px;
+    max-width: 100%;
+    padding: 0;
+    box-shadow: none;
+}
+
+div.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 200px;
+    max-width: 100%;
+    padding: 0;
+    box-shadow: none;
+}
+
+div#location,
+div#prices,
+div#opening-hours,
+div#accessibility {
+    display: none;
 }
