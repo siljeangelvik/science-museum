@@ -641,7 +641,7 @@ p {
 }
 
 div.mapouter {
-    text-align: center;
+    text-align: left;
     height: 200px;
     max-width: 100%;
     padding: 0;
