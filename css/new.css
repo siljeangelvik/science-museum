@@ -73,6 +73,21 @@ main { grid-area: main;     padding: 5px 10px;}
 aside { grid-area: aside;     padding: 5px 10px;}
 footer { grid-area: footer;     padding: 5px 10px;}
 /* @formatter:on */
+h2 {
+    padding: 10px;
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .2em;
+    color: var(--white);
+    background: var(--primary);
+    font-size: 18px;
+    text-align: left;
+}
+
+p {
+    color: var(--primary);
+    line-height: 1.7em;
+    letter-spacing: .07em;
+}
 
 header > a,
 footer > a,
@@ -84,118 +99,9 @@ header img.logo {
     margin-left: 10px;
 }
 
-/**********     HEADER#HEADER-MOBILE    ***********/
-header.header-mobile {
-    min-width: 300px;
-    overflow-x: hidden;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    width: 90%;
-}
-
-header.header-mobile,
-header.header-mobile section {
-    position: fixed;
-    z-index: 2;
-    background: var(--primary);
-}
-
-header.header-mobile section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100%;
-}
-
-header.header-mobile section span {
-    flex: 1;
-}
-
-header.header-mobile section span {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    color: var(--white);
-    padding: 0 20px;
-    cursor: pointer;
-    max-width: 90px;
-}
-header.header-mobile section span > i {
-    padding: 0 5px 5px 0;
-}
-
-header.header-mobile section span strong {
-font-size: 13px;
-}
-
-header.header-desktop,
-div#toggle-element {
-    display: none;
-}
-
-header.header-mobile nav {
-    border:1px solid greenyellow;
-}
-
-header.header-mobile nav div#toggle-element {
-    background: var(--primary);
-    position: fixed;
-    margin: 84px 0;
-    width: 100%;
-}
-
-header.header-mobile nav div#toggle-element > a:first-child {
-    border-top: 2px solid var(--white);
-}
-
-header.header-mobile nav div#toggle-element > a {
-    display: block;
-    width: 100%;
-    padding: 25px;
-    text-align: center;
-    text-decoration: none;
-    color: var(--offWhite);
-    text-transform: uppercase;
-    font-family: fontMedium, sans-serif;
-    letter-spacing: .2em;
-    line-height: 1.7em;
-    border-bottom: 2px solid var(--white);
-}
-
-header.header-mobile nav div#toggle-element > a:hover {
-    background: var(--greenLizard);
-    color: var(--primary);
-    transition: .5s linear;
-}
-
-header.header-mobile nav div#toggle-element > a.active {
-    background: var(--primary);
-    color: var(--greenLizard);
-}
-
-
-
-
-/**********     SECTION#H1    ***********/
-h1#h1 {
-    display: none;
-}
-
-h1#mobile-h1 {
-    padding: 100px 0 20px 0;
-    color: var(--primary);
-    letter-spacing: .3em;
-    text-align: center;
-    font-family: fontBold, sans-serif;
-    writing-mode: horizontal-tb;
-}
-
 /**********     SECTION#HERO    ***********/
 section#hero {
-    height: 65vh;
+    height: 70vh;
     background: url("../assets/images/banner-abstract.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
@@ -209,31 +115,28 @@ section#hero {
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(6px);
         background-color: rgba(000, 000, 000, 0.45);
-        max-width: 470px;
+        min-width: 300px;
         padding: 10px 20px;
-        display: flex;
-        flex-direction: column;
         border-radius: 10px;
     }
 }
 
 section#hero section h2 {
     color: var(--white);
+    background: transparent;
     font-family: fontBold, sans-serif;
     letter-spacing: .2em;
 }
 
 section#hero section p {
-    line-height: 1.7em;
-    letter-spacing: .07em;
     color: var(--white);
 }
 
 section#hero section div {
     display: flex;
     gap: 10px;
-    padding: 10px 0 15px 0;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 section#hero section div a:first-child {
@@ -254,8 +157,7 @@ nav#nav-secondary section {
 
 nav#nav-secondary section div {
     width: 80px;
-    flex: 1 25%;
-    padding: 10px;
+    flex: 1 20%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -292,17 +194,14 @@ nav#nav-secondary section div > a i {
     color: var(--white);
 }
 
-nav#nav-secondary section div > p {
-    padding-top: 5px;
-    font-size: 16px;
-}
-
 nav#nav-secondary section div > p a {
     text-decoration: none;
     text-transform: uppercase;
-    font-family: fontRegular, sans-serif;
+    font-family: fontLight, sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    padding-top: 5px;
     color: var(--primary);
-    font-size: 14px;
 }
 
 nav#nav-secondary section div > a:hover {
@@ -317,52 +216,24 @@ nav#nav-secondary section div > a:hover {
 }
 
 /**********     MAIN    ***********/
-main {
-    display: flex;
-    flex-direction: column;
-    color: var(--primary);
-}
 
-main section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
 
 main section div {
-}
-
-main h2 {
-    padding: 10px;
-    font-family: fontBold, sans-serif;
-    letter-spacing: .3em;
-    color: var(--primary);
-    background: var(--greenLizard);
-    font-size: 18px;
-}
-
-main section div {
-    border-radius: 10px;
-    max-width: 300px;
-    padding: 10px;
-    flex: 1 100%;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+    padding: 10px;
 }
 
-main section div h3 {
+main h3 {
     font-family: fontMedium, sans-serif;
     letter-spacing: .17em;
     font-size: 16px;
     padding: 10px;
-    background: var(--primary);
-    color: var(--greenLizard);
+    background: var(--greenLizard);
+    color: var(--primary);
     border-radius: 5px;
 }
 
-
-
-main section div p {
+main p {
     line-height: 1.5em;
     letter-spacing: .1em;
 }
@@ -373,30 +244,6 @@ aside section:first-child {
     color: var(--primary);
 }
 
-aside section h2 {
-    font-family: fontMedium, sans-serif;
-    letter-spacing: .2em;
-    padding: 10px;
-    text-align: left;
-}
-
-aside section:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 30px 0;
-    row-gap: 0;
-}
-
-aside section div {
-    flex: 1 25%;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
 
 aside section div a {
     height: 50px;
@@ -460,78 +307,43 @@ aside section div a i {
     font-size: 22px;
 }
 
-aside section div a:hover {
-    background: rgb(241, 111, 8);
-    background: radial-gradient(circle,
-    rgba(241, 111, 8, 1) 0%,
-    rgba(255, 153, 51, 1) 45%,
-    rgba(255, 211, 0, 1) 100%,
-    rgba(232, 255, 0, 1) 100%);
-    color: var(--white);
-    border: 3px solid transparent;
-    transition: .5s linear;
-}
 
 /**********     FOOTER    ***********/
-footer * {
-    #border:1px solid greenyellow;;
-}
-
 footer {
     background: var(--primary);
     color: var(--white);
 }
 
-footer section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-footer section div {
-    max-width: 300px;
-    padding: 10px;
-    flex: 1 100%;
-}
-
-footer section div h3:first-child {
-    padding-bottom: 10px;
-}
 footer section > div > a {
     display: inline-block;
     width: 150px;
     text-align: center;
 }
-footer section div h3 {
+
+footer h3 {
     font-family: fontRegular, sans-serif;
+    font-size: 16px;
     letter-spacing: .15em;
-    font-size: 15px;
     font-weight: bolder;
-    line-height: 1.4em;
+    line-height: 1.7em;
     text-transform: uppercase;
 }
 
 footer section div p a {
     color: var(--greenLizard);
     text-decoration: underline;
+    font-family: fontLight, sans-serif;
+    font-weight: bolder;
+    font-size: 11px;
 }
 
 footer section div p {
-    letter-spacing: .1em;
     color: var(--offWhite);
 }
 
-footer h3,
-footer p {
-    text-align: left;
-    font-size: 11px;
-    font-family: fontLight, sans-serif;
-}
-
 footer > div > p {
+    font-family: fontLight, sans-serif;
+    color: var(--white);
     text-align: center;
     font-size: 10px;
 }
@@ -636,42 +448,204 @@ div#accessibility {
 }
 
 
-/***************    TABLET    ***************/
-@media (min-width: 640px) {
-    body {
+/****************   SECTION#HERO    *******************/
 
-    }
 
-    /****************   HEADER#HEADER-DESKTOP    *******************/
-    /****************   SECTION#h1    *******************/
-    /****************   SECTION#HERO    *******************/
-    /* @formatter:off */
-    section#hero { height: 65vh; }
+/* @formatter: off */
+
+
+section#hero {
+    height: 65vh;
 }
 
-
-/****************   NAV#NAV-SECONDARY   *******************/
-/****************   MAIN    *******************/
-
-/****************   ASIDE    *******************/
-/****************   FOOTER    *******************/
-footer {
-    display: flex;
-    flex-direction: column;
+main section img {
+    max-width: 100%;
 }
 
+main section,
+aside section:last-child,
 footer section {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    gap: 20px;
+    gap: 10px;
 }
 
-/* @formatter:on */
+/* @formatter:off */
+
+    body {
+        font-family: "Roboto Thin", sans-serif;
+        font-size: 16px;
+        min-width: 300px;
+        margin: 0 auto; /* Center align once max-width is reached */
+        overflow-x: hidden;
+        padding: 5px 10px;
+        display: grid;
+        grid-template-areas:
+    "header"
+    "h1"
+    "hero"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+    }
+
+    header.header-desktop {
+        display: none;
+    }
+    header.header-mobile {
+        min-width: 300px;
+        overflow-x: hidden;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 90%;
+    }
+
+    header.header-mobile,
+    header.header-mobile section {
+        position: fixed;
+        z-index: 2;
+        background: var(--primary);
+    }
+
+    header.header-mobile section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 100%;
+    }
+
+    header.header-mobile section span {
+        flex: 1;
+    }
+
+    header.header-mobile section span {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        color: var(--white);
+        padding: 0 20px;
+        cursor: pointer;
+        max-width: 90px;
+    }
+
+    header.header-mobile section span > i {
+        padding: 0 5px 5px 0;
+    }
+
+    header.header-mobile section span strong {
+        font-size: 13px;
+    }
+
+    header.header-desktop,
+    div#toggle-element {
+        display: none;
+    }
+
+    header.header-mobile nav {
+        border: 1px solid greenyellow;
+    }
+
+    header.header-mobile nav div#toggle-element {
+        background: var(--primary);
+        position: fixed;
+        margin: 84px 0;
+        width: 100%;
+    }
+
+    header.header-mobile nav div#toggle-element > a:first-child {
+        border-top: 2px solid var(--white);
+    }
+
+    header.header-mobile nav div#toggle-element > a {
+        display: block;
+        width: 100%;
+        padding: 25px;
+        text-align: center;
+        text-decoration: none;
+        color: var(--offWhite);
+        text-transform: uppercase;
+        font-family: fontMedium, sans-serif;
+        letter-spacing: .2em;
+        line-height: 1.7em;
+        border-bottom: 2px solid var(--white);
+    }
+
+    header.header-mobile nav div#toggle-element > a:hover {
+        background: var(--greenLizard);
+        color: var(--primary);
+        transition: .5s linear;
+    }
+
+    header.header-mobile nav div#toggle-element > a.active {
+        background: var(--primary);
+        color: var(--greenLizard);
+    }
 
 
-/***************    DESKTOP    ***************/
-@media (min-width: 1024px) {
+    /**********     SECTION#H1    ***********/
+section#hero section > p:not(:first-child),
+h1#h1 {
+        display: none;
+    }
+
+    h1#mobile-h1 {
+        padding: 100px 0 20px 0;
+        color: var(--primary);
+        letter-spacing: .3em;
+        text-align: center;
+        font-family: fontBold, sans-serif;
+        writing-mode: horizontal-tb;
+    }
+
+
+    footer section {
+        flex-direction: column;
+    }
+
+    aside section:last-child div {
+        flex:20%
+    }
+
+    aside section:last-child div {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+
+@media screen and (min-width: 600px) {
+    main section div,
+    footer section div {
+        flex:50%;
+    }
+
+    section#hero {
+        height: 75vh;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
+
+    section#hero section {
+        display: flex;
+        flex-direction: column;
+        max-width: 470px;
+    }
+
+
+
+
+}
+
+
+
+@media screen and (min-width: 992px) {
     body {
         max-width: 1920px;
         display: grid;
@@ -687,11 +661,13 @@ footer section {
     "footer   footer  footer  footer";
     }
 
-
-    /****************   HEADER#HEADER-DESKTOP    *******************/
-    header.header-mobile {
-        display: none;
+    header.header-desktop nav a.active,
+    header.header-desktop nav a:hover {
+        background: var(--greenLizard);
+        color: var(--primary);
+        transition: .5s linear;
     }
+
 
     header.header-desktop {
         display: flex;
@@ -706,8 +682,8 @@ footer section {
 
     header.header-desktop nav {
         display: flex;
-        gap: 50px;
-        width: 100%;
+        gap: 10px;
+        max-width: 100%;
         align-items: center;
         text-align: center;
     }
@@ -717,19 +693,32 @@ footer section {
         font-family: fontLight, sans-serif;
         letter-spacing: .2em;
         color: var(--greenLizard);
-        padding: 10px;
         flex: 1 20%;
+        padding: 10px;
     }
 
-    header.header-desktop nav a.active,
-    header.header-desktop nav a:hover {
-        background: var(--greenLizard);
-        color: var(--primary);
-        transition: .5s linear;
+    main section div,
+    footer section div {
+        flex: 25%;
+    }
+    aside section:last-child div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
     }
 
+    section#hero {
+        height: 70vh;
+    }
+    section#hero section {
+        max-width: 470px;
+    }
 
-    /****************   SECTION#h1    *******************/
+    h1#mobile-h1 {
+        display: none;
+    }
+
     h1#h1 {
         display: block;
         font-family: fontBold, sans-serif;
@@ -738,70 +727,19 @@ footer section {
         padding: 30px 0 0 0;
         writing-mode: vertical-lr;
     }
-
-    h1#mobile-h1 {
-        display: none;
-    }
-
-    /****************   SECTION#HERO    *******************/
-    section#hero {
-        height: 70vh;
-    }
-
-    /****************   NAV#NAV-SECONDARY   *******************/
-    /****************   MAIN    *******************/
-    main section:first-child {
-
-    }
-
-    main section:first-child h2 {
-
-    }
-
-    main section:last-child {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 20px;
-        margin-bottom: 5px;
-        min-height: 60vh;
-    }
-
-    /****************   ASIDE    *******************/
-    aside {
-        box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
-    }
-
-    aside section div {
-        max-width: 100%;
-        flex: 1 105%;
-    }
-
-    aside section h2 {
-        font-family: fontMedium, sans-serif;
-        letter-spacing: .2em;
-        padding: 10px;
-        text-align: center;
-    }
-
-    aside section:last-child {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 30px 0;
-        row-gap: 100px;
-    }
-
-    /****************   FOOTER    *******************/
-    footer {
-        margin-left: -10px;
-    }
-
-
-    footer section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 10px 0 10px 100px;
-        justify-content: center;
-
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
