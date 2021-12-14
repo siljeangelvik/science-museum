@@ -570,7 +570,6 @@ p {
     background: var(--greenLizard);
     color: var(--primary);
     border: 3px solid var(--greenLizard);
-    padding: 5px;
 }
 
 .btn-secondary {
@@ -581,7 +580,6 @@ p {
 }
 
 .btn-tertiary {
-    background: var(--primary);
     color: var(--greenLizard);
     border: 3px solid var(--greenLizard);
 }
