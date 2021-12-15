@@ -428,9 +428,7 @@ footer > div > p {
     font-size: 10px;
 }
 
-footer > a {
-    margin-left: -5px;
-}
+
 
 @media screen and (max-width: 360px) {
     /* @formatter:off */
