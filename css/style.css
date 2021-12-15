@@ -759,8 +759,6 @@ aside section div {
         writing-mode: vertical-lr;
     }
 
-
-
     footer section div {
         flex: 25%;
         max-width:calc( 25% - 30px );
