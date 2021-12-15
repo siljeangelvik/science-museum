@@ -456,8 +456,9 @@ footer > div > p {
     .img-box-hidden {
         display: block;
     }
-
-    aside section div { padding-left: 100px; }
+    .img-box-hidden {
+        display: none;
+    }
 
 }
 
@@ -475,10 +476,6 @@ footer > div > p {
     "h1       nav     nav     aside"
     "h1       main    main    aside"
     "footer   footer  footer  footer";
-    }
-
-    .img-box-hidden {
-        display: none;
     }
 
     /* @formatter:off */
@@ -504,7 +501,7 @@ footer > div > p {
 
     aside section { flex-direction: row; padding: 0;  }
 
-    aside section div:first-child { padding-top: 50px; }
+    aside section div:first-child { padding-top: 80px; }
 
     /* @formatter:on */
     section#hero {
@@ -561,7 +558,6 @@ footer > div > p {
         text-align: center;
         align-items: center;
         justify-content: center;
-        padding-left: 0;
     }
 
     footer section {
@@ -641,7 +637,7 @@ p {
 }
 
 div.mapouter {
-    text-align: left;
+    text-align: center;
     height: 200px;
     max-width: 100%;
     padding: 0;
