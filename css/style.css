@@ -660,14 +660,6 @@ div.gmap_canvas {
     box-shadow: none;
 }
 
-div#location,
-div#prices,
-div#opening-hours,
-div#accessibility {
-    display: none;
-}
-
-
 main,
 footer {
     margin-top: 30px;
