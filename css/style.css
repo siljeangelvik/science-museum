@@ -280,23 +280,27 @@ nav#nav-secondary section div > a:hover {
 
 nav#nav-secondary section,
 main section,
+footer section {
+    padding: 20px 0;
+}
+
+nav#nav-secondary section,
+main section,
 footer section,
-aside section:last-child {
+aside section {
     display: flex;
     flex-wrap: wrap;
 }
 
 main section {
-    gap: 30px;
+    gap: 20px;
 }
 
 main section div {
-    padding: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
-main section div a {
-
+main section div:nth-child(even) {
 }
 
 
@@ -304,13 +308,16 @@ main section div a {
 nav#nav-secondary section { margin-top: -15px; }
 
 nav#nav-secondary section div,
-aside section:last-child div { flex: 25%; }
+aside section div {
+    flex: 20%;
+    max-width:calc( 25% - 10px );
+    justify-content: center;
+}
 
-aside section { flex-direction: row; padding: 40px 0;  }
+aside section { flex-direction: row; }
 
 nav#nav-secondary section div,
 aside section { text-align: center;}
-
 
 main section,
 footer section {display: flex; flex-wrap: wrap; }
@@ -318,18 +325,27 @@ footer section {display: flex; flex-wrap: wrap; }
 main section div,
 footer section div { flex: 100%; }
 
-main section div { gap:20px; }
-
 footer section { align-items: flex-start;  }
 
+
+nav#nav-secondary section,
+nav#nav-secondary section div,
 main section div img,
+aside section,
 aside section div,
 aside section div a,
 aside section div a i {
-    align-items: center;
     text-align: center;
+    align-items: center;
     justify-content: center;
 }
+nav#nav-secondary section div,
+aside section div {
+    flex: 25%;
+    max-width:calc( 25% - 30px );
+    gap:30px;
+}
+
 
 /* @formatter:on */
 
@@ -381,28 +397,20 @@ aside section div:nth-child(4) a {
     box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
-footer{
-  margin-left:-10px ;
-    margin-right: -10px;
+
+h1#h1 {
+    margin-left: 5px;
 }
 
 footer section {
     padding: 0 20px;
+    gap:20px;
 }
 
 footer section > div > a {
     display: inline-block;
     width: 150px;
     text-align: center;
-}
-
-footer h3 {
-    font-family: fontRegular, sans-serif;
-    font-size: 16px;
-    letter-spacing: .15em;
-    font-weight: bolder;
-    line-height: 1.7em;
-    text-transform: uppercase;
 }
 
 main section div a,
@@ -441,15 +449,18 @@ footer > div > p {
     }
 
     section#hero section div a { flex:100%; }
+
+
     /* @formatter:on */
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 670px) {
     nav#nav-secondary section div {
         flex: 50%;
+        max-width:calc( 50% - 30px );
+        gap:30px;
     }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -467,11 +478,21 @@ footer > div > p {
         display: none;
     }
 
+    aside section div {
+        flex: 25%;
+        max-width:calc( 25% - 20px );
+        gap:30px;
+    }
+
+    footer section div {
+        flex: 50%;
+        max-width:calc( 50% - 20px );
+        gap:30px;
+    }
 }
 
 @media screen and (min-width: 1280px) {
     body {
-        max-width: 1920px;
         display: grid;
         margin: 0 auto;
         overflow-x: hidden;
@@ -492,23 +513,55 @@ footer > div > p {
         background-size: cover;
     }
 
-    main section div { flex: 33%; max-width: 30%; justify-content: center; gap:30px;}
+
+    header.header-desktop { padding-right: 2%;}
+
+    aside,
+    aside section,
+    aside section div,
+    aside section div a {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap:30px;
+        max-width: 100%;
+    }
+
+    aside section div {
+        flex: 100%;
+        max-width:calc( 100% - 20px );
+        max-height: 100%;
+        justify-content: center;
+    }
+    main section div {
+        flex: 33.33%;
+        max-width:calc( 33.33% - 30px );
+        justify-content: center;
+        gap:30px;
+    }
 
     footer section { justify-content: center; }
-    footer section div { flex:1 15%; }
+    footer section div {
+        flex: 25%;
+        max-width:calc( 25% - 30px );
+        justify-content: center;
+        gap:30px;
+    }
 
 
-    aside section:last-child { flex-direction: column; row-gap: 80px;}
-    aside section div { flex:100%; }
+    aside section div {
+        flex: 100%;
+        max-width:calc( 100% - 20px );
+        justify-content: center;
+        gap:80px;
+    }
 
     header.header-mobile,
     h1#mobile-h1 { display: none; }
 
     nav#nav-secondary section { margin-top: -15px; }
 
-    aside section { flex-direction: row; padding: 0;  }
-
-    aside section div:first-child { padding-top: 80px; }
+    aside section { flex-direction: row; }
 
     /* @formatter:on */
     section#hero {
@@ -567,28 +620,48 @@ footer > div > p {
         justify-content: center;
     }
 
-    footer section {
-        padding: 0 80px;
+    footer section div {
+        flex: 25%;
+        max-width:calc( 25% - 30px );
+        gap:30px;
     }
+
 }
 
 /**********     DIVERSE    ***********/
 h2, h3 {
+    margin: 0;
     padding: 10px;
     font-family: fontMedium, sans-serif;
     letter-spacing: .14em;
     color: var(--primary);
     background: var(--greenLizard);
-    font-size: 20px;
+    font-size: 1.5em;
     text-align: left;
 }
 
-h3 {
+h3, h4 {
     font-family: fontMedium, sans-serif;
     letter-spacing: .15em;
     color: var(--white);
     background: var(--primary);
     font-size: 16px;
+}
+
+h4 {
+    margin: auto;
+    padding: 0;
+    font-family: fontBold, sans-serif;
+    letter-spacing: .11em;
+    font-size: .7em;
+}
+
+h4 {
+    margin: auto;
+    padding: 0 10px;
+    font-family: fontBold, sans-serif;
+    letter-spacing: .14em;
+    font-size: .75em;
 }
 
 p {
@@ -598,6 +671,22 @@ p {
     letter-spacing: .07em;
 }
 
+footer section {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+footer section div {
+    padding: 20px 0;
+}
+footer section h4,
+footer section p {
+    padding: 0;
+}
+
+footer section div:first-child h4 {
+    padding-bottom: 20px;
+}
 
 /**********     DIVERSE    ***********/
 .btn {
@@ -661,6 +750,21 @@ div.gmap_canvas {
 }
 
 main,
-footer {
+main section,
+aside,
+aside section,
+footer,
+footer section {
     margin-top: 30px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header,
+footer{
+    margin-left:-10px ;
+    margin-right: -10px;
 }
