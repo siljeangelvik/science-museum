@@ -206,7 +206,7 @@ section#hero {
 }
 
 /* @formatter:off */
-section#hero { height: 75vh; }
+section#hero { height: 80vh; }
 section#hero section p { color: var(--white); }
 
 section#hero section div a:first-child { flex: 65%; }
