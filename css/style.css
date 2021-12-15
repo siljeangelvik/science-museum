@@ -333,6 +333,7 @@ main section div img {
     align-items: center;
     justify-content: center;
 }
+
 nav#nav-secondary section div,
 aside section div {
     flex: 25%;
@@ -552,7 +553,8 @@ div.mapouter {
     text-align: center;
     height: 200px;
     max-width: 100%;
-    padding: 0;
+    padding:0;
+    margin-bottom: 10px;
     box-shadow: none;
 }
 
@@ -584,6 +586,7 @@ footer{
     margin-left:-10px ;
     margin-right: -10px;
 }
+
 
 aside section div,
 aside section {
