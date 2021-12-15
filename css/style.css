@@ -153,8 +153,9 @@ h1#h1 {
 h1#mobile-h1 {
     padding: 100px 0 20px 0;
     color: var(--primary);
-    letter-spacing: .3em;
-    text-align: center;
+    letter-spacing: .2em;
+    text-align: left;
+    font-size: 26px;
     font-family: fontBold, sans-serif;
     writing-mode: horizontal-tb;
 }
@@ -574,7 +575,7 @@ footer > div > p {
 /**********     DIVERSE    ***********/
 h2, h3 {
     padding: 10px;
-    font-family: fontBold, sans-serif;
+    font-family: fontMedium, sans-serif;
     letter-spacing: .14em;
     color: var(--primary);
     background: var(--greenLizard);
