@@ -579,17 +579,20 @@ footer section div {
 
 main section h2 { text-align: center; color: var(--white); background: var(--primary); }
 
-
+.img-container,
 .tablet-hidden,
 .img-desktop {
     padding: 0;
     box-shadow: none;
     background: transparent;
     justify-content: space-around;
-    display: none;
 }
+
+
 .img-container { display: block; }
 
+
+.img-desktop { display: none; }
 
 
 
@@ -643,7 +646,6 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     }
     footer section { align-items: flex-start; justify-content: center; }
 
-    .tablet-hidden { display: block; }
 
     main section {  margin: 20px 0 20px 0; }
 
