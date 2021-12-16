@@ -1,19 +1,21 @@
 /* @formatter:off */
 @font-face {  font-family: "fontBold";
     src: url("../assets/fonts/lemon_milk/LEMONMILK-Bold.otf") format("otf");
-    src: url("../assets/fonts/lemon_milk/LEMONMILK-Bold.otf") format("woff2");  }
+    src: url("../assets/fonts/lemon_milk/LEMONMILK-Bold.otf") format("woff2");
+    font-display: swap; }
 @font-face {  font-family: "fontMedium";
     src: url("../assets/fonts/lemon_milk/LEMONMILK-Medium.otf") format("otf");
     src: url("../assets/fonts/lemon_milk/LEMONMILK-Medium.otf") format("woff2");
-    font-weight: 500;  }
+    font-weight: 500;font-display: swap; }
 @font-face {  font-family: "fontRegular";
     src: url("../assets/fonts/lemon_milk/LEMONMILK-Regular.otf") format("otf");
     src: url("../assets/fonts/lemon_milk/LEMONMILK-Regular.otf") format("woff2");
-    font-weight: 400;  }
+    font-weight: 400; font-display: swap; }
 @font-face {  font-family: "fontLight";
     src: url("../assets/fonts/lemon_milk/LEMONMILK-Light.otf") format("otf");
     src: url("../assets/fonts/lemon_milk/LEMONMILK-Light.otf") format("woff2");
-    font-weight: 300;  }
+    font-weight: 300;
+    font-display: swap; }
 
 :root {
     --primary: #4c5a69;
