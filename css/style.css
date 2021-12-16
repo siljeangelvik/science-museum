@@ -123,7 +123,7 @@ header.header-mobile div#toggle-element {
 header.header-mobile div#toggle-element > a {
     display: block;
     width: 100%;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
     text-decoration: none;
     color: var(--offWhite);
@@ -169,22 +169,6 @@ section#hero {
     justify-content: center;
 }
 
-section#hero section h2 {
-    color: var(--white);
-    background: transparent;
-    font-family: fontBold, sans-serif;
-    letter-spacing: .2em;
-}
-
-section#hero section div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0 20px 0;
-    text-align: center;
-    align-items: center;
-}
-
 section#hero {
     height: 65vh;
     background: url("../assets/images/banner-abstract.jpg") center center no-repeat;
@@ -209,9 +193,6 @@ section#hero {
 /* @formatter:off */
 section#hero { height: 75vh; }
 section#hero section p { color: var(--white); }
-
-section#hero section div a:first-child { flex: 65%; }
-section#hero section div a:first-child { flex: 45%; }
 
 
 /**********     NAV#NAV-SECONDARY, MAIN, ASIDE, FOOTER    ***********/
@@ -278,69 +259,6 @@ nav#nav-secondary section div > a:hover {
     transition: .5s linear;
 }
 
-nav#nav-secondary section,
-main section,
-footer section {
-    padding: 20px 0;
-}
-
-nav#nav-secondary section,
-main section,
-footer section,
-aside section {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-main section {
-    gap: 20px;
-}
-
-main section div {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
-}
-
-main section div:nth-child(even) {
-}
-
-
-/* @formatter:off */
-nav#nav-secondary section { margin-top: -15px; }
-
-nav#nav-secondary section div,
-aside section div {
-    flex: 20%;
-    max-width:calc( 25% - 10px );
-    justify-content: center;
-}
-
-
-nav#nav-secondary section div { text-align: center;}
-
-main section,
-footer section {display: flex; flex-wrap: wrap; }
-
-main section div,
-footer section div { flex: 100%; }
-
-footer section { align-items: flex-start;  }
-
-
-nav#nav-secondary section,
-nav#nav-secondary section div,
-main section div img {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-nav#nav-secondary section div,
-aside section div {
-    flex: 25%;
-    max-width:calc( 25% - 30px );
-    gap:30px;
-}
-
 
 /* @formatter:on */
 
@@ -392,47 +310,14 @@ aside section div:nth-child(4) a {
     box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
 }
 
-
-h1#h1 {
-    margin-left: 5px;
-}
-
-footer section {
-    padding: 0 20px;
-    gap:20px;
-}
-
-footer section > div > a {
-    display: inline-block;
-    width: 150px;
-    text-align: center;
-}
-
 main section div a,
 footer section div p a {
     color: var(--greenLizard);
     text-decoration: underline;
     font-family: fontLight, sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 11px;
 }
-
-main section div a {
-    color: var(--primary);
-}
-
-footer section div p {
-    color: var(--offWhite);
-}
-
-footer > div > p {
-    font-family: fontLight, sans-serif;
-    color: var(--white);
-    text-align: center;
-    font-size: 10px;
-}
-
-
 
 
 /***************        @formatter:off          **********/
@@ -444,14 +329,12 @@ footer > div > p {
 
 /**********     DIVERSE    ***********/
 h2, h3 {
-    margin: 0;
     padding: 10px;
     font-family: fontMedium, sans-serif;
     letter-spacing: .14em;
     color: var(--primary);
     background: var(--greenLizard);
     font-size: 1.5em;
-    text-align: left;
 }
 
 h3, h4 {
@@ -463,15 +346,6 @@ h3, h4 {
 }
 
 h4 {
-    margin: auto;
-    padding: 0;
-    font-family: fontBold, sans-serif;
-    letter-spacing: .11em;
-    font-size: .7em;
-}
-
-h4 {
-    margin: auto;
     padding: 0 10px;
     font-family: fontBold, sans-serif;
     letter-spacing: .14em;
@@ -485,21 +359,24 @@ p {
     letter-spacing: .07em;
 }
 
-footer section {
-    align-items: flex-start;
-    justify-content: flex-start;
+main section div a {
+    color: var(--primary);
+    font-weight: bolder;
 }
 
-footer section div {
-    padding: 20px 0;
-}
-footer section h4,
-footer section p {
-    padding: 0;
+aside h2 {
+    text-align: left;
 }
 
-footer section div:first-child h4 {
-    padding-bottom: 20px;
+footer section div p {
+    color: var(--offWhite);
+}
+
+footer > div > p {
+    font-family: fontLight, sans-serif;
+    color: var(--white);
+    text-align: center;
+    font-size: 10px;
 }
 
 
@@ -554,7 +431,7 @@ div.mapouter {
     height: 200px;
     max-width: 100%;
     padding:0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     box-shadow: none;
 }
 
@@ -567,13 +444,40 @@ div.gmap_canvas {
     box-shadow: none;
 }
 
-main,
-main section,
-aside,
-aside section,
-footer,
-footer section {
-    margin-top: 30px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @formatter:off */
+
+
+
+
+
+
+/********************** DO NOT TOUCH ******************************/
+/* @formatter:off */
+
+h1#h1 {
+    margin-left: 5px;
 }
 
 section {
@@ -581,32 +485,99 @@ section {
     flex-wrap: wrap;
 }
 
+
+section#hero section h2 {
+    color: var(--white);
+    background: transparent;
+    letter-spacing: .2em;
+}
+
+
+section#hero section div {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0 20px 0;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+section#hero section div a:first-child { flex: 65%; }
+section#hero section div a:first-child { flex: 45%; }
+
+
 header,
 footer{
     margin-left:-10px ;
     margin-right: -10px;
 }
 
-
+nav#nav-secondary section,
+nav#nav-secondary section div,
+aside section,
 aside section div,
-aside section {
+aside section div a,
+aside section div a i,
+footer section {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
-    gap:20px;
-}
-aside section div a,
-aside section div a i {
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-aside section div {
-    flex: 25%;
-    max-width:calc( 25% - 20px );
+nav#nav-secondary section { margin-top: -15px; }
+
+main section {
+    gap: 20px;
 }
+
+main section div { box-shadow: 0 3px 10px rgba(0, 0, 0, .25); border-radius: 5px; }
+
+
+
+footer section {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+footer section div { text-align: left; }
+
+footer section > div > a {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+
+
+aside section div,
+nav#nav-secondary section div {
+    flex: 25%;
+    max-width:calc( 25% - 0 );
+}
+
+main section div,
+footer section div {
+    flex: 100%;
+    max-width:calc( 100% - 0 );
+}
+
+main section div,
+footer section div {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -614,9 +585,7 @@ aside section div {
     /* @formatter:off */
 
     section#hero section div {
-        flex-direction: column;
-        gap: 10px;
-        color: var(--white);
+        flex-wrap: wrap;
     }
 
     section#hero section div a { flex:100%; }
@@ -626,21 +595,32 @@ aside section div {
 }
 
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 560px) {
     nav#nav-secondary section div {
         flex: 50%;
-        max-width:calc( 50% - 30px );
-        gap:30px;
+        max-width: calc(50% - 0);
     }
+
+    aside section { padding: 0 0 20px 0; }
+
+
+
+
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 710px) {
     /* @formatter:off */
-    main section div { flex: 50%; max-width: 45%; }
-    /* @formatter:on */
-    section#hero {
-        height: 80vh;
+
+    main section div {
+        flex: 1 auto;
+        width: 345px;
     }
+
+    footer section div {
+        flex: 50%;
+        max-width: calc(50% - 20px );
+    }
+
 
     .img-box-hidden {
         display: block;
@@ -649,11 +629,9 @@ aside section div {
         display: none;
     }
 
-    footer section div {
-        flex: 50%;
-        max-width:calc( 50% - 20px );
-        gap:30px;
-    }
+
+
+    /* @formatter:on */
 }
 
 @media screen and (min-width: 1280px) {
@@ -671,57 +649,53 @@ aside section div {
     "footer   footer  footer  footer";
     }
 
+main { padding: 20px 10px 0 0 ; }
+aside section { padding-top: 30px;}
+.events-img-container { display: none; }
+.events-img-bottom { display: none; box-shadow: none; justify-content: center; }
+
     /* @formatter:off */
-    section#hero {
-        height: 85vh;
-        background: url("../assets/images/scott-webb-102825.jpg") center no-repeat;
-        background-size: cover;
-    }
-
-
-    header.header-desktop { padding-right: 2%;}
-
-    main section div {
-        flex: 33.33%;
-        max-width:calc( 33.33% - 30px );
-        justify-content: center;
-        gap:30px;
-    }
-
-    footer section { justify-content: center; }
+    main section div,
     footer section div {
-        flex: 25%;
-        max-width:calc( 25% - 30px );
-        justify-content: center;
-        gap:30px;
+        flex: 1 auto;
+        width: 300px;
     }
 
 
-    header.header-mobile,
-    h1#mobile-h1 { display: none; }
 
-    nav#nav-secondary section { margin-top: -15px; }
 
-    aside section div,
-    aside section {
-        gap:0;
-        row-gap: 120px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    h1#h1 {
+        display: block;
+        font-family: fontBold, sans-serif;
+        letter-spacing: .3em;
+        color: var(--primary);
+        padding: 30px 0 0 0;
+        writing-mode: vertical-lr;
     }
 
-    aside section div {
-        flex: 100%;
-        max-width:calc( 100% - 20px );
-        justify-content: center;
-        gap:80px;
-    }
-    /* @formatter:on */
-    section#hero {
-        height: 75vh;
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 10px;
-    }
-
+    h1#mobile-h1,
+    header.header-mobile { display: none; }
 
     header.header-desktop nav a.active,
     header.header-desktop nav a:hover {
@@ -734,6 +708,7 @@ aside section div {
         display: flex;
         justify-content: space-between;
         background: var(--primary);
+        padding-right: 2%;
     }
 
     header.header-desktop nav {
@@ -753,19 +728,44 @@ aside section div {
         padding: 10px;
     }
 
-    h1#h1 {
-        display: block;
-        font-family: fontBold, sans-serif;
-        letter-spacing: .3em;
-        color: var(--primary);
-        padding: 30px 0 0 0;
-        writing-mode: vertical-lr;
+    section#hero {
+        height: 80vh;
+        background: url("../assets/images/scott-webb-102825.jpg") center no-repeat;
+        background-size: cover;
+        justify-content: flex-start;
+    }
+
+    section#hero section {
+        max-height: 490px;
+        padding: 30px;
+    }
+
+    nav#nav-secondary section { margin-top: -15px; }
+
+    footer section,
+    aside section div {
+        gap:30px;
+    }
+
+    aside section div,
+    aside section {
+        row-gap: 60px;
+        flex: 100%;
+        max-width:calc( 100% - 10px );
+        justify-content: center;
+    }
+
+
+    aside h2 {
+        text-align: center;
+        margin: 0 0 0 10px;
     }
 
     footer section div {
         flex: 25%;
         max-width:calc( 25% - 30px );
-        gap:30px;
     }
-
 }
+
+
+/* @formatter:on */
