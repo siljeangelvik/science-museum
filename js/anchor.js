@@ -7,7 +7,7 @@ let accessibility = document.getElementById("accessibility"),
     location = document.getElementById("museum-location"),
     events = document.getElementById("events")
 
-function scrollToElement(element, offset = -10) {
+function scrollToElement(element, offset = -5) {
     const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
 
     window.scrollTo({
