@@ -64,9 +64,24 @@ https://codepen.io/miduga/pen/RaXvdg
 --Twitter
   https://codepen.io/tomlutzenberger/pen/OwaoBG
 
-<br>
---YouTube
 
-<br>
+PHOTOS <br>
+Night in Museum:
+https://pixabay.com/photos/metropolitan-museum-new-york-museum-581214/
 
 
+Solar Energy:
+https://pixabay.com/photos/solar-energy-solar-panels-862602/
+
+AI Robot
+https://www.freepik.com/free-photo/robot-hand-finger-pointing-ai-technology-background_17850415.htm#page=1&query=robot&position=1&from_view=search
+
+Ecology
+https://www.freepik.com/free-photo/environmental-conservation-garden-children_5219379.htm#page=1&query=ecology&position=3&from_view=search
+
+Evolution
+https://pixabay.com/photos/human-evolution-reenactment-sunset-3801547/
+
+
+BREAKPOINT 
+between 1280 and 1297 the images on events page breaks badly. I did not have any more time to fix it properly.
