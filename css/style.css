@@ -56,6 +56,7 @@ body {
     font-family: "Roboto Thin", sans-serif;
     font-size: 16px;
     min-width: 300px;
+    min-height: 100vh;
     margin: 0 auto; /* Center align once max-width is reached */
     overflow-x: hidden;
     padding: 0 10px;
@@ -152,13 +153,14 @@ h1#h1 {
 
 h2#mobile-h1 {
     margin: 0;
-    padding: 100px 0 20px 10px;
+    padding: 100px 0 10px 10px;
     color: var(--primary);
     letter-spacing: .2em;
     text-align: left;
     font-size: 26px;
     font-family: fontBold, sans-serif;
     writing-mode: horizontal-tb;
+    background: transparent;
 }
 
 /**********     SECTION#HERO    ***********/
@@ -170,6 +172,7 @@ section#hero {
     align-items: center;
     justify-content: center;
     padding-top: 90px;
+    padding-left: 10px;
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -492,6 +495,7 @@ footer{
     margin-right: -10px;
 }
 
+
 nav#nav-secondary section,
 nav#nav-secondary section div,
 aside section,
@@ -544,7 +548,7 @@ footer section > div > a {
 aside section { padding: 10px 0; }
 
 main h2 { color: var(--primary); background: var(--greenLizard); padding-left: 10px; }
-main h3 { color: var(--white); background: var(--primary); }
+main h3 { color: var(--white); background: var(--primary); text-align: center; }
 aside h2 { text-align: left; color: var(--primary); background: transparent;  padding: 20px 0; margin: 0; }
 
 
@@ -576,18 +580,16 @@ footer section div {
 main section h2 { text-align: center; color: var(--white); background: var(--primary); }
 
 
-.img,
-.img-extra,
-div.img-container,
-.desktop-img {
+.tablet-hidden,
+.img-desktop {
     padding: 0;
     box-shadow: none;
     background: transparent;
     justify-content: space-around;
+    display: none;
 }
-.img-mobile { display: block; }
+.img-container { display: block; }
 
-main.main-exhibition div.img-desktop { box-shadow: 0 3px 10px rgba(0, 0, 0, .25);  }
 
 
 
@@ -624,9 +626,6 @@ main.main-exhibition div.img-desktop { box-shadow: 0 3px 10px rgba(0, 0, 0, .25)
 @media screen and (max-width: 560px) {
     nav#nav-secondary section div { flex: 50%; max-width: calc(50% - 0); }
 
-    .img { display: block; }
-    .img-extra { display: none; }
-
     main section div { flex: 100%; max-width: calc(100% - 0 ); }
 
 }
@@ -644,11 +643,9 @@ main.main-exhibition div.img-desktop { box-shadow: 0 3px 10px rgba(0, 0, 0, .25)
     }
     footer section { align-items: flex-start; justify-content: center; }
 
-    .tablet-hidden,
-    .desktop-img { display: none; }
-    .img-container { display: block; }
+    .tablet-hidden { display: block; }
 
-    main section {  margin: 0 0 20px 0; }
+    main section {  margin: 20px 0 20px 0; }
 
 
 }
@@ -682,7 +679,7 @@ aside h2 { background: none; }
 
 
     .img-container { display: none; }
-    .desktop-img { display: block; }
+    .img-desktop { display: block; }
 
 
     main section { gap:20px; }
