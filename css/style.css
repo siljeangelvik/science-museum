@@ -477,7 +477,7 @@ div.gmap_canvas {
 /* @formatter:off */
 
 h1#h1 {
-    margin-left: 5px;
+    margin: 0 0 0 5px;
 }
 
 section {
