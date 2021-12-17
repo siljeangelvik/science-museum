@@ -148,7 +148,6 @@ header.header-mobile div#toggle-element > a.active { color: var(--greenLizard); 
 header.header-mobile div#toggle-element > a:hover { transition: .5s linear; }
 /* @formatter:on */
 
-/**********     SECTION#H1    ***********/
 h1#h1 {
     display: none;
 }
@@ -165,7 +164,6 @@ h2#mobile-h1 {
     background: transparent;
 }
 
-/**********     SECTION#HERO    ***********/
 section#hero {
     height: 65vh;
     background: url("../assets/images/museum-smoother-banner.jpg") center center no-repeat;
@@ -188,14 +186,10 @@ section#hero {
     }
 }
 
-
-
 /* @formatter:off */
 section#hero { height: 75vh; }
 section#hero section p { color: var(--white); }
 
-
-/**********     NAV#NAV-SECONDARY, MAIN, ASIDE, FOOTER    ***********/
 /* @formatter:off */
 nav#nav-secondary section { margin-top: -35px; }
 nav#nav-secondary section div,
@@ -257,11 +251,7 @@ nav#nav-secondary section div > a:hover {
     border: 3px solid transparent;
     transition: .5s linear;
 }
-
-
 /* @formatter:on */
-
-
 aside section div a {
     height: 50px;
     width: 50px;
@@ -318,14 +308,6 @@ footer section div p a {
     font-size: 11px;
 }
 
-
-/***************        @formatter:off          **********/
-
-
-
-
-
-
 /**********     DIVERSE    ***********/
 h2, h3 {
     padding: 10px 0;
@@ -367,8 +349,6 @@ footer > div > p {
     text-align: center;
     font-size: 10px;
 }
-
-
 
 /* @formatter:off */
 /**********     DIVERSE    ***********/
@@ -433,30 +413,6 @@ div.gmap_canvas {
     box-shadow: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @formatter:off */
-
-
-
-
-
-
 /********************** DO NOT TOUCH ******************************/
 /* @formatter:off */
 
@@ -487,15 +443,13 @@ section#hero section div {
 }
 
 section#hero section div a:first-child { flex: 65%; }
-section#hero section div a:first-child { flex: 45%; }
-
+section#hero section div a:last-child { flex: 45%; }
 
 header,
 footer{
     margin-left:-10px ;
     margin-right: -10px;
 }
-
 
 nav#nav-secondary section,
 nav#nav-secondary section div,
@@ -510,48 +464,45 @@ footer section {
     justify-content: center;
 }
 
-
 nav#nav-secondary section,
 nav#nav-secondary section div,
 aside section,
 aside section div,
 aside section div a,
 aside section div a i,
-footer section {
-    text-align: center;
-}
-
+footer section { text-align: center; }
 
 nav#nav-secondary section { margin-top: -15px; }
 
-
-main section { gap: 20px; }
-footer section { gap: 10px; justify-content: center; }
-
-
 main section div { box-shadow: 0 3px 10px rgba(0, 0, 0, .25); background: var(--white); border-radius: 5px; padding: 10px; }
+main section { gap: 20px; }
+main h2 { color: var(--primary); background: var(--greenLizard); padding-left: 10px; }
 
+main section div h3,
+main section div h3 > a {
+    color: var(--white);
+    background: var(--primary);
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .15em;
+    font-size: 16px;
+    width: 100%;
+}
 
+aside h2 { text-align: left; color: var(--primary); background: transparent;  padding: 20px 0; margin: 0; }
+
+aside section { padding: 10px 0; }
+
+footer section { gap: 10px; justify-content: center; }
 footer section { align-items: flex-start; padding: 10px; }
-
-
 footer section div { text-align: left; }
-
-
 footer section > div > a {
     display: inline-block;
     width: 150px;
     text-align: center;
 }
-
-
-aside section { padding: 10px 0; }
-
-main h2 { color: var(--primary); background: var(--greenLizard); padding-left: 10px; }
-main h3 { color: var(--white); background: var(--primary); text-align: center; }
-aside h2 { text-align: left; color: var(--primary); background: transparent;  padding: 20px 0; margin: 0; }
-
-
 
 aside section div,
 nav#nav-secondary section div {
@@ -571,12 +522,6 @@ footer section div {
     max-width: 100%;
 }
 
-
-
-
-
-
-
 main section h2 { text-align: center; color: var(--white); background: var(--primary); }
 
 .img-container,
@@ -588,73 +533,31 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     justify-content: space-around;
 }
 
-
 .img-container { display: block; }
-
-
 .img-desktop { display: none; }
 
-
-
-
-
-
-
-
-
 /* @formatter:off */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* only purpose of this is for the CTA-buttons in hero-section to break down into full width */
 @media screen and (max-width: 360px) {
-
     section#hero section div { flex-wrap: wrap; }
     section#hero section div a { flex:100%; }
-
 }
 
-
-
+/*  only purpose is for making the navigation break down */
 @media screen and (max-width: 560px) {
     nav#nav-secondary section div { flex: 50%; max-width: calc(50% - 0); }
-
-    main section div { flex: 100%; max-width: calc(100% - 0 ); }
-
 }
 
-
-
-
-
 @media screen and (min-width: 710px) {
-
     main section div,
     footer section div {
         flex: 50%;
         max-width: calc(50% - 10px );
     }
+
     footer section { align-items: flex-start; justify-content: center; }
-
-
     main section {  margin: 20px 0 20px 0; }
-
-
 }
-
-
-
-
 
 @media screen and (min-width: 1280px) {
     body {
@@ -670,41 +573,17 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     "h1       main    main    aside"
     "footer   footer  footer  footer";
     }
-aside h2 { background: none; }
+    aside h2 { background: none; }
 
     main section div {
         flex: 33.33%;
         max-width: calc(33.33% - 15px );
-
     }
-
 
     .img-container { display: none; }
     .img-desktop { display: block; }
 
-
     main section { gap:20px; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     h1#h1 {
         display: block;
@@ -756,6 +635,9 @@ aside h2 { background: none; }
         padding: 30px;
     }
 
+    section#hero section div a:first-child:hover { background: var(--yellowSunshine); color: var(--primary); border: 3px solid var(--yellowSunshine); transition: .5s linear; }
+    section#hero section div a:last-child:hover { background: var(--primary); color: var(--greenLizard); border: 3px solid var(--primary); transition: .5s linear; }
+
     nav#nav-secondary section { margin-top: -15px; }
 
     aside section div {
@@ -770,7 +652,6 @@ aside h2 { background: none; }
         justify-content: center;
     }
 
-
     aside h2 {
         text-align: center;
         margin: 0 0 0 10px;
@@ -781,6 +662,3 @@ aside h2 { background: none; }
         max-width:calc( 25% - 30px );
     }
 }
-
-
-/* @formatter:on */
