@@ -172,7 +172,6 @@ section#hero {
     align-items: center;
     justify-content: center;
     padding-top: 90px;
-    padding-left: 10px;
 }
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -627,6 +626,8 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
         flex: 1;
         padding: 10px;
     }
+
+    section#hero { padding-left: 10px; }
 
     section#hero section {
         align-items: center;
