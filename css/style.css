@@ -543,7 +543,6 @@ footer section > div > a {
     display: inline-block;
     width: 150px;
     text-align: center;
-    margin-left: 5px;
 }
 
 
@@ -672,7 +671,6 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     "h1       main    main    aside"
     "footer   footer  footer  footer";
     }
-
 aside h2 { background: none; }
 
     main section div {
@@ -786,10 +784,4 @@ aside h2 { background: none; }
 }
 
 
-
-
-@media screen and (min-width: 1420px){
-    main.main-exhibition div.img-desktop img.img-tablet:last-child { display: none; }
-
-}
 /* @formatter:on */
