@@ -174,7 +174,14 @@ section#hero {
     padding-top: 90px;
 }
 
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
+I forgot to put a value to the @support declaration
+which does not output any style in the browsers
+according to MDN the backdrop-filter attribute is not supported in FF, FF for Android and IE
+but commenting out the declaration seems to work for FF anyway..
+*/
+/* @supports ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(6px))) { */
     section#hero section {
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(6px);
@@ -183,7 +190,7 @@ section#hero {
         padding: 10px;
         max-width: 470px;
     }
-}
+
 
 /* @formatter:off */
 section#hero { height: 75vh; }
