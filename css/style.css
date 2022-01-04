@@ -547,8 +547,6 @@ nav#nav-secondary section { margin-top: -15px; }
 main section { gap: 20px; }
 main h2 { color: var(--primary); background: var(--greenLizard); }
 
-main.home section { display: flex; flex-wrap: wrap; }
-main.home section div { max-width: 400px;  }
 main.home h2 { padding-left: 10px; }
 
 main section div h3,
@@ -750,4 +748,17 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
         max-width:calc( 25% - 30px );
     }
 
+}
+
+
+main h2.h2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--primary);
+    background: var(--greenLizard);
+    padding-left: 10px;
+    font-family: fontMedium, sans-serif;
+    letter-spacing: .14em;
+    font-size: 1.5em;
 }
