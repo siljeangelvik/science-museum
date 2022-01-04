@@ -347,20 +347,12 @@ aside {
 }
 main {
     padding: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-items: baseline;
-    align-items: flex-end;
-    align-content: flex-end;
+
+
 }
 main section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-items: center;
-    align-items: flex-start;
-    align-content: baseline;
 }
 
 /* CARD BOX */
@@ -369,29 +361,30 @@ main section div.card-box {
     background: var(--white);
     border-radius: 5px;
     padding: 10px;
+    height: 440px;
 
-    height: 600px;
-    width: 420px;
+
     display: flex;
     flex-direction: column;
+    justify-content: stretch;
+    justify-items: center;
     align-content: baseline;
     #border: 2px solid green;
 }
 
+
 /* card-box > INNER CARD BOX */
 main section div.inner-card-box {
-    #border: 3px solid blue;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
 }
 
-/* card-box > inner-card-box > TEXT BOX */
-main section div.inner-card-box div:first-child {
-    #border: 2px solid deeppink;
-    max-height: 260px;
-}
+main.home section div.inner-card-box div:first-child { height: 260px; width: calc(100% - 20px) }
+main.explore section div.inner-card-box div:first-child { height: 100%; }
+main.exhibition section div.card-box { height: 760px; }
+main.exhibition section div.inner-card-box div:first-child { height: 330px; width: calc(100% - 20px) }
+main.exhibition section div.inner-card-box div:last-child { height: 400px; text-align: center; border:1px solid red;}
+
 
 /* card-box > inner-card-box > IMG BOX */
 main section div.inner-card-box div:last-child {
@@ -403,6 +396,9 @@ main section div.inner-card-box div:last-child {
 main section div.card-box div:last-child img {
     max-width: 100%;
 }
+
+
+
 
 main section div a {
     color: var(--primary);
@@ -468,7 +464,7 @@ footer > div > p {
 div.mapouter {
     text-align: center;
     height: 200px;
-    max-width: 100%;
+    width: 400px;
     padding:0;
     margin-bottom: 20px;
     box-shadow: none;
@@ -478,9 +474,11 @@ div.gmap_canvas {
     overflow: hidden;
     background: none !important;
     height: 200px;
-    max-width: 100%;
+    width: 400px;
     padding: 0;
     box-shadow: none;
+    text-align: center;
+
 }
 
 /********************** DO NOT TOUCH ******************************/
@@ -605,6 +603,9 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
 .img-container { display: block; }
 .img-desktop { display: none; }
 
+main section div.card-box{ flex: 100%; max-width: calc(100% - 0)}
+
+
 /* @formatter:off */
 /* only purpose of this is for the CTA-buttons in hero-section to break down into full width */
 @media screen and (max-width: 360px) {
@@ -612,13 +613,17 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     section#hero section div a { flex:100%; }
 }
 
-/*  only purpose is for making the navigation break down */
 @media screen and (max-width: 560px) {
     nav#nav-secondary section div { flex: 50%; max-width: calc(50% - 0); }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 680px) {
     main section { justify-content: center; }
+}
+
+@media screen and (min-width: 740px) {
+    main section div.card-box{ flex: 50%; max-width: calc(50% - 10px); }
+    main.visit section div.card-box:nth-last-child(-n+2) { height: 300px; }
 }
 
 @media screen and (min-width: 710px) {
@@ -626,7 +631,13 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     footer section { align-items: flex-start; justify-content: center; }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 980px){
+    main section div.card-box{ flex: 33.33%; max-width: calc(33.33% - 20px); }
+    main.exhibition section div.card-box{ flex: 50%; max-width: calc(50% - 10px); }
+    main.visit section div.card-box:nth-last-child(-n+3) { height: 300px; }
+}
+
+@media screen and (min-width: 1280px) {
     body {
         display: grid;
         margin: 0 auto;
@@ -641,30 +652,16 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     "footer   footer  footer  footer";
     }
 
-    /* CARD BOX */
-    main section div.card-box {
-        min-height: 580px;
-        max-width: 500px;
-    }
-
-    /* card-box > INNER CARD BOX */
-    main section div.inner-card-box {
-        #border: 3px solid blue;
-    }
-
-    /* card-box > inner-card-box > TEXT BOX */
-    main section div.inner-card-box div:first-child {
-        #border: 2px solid deeppink;
-        max-height: 260px;
-    }
+    main.exhibition section div.card-box{ flex: 50%; max-width: calc(50% - 15px); }
+    main.visit section div.card-box:nth-last-child(-n+3) { height: 300px; }
 
     /* card-box > inner-card-box > IMG BOX */
-    main section div.inner-card-box div:last-child {
-        #border: 2px solid yellow;
-        display: flex;
-        justify-items: flex-end;
-    }
+    main section div.inner-card-box div:last-child { display: flex; justify-items: flex-end; }
 
+    main.explore section div.inner-card-box div:first-child {
+        #border: 2px solid deeppink;
+        min-height: 330px;
+    }
     aside h2 { background: none; }
 
     .img-container { display: none; }
@@ -747,9 +744,7 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
         flex: 25%;
         max-width:calc( 25% - 30px );
     }
-
 }
-
 
 main h2.h2 {
     display: flex;
@@ -762,3 +757,4 @@ main h2.h2 {
     letter-spacing: .14em;
     font-size: 1.5em;
 }
+
