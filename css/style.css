@@ -77,9 +77,9 @@ body {
 header              { grid-area: header;     color: var(--white);       background: var(--primary); }
 h1#h1               { grid-area: h1;         color:var(--primary);                                  }
 section#hero        { grid-area: hero;                                                              }
-nav#nav-secondary   { grid-area: nav;                                   margin-bottom: 20px;        }
-main                { grid-area: main;                                  margin: 20px 0 5px 0;             }
-aside               { grid-area: aside;                                 margin-bottom: 20px;        }
+nav#nav-secondary   { grid-area: nav;                                        }
+main                { grid-area: main;                                              }
+aside               { grid-area: aside;                                      }
 footer              { grid-area: footer;      color: var(--white);      background: var(--primary); }
 /* @formatter:on */
 
@@ -182,14 +182,14 @@ according to MDN the backdrop-filter attribute is not supported in FF, FF for An
 but commenting out the declaration seems to work for FF anyway..
 */
 /* @supports ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(6px))) { */
-    section#hero section {
-        -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(6px);
-        background-color: rgba(000, 000, 000, 0.45);
-        border-radius: 10px;
-        padding: 10px;
-        max-width: 470px;
-    }
+section#hero section {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(6px);
+    background-color: rgba(000, 000, 000, 0.45);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 470px;
+}
 
 
 /* @formatter:off */
@@ -257,6 +257,7 @@ nav#nav-secondary section div > a:hover {
     border: 3px solid transparent;
     transition: .5s linear;
 }
+
 /* @formatter:on */
 aside section div a {
     height: 50px;
@@ -338,6 +339,69 @@ p {
     color: var(--primary);
     line-height: 1.7em;
     letter-spacing: .07em;
+}
+
+main,
+aside {
+    padding-bottom: 20px;
+}
+main {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-items: baseline;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: flex-start;
+    align-content: baseline;
+}
+
+/* CARD BOX */
+main section div.card-box {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+    background: var(--white);
+    border-radius: 5px;
+    padding: 10px;
+
+    height: 600px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+    #border: 2px solid green;
+}
+
+/* card-box > INNER CARD BOX */
+main section div.inner-card-box {
+    #border: 3px solid blue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+/* card-box > inner-card-box > TEXT BOX */
+main section div.inner-card-box div:first-child {
+    #border: 2px solid deeppink;
+    max-height: 260px;
+}
+
+/* card-box > inner-card-box > IMG BOX */
+main section div.inner-card-box div:last-child {
+    #border: 2px solid yellow;
+    display: flex;
+    justify-items: flex-end;
+}
+
+main section div.card-box div:last-child img {
+    max-width: 100%;
 }
 
 main section div a {
@@ -480,9 +544,12 @@ footer section { text-align: center; }
 
 nav#nav-secondary section { margin-top: -15px; }
 
-main section div { box-shadow: 0 3px 10px rgba(0, 0, 0, .25); background: var(--white); border-radius: 5px; padding: 10px; }
 main section { gap: 20px; }
-main h2 { color: var(--primary); background: var(--greenLizard); padding-left: 10px; }
+main h2 { color: var(--primary); background: var(--greenLizard); }
+
+main.home section { display: flex; flex-wrap: wrap; }
+main.home section div { max-width: 400px;  }
+main.home h2 { padding-left: 10px; }
 
 main section div h3,
 main section div h3 > a {
@@ -497,7 +564,7 @@ main section div h3 > a {
     width: 100%;
 }
 
-aside h2 { text-align: left; color: var(--primary); background: transparent;  padding: 20px 0; margin: 0; }
+aside h2 { text-align: left; color: var(--primary); background: transparent;  padding: 20px 0; }
 
 aside section { padding: 10px 0; }
 
@@ -516,13 +583,11 @@ nav#nav-secondary section div {
     max-width:calc( 25% - 0 );
 }
 
-main section div,
 footer section div {
     flex: 100%;
     max-width:calc( 100% - 0 );
 }
 
-main section div,
 footer section div {
     flex-basis: 100%;
     max-width: 100%;
@@ -554,18 +619,16 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     nav#nav-secondary section div { flex: 50%; max-width: calc(50% - 0); }
 }
 
-@media screen and (min-width: 710px) {
-    main section div,
-    footer section div {
-        flex: 50%;
-        max-width: calc(50% - 10px );
-    }
-
-    footer section { align-items: flex-start; justify-content: center; }
-    main section {  margin: 20px 0 20px 0; }
+@media screen and (max-width: 900px) {
+    main section { justify-content: center; }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 710px) {
+    footer section div { flex: 50%; max-width: calc(50% - 10px ); }
+    footer section { align-items: flex-start; justify-content: center; }
+}
+
+@media screen and (min-width: 1080px) {
     body {
         display: grid;
         margin: 0 auto;
@@ -579,17 +642,35 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     "h1       main    main    aside"
     "footer   footer  footer  footer";
     }
-    aside h2 { background: none; }
 
-    main section div {
-        flex: 33.33%;
-        max-width: calc(33.33% - 15px );
+    /* CARD BOX */
+    main section div.card-box {
+        min-height: 580px;
+        max-width: 500px;
     }
+
+    /* card-box > INNER CARD BOX */
+    main section div.inner-card-box {
+        #border: 3px solid blue;
+    }
+
+    /* card-box > inner-card-box > TEXT BOX */
+    main section div.inner-card-box div:first-child {
+        #border: 2px solid deeppink;
+        max-height: 260px;
+    }
+
+    /* card-box > inner-card-box > IMG BOX */
+    main section div.inner-card-box div:last-child {
+        #border: 2px solid yellow;
+        display: flex;
+        justify-items: flex-end;
+    }
+
+    aside h2 { background: none; }
 
     .img-container { display: none; }
     .img-desktop { display: block; }
-
-    main section { gap:20px; }
 
     h1#h1 {
         display: block;
@@ -649,7 +730,7 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     nav#nav-secondary section { margin-top: -15px; }
 
     aside section div {
-        gap:30px;
+        gap:20px;
     }
 
     aside section div,
@@ -662,11 +743,11 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
 
     aside h2 {
         text-align: center;
-        margin: 0 0 0 10px;
     }
 
     footer section div {
         flex: 25%;
         max-width:calc( 25% - 30px );
     }
+
 }
