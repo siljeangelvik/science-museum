@@ -344,23 +344,7 @@ p {
 main,
 aside {
     padding-bottom: 20px;
-}
-main {
-    padding: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-items: baseline;
-    align-items: flex-end;
-    align-content: flex-end;
-}
-main section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-items: center;
-    align-items: flex-start;
-    align-content: baseline;
+    padding-top: 20px;
 }
 
 /* CARD BOX */
@@ -369,7 +353,8 @@ main section div.card-box {
     background: var(--white);
     border-radius: 5px;
     padding: 10px;
-    width: 420px;
+    max-width: 400px;
+    flex: 100%;
     #border: 2px solid green;
 }
 
@@ -378,9 +363,6 @@ main section div.inner-card-box {
     #border: 3px solid blue;
     display: flex;
     flex-direction: column;
-    justify-items: auto;
-    gap: 10px;
-
 }
 
 /* card-box > inner-card-box > TEXT BOX */
@@ -397,16 +379,18 @@ main section div.inner-card-box div:last-child {
 main section div.card-box div:last-child img {
     max-width: 100%;
 }
+main.home section div.card-box { max-height: 690px; }
+main.home section div.inner-card-box div:first-child { min-height: 265px; }
 
-main.exhibition section div.card-box { max-height: 750px; }
-main.exhibition section div.inner-card-box div:first-child { min-height: 350px; }
+main.exhibition section div.card-box { min-height: 550px; }
+main.exhibition section div.inner-card-box div:first-child { max-height: 360px; }
 
 main.explore section div.card-box { max-height: 740px; }
-main.explore section div.inner-card-box div:first-child { min-height: 330px; }
+main.explore section div.inner-card-box div:first-child { max-height: 350px; }
 
 main.visit section div.card-box { height: 300px; }
 main.visit section div.card-box:nth-child(n+1) { min-height: 430px; }
-main.visit section div.card-box:nth-last-child(-n+3) { min-height: 200px; }
+main.visit section div.card-box:nth-last-child(-n+2) { min-height: 180px; }
 main.visit section div.inner-card-box { min-height: 250px; }
 
 main.events section div.card-box { max-height: 600px; }
@@ -559,7 +543,6 @@ nav#nav-secondary section { margin-top: -15px; }
 main section { gap: 20px; }
 main h2 { color: var(--primary); background: var(--greenLizard); }
 
-main.home h2 { padding-left: 10px; }
 
 main section div h3,
 main section div h3 > a {
@@ -626,18 +609,30 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
 
 /*  only purpose is for making the navigation break down */
 @media screen and (max-width: 560px) {
-    main section { justify-content: center; }
     nav#nav-secondary section div { flex: 50%; max-width: calc(50% - 0); }
+}
+
+@media screen and (max-width: 640px) {
+    main section { justify-content: center; }
+    main section div.card-box {
+        max-width: 400px;
+        flex:100%;
+        min-width: calc(100% - 15px);
+    }
 }
 
 @media screen and (max-width: 900px) {
     main.exhibition section div.card-box:last-child { max-height: 670px; }
-
 }
 
 @media screen and (min-width: 710px) {
     footer section div { flex: 50%; max-width: calc(50% - 10px ); }
     footer section { align-items: flex-start; justify-content: center; }
+    main section div.card-box {
+        max-width: 400px;
+        flex:33.33%;
+        min-width: calc(33.33% - 15px);
+    }
 }
 
 @media screen and (min-width: 1080px) {
@@ -658,7 +653,6 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     /* CARD BOX */
     main section div.card-box {
         min-height: 580px;
-        max-width: 500px;
     }
 
     /* card-box > INNER CARD BOX */
@@ -669,19 +663,14 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
     /* card-box > inner-card-box > TEXT BOX */
     main section div.inner-card-box div:first-child { #border: 2px solid deeppink; max-height: 260px; }
 
-    main.exhibition section div.card-box { max-height: 750px; }
-    main.exhibition section div.inner-card-box div:first-child { min-height: 350px; }
-
-    main.explore section div.card-box { max-height: 740px; }
-    main.explore section div.inner-card-box div:first-child { min-height: 330px; }
-
-    main.visit section div.card-box { height: 300px; }
-    main.visit section div.card-box:nth-child(n+1) { min-height: 430px; }
-    main.visit section div.card-box:nth-last-child(-n+3) { min-height: 200px; }
-    main.visit section div.inner-card-box { min-height: 250px; }
-
-    main.events section div.card-box { max-height: 600px; }
+    main.events section div.card-box { max-height: 620px; }
     main.events section div.inner-card-box div:first-child { min-height: 200px; }
+
+    main.exhibition section div.card-box { min-height: 740px; }
+    main.exhibition section div.inner-card-box div:first-child { max-height: 410px; }
+
+    main.explore section div.card-box { max-height: 780px; }
+    main.explore section div.inner-card-box div:first-child { min-height: 340px; }
 
     main.involved section div.card-box { height: 440px; }
     main.involved section div.inner-card-box div:first-child { height: 200px; }
@@ -779,6 +768,9 @@ main section h2 { text-align: center; color: var(--white); background: var(--pri
 
 }
 
+@media screen and (min-width: 1540px) {
+    main.visit section div.card-box:nth-last-child(-n+3) { min-height: 200px; }
+}
 
 main h2.h2 {
     display: flex;
